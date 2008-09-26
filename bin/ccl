@@ -1,0 +1,8 @@
+#!/bin/sh
+
+LISP=/home/stas/lisp
+DD=${LISP}/impl/ccl
+OPENMCL_KERNEL=lx86cl64
+
+CCL_DEFAULT_DIRECTORY=${DD} exec ${DD}/${OPENMCL_KERNEL} \
+    -n --load ${LISP}/configs/ccl.lisp -K utf-8 "$@"

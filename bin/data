@@ -1,0 +1,107 @@
+;;; -*- Mode: Scheme -*-
+
+(define (~ path)
+  (build-path (home-directory) path))
+
+(define *lisp-dir*
+  (~ "lisp"))
+
+(define (lisp path)
+  (build-path *lisp-dir* path))
+
+(define *asdf-registry*
+  (lisp "systems"))
+
+(define (ediware name)
+  (string-append "http://common-lisp.net/~loliveira/ediware/" name)
+  ;; (string-append "svn://svn.bknr.net/svn/trunk/thirdparty/" name)
+  )
+
+(define (cl-net-cvs name module)
+  (format
+   ":pserver:anonymous:anonymous@common-lisp.net:/project/~a/cvsroot ~a"
+   name module))
+
+(define (cl-net-darcs name)
+  (format
+   "http://www.common-lisp.net/project/~a/darcs/~a/"
+   name name))
+
+(define (sf-cvs name module)
+  (format
+   ":pserver:anonymous@~a.cvs.sourceforge.net:/cvsroot/~a ~a"
+   name name module))
+
+(define *projects*
+  `((flexi-streams darcs ,(ediware "flexi-streams") ,(lisp "site/flexi-streams") ("flexi-streams.asd"))
+    (drakma darcs ,(ediware "drakma") ,(lisp "site/drakma") ("drakma.asd"))
+    (cl-ppcre darcs ,(ediware "cl-ppcre") ,(lisp "site/cl-ppcre") ("cl-ppcre.asd"))
+    (chunga darcs ,(ediware "chunga") ,(lisp "site/chunga") ("chunga.asd"))
+    (url-rewrite darcs ,(ediware "url-rewrite") ,(lisp "site/url-rewrite") ("url-rewrite.asd"))
+    (cl-who darcs ,(ediware "cl-who") ,(lisp "site/cl-who") ("cl-who.asd"))
+    (hunchentoot darcs ,(ediware "hunchentoot") ,(lisp "site/hunchentoot") ("hunchentoot.asd"))
+    (cl-fad darcs ,(ediware "cl-fad") ,(lisp "site/cl-fad") ("cl-fad.asd"))
+
+    (cl+ssl cvs ,(cl-net-cvs "cl-plus-ssl" "cl+ssl") ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
+    (trivial-gray-streams cvs ,(cl-net-cvs "cl-plus-ssl" "trivial-gray-streams")
+                          ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
+    (cffi darcs ,(cl-net-darcs "cffi") ,(lisp "site/cffi") ("cffi.asd"))
+    (babel darcs ,(cl-net-darcs "babel") ,(lisp "site/babel") ("babel.asd"))
+    (alexandria darcs ,(cl-net-darcs "alexandria") ,(lisp "site/alexandria") ("alexandria.asd"))
+
+    (trivial-features darcs "http://common-lisp.net/~loliveira/darcs/trivial-features/"
+                      ,(lisp "site/trivial-features") ("trivial-features.asd"))
+    (trivial-utf-8 darcs ,(cl-net-darcs "trivial-utf-8") ,(lisp "site/trivial-utf-8") ("trivial-utf-8.asd"))
+    (usocket svn "svn://common-lisp.net/project/usocket/svn/usocket/trunk"
+             ,(lisp "site/usocket") ("usocket.asd"))
+    (puri git "git://git.b9.com/puri.git" ,(lisp "site/puri") ("puri.asd"))
+    (cl-base64 git "git://git.b9.com/cl-base64.git" ,(lisp "site/cl-base64") ("cl-base64.asd"))
+    (md5 git "git://git.b9.com/md5.git" ,(lisp "site/md5") ("md5.asd"))
+    (clsql git "git://git.b9.com/clsql.git" ,(lisp "site/clsql") ("clsql.asd"))
+    (asdf cvs ,(sf-cvs "cclan" "asdf") ,(lisp "site/asdf") ())
+
+    (cl-audioscrobbler svn "http://cl-audioscrobbler.googlecode.com/svn/trunk/"
+                       ,(lisp "site/cl-audioscrobbler") ("cl-audioscrobbler.asd"))
+    (s-xml cvs ,(cl-net-cvs "s-xml" "s-xml") ,(lisp "site/s-xml") ("s-xml.asd"))
+    (clx darcs "http://common-lisp.net/~crhodes/clx/" ,(lisp "site/clx") ("clx.asd"))
+    (mcclim cvs ,(cl-net-cvs "mcclim" "mcclim") ,(lisp "site/mcclim") ("mcclim.asd"))
+    (climacs cvs ,(cl-net-cvs "climacs" "climacs") ,(lisp "site/climacs") ("climacs.asd"))
+    (flexichain cvs ,(cl-net-cvs "flexichain" "flexichain") ,(lisp "site/flexichain") ("flexichain.asd"))
+    (spatial-trees darcs "http://rvw.doc.gold.ac.uk/gibbons/darcs/spatial-trees"
+                   ,(lisp "site/spatial-trees") ("spatial-trees.asd"))
+    (cl-xmpp cvs ,(cl-net-cvs "cl-xmpp" "cl-xmpp") ,(lisp "site/cl-xmpp")
+             ("cl-xmpp.asd" "cl-xmpp-tls.asd" "cl-xmpp-sasl.asd"))
+    (cxml git "git://repo.or.cz/cxml.git" ,(lisp "site/cxml") ("cxml.asd"))
+    (closure-common git "git://repo.or.cz/closure-common.git" ,(lisp "site/closure-common") ("closure-common.asd"))
+    (closure-html git "git://repo.or.cz/closure-html.git" ,(lisp "site/closure-html") ("closure-html.asd"))
+    (iterate darcs ,(cl-net-darcs "iterate") ,(lisp "site/iterate") ("iterate.asd"))
+    (cl-utilities cvs ,(cl-net-cvs "cl-utilities" "cl-utilities") ,(lisp "site/cl-utilities") ("cl-utilities.asd"))
+    (acl-compat cvs ,(sf-cvs "portableaserve" "portableaserve/acl-compat")
+                    ,(lisp "site/acl-compat") ("acl-compat.asd"))
+    (trivial-http svn "svn://unmutual.info/trivial-http" ,(lisp "site/trivial-http") ("trivial-http.asd"))
+    (org-davep-dict wget "http://www.davep.org/lisp/org-davep-dict-2.3.tar.gz"
+                    ,(lisp "site/org-davep-dict") ("org-davep-dict.asd"))
+    (hunchentoot-cgi git "git://cyrusharmon.org/pub/git/hunchentoot-cgi.git"
+                     ,(lisp "site/hunchentoot-cgi") ("hunchentoot-cgi.asd"))
+    (local-time darcs ,(cl-net-darcs "local-time") ,(lisp "site/local-time") ("local-time.asd"))
+    (asdf-system-connections darcs
+                             "http://common-lisp.net/project/cl-containers/asdf-system-connections/darcs/asdf-system-connections"
+                             ,(lisp "site/asdf-system-connections") ("asdf-system-connections.asd"))
+    (stumpwm git "git://git.savannah.nongnu.org/stumpwm.git" ,(lisp "site/stumwpm") ("stumpwm.asd"))
+;;;
+    (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx8664/ccl" ,(lisp "impl/ccl") ())
+    (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
+    (clisp git "git://git.boinkor.net/clisp.git" ,(lisp "impl/clisp") ())
+    (ecl git "http://ecls.sourceforge.net/git/ecl/.git" ,(lisp "impl/ecl") ())
+    (gosh svn "https://gauche.svn.sourceforge.net/svnroot/gauche/Gauche/trunk" ,(lisp "impl/gauche") ())
+
+    (slime cvs "_ _" ,(~ ".emacs.d/slime") ())
+    (redshank darcs "http://www.foldr.org/~michaelw/projects/redshank"
+              ,(~ ".emacs.d/redshank") ())
+    (jabber-el cvs "_ _" ,(~ ".emacs.d/jabber") ())
+    (emacs git "git://git.sv.gnu.org/emacs.git" ,(~ "tmp/emacs") ())
+    (haskell-mode cvs ":pserver:anoncvs@cvs.haskell.org:/cvs fptools/CONTRIB/haskell-modes/emacs"
+                  ,(~ ".emacs.d/haskell") ())
+    (mplayer svn "svn://svn.mplayerhq.hu/mplayer/trunk" ,(~ "c/mplayer") ())
+
+    (maxima cvs ":pserver:anonymous@maxima.cvs.sourceforge.net:/cvsroot/maxima maxima" ,(~ "c/maxima") ())))

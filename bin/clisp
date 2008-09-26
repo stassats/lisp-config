@@ -1,0 +1,3 @@
+#!/bin/sh
+
+~/lisp/impl/clisp/src/clisp "$@" -i ~/lisp/configs/clisp.lisp
