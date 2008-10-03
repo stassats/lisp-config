@@ -1,8 +1,16 @@
 #!/bin/sh
 
+arch=`uname -m`
+
 LISP=/home/stas/lisp
 DD=${LISP}/impl/ccl
-OPENMCL_KERNEL=lx86cl64
 
-CCL_DEFAULT_DIRECTORY=${DD} exec ${DD}/${OPENMCL_KERNEL} \
+if [ $arch = x86_64 ]
+then
+    KERNEL=lx86cl64
+else
+    KERNEL=lx86cl
+fi
+
+CCL_DEFAULT_DIRECTORY=${DD} exec ${DD}/${KERNEL} \
     -n --load ${LISP}/configs/ccl.lisp -K utf-8 "$@"

@@ -87,6 +87,8 @@
     (asdf-system-connections darcs
                              "http://common-lisp.net/project/cl-containers/asdf-system-connections/darcs/asdf-system-connections"
                              ,(lisp "site/asdf-system-connections") ("asdf-system-connections.asd"))
+    (asdf-binary-locations darcs ,(cl-net-darcs "asdf-binary-locations")
+                           ,(lisp "site/asdf-binary-locations") ("asdf-system-connections.asd"))
     (stumpwm git "git://git.savannah.nongnu.org/stumpwm.git" ,(lisp "site/stumwpm") ("stumpwm.asd"))
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx8664/ccl" ,(lisp "impl/ccl") ())
