@@ -1,0 +1,4 @@
+#!/bin/sh
+
+~/lisp/impl/acl/alisp -e '(setf *init-file-names* (list "~/lisp/configs/acl.lisp"))' \
+    "$@"

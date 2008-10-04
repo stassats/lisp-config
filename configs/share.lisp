@@ -3,17 +3,18 @@
 (declaim (optimize (compilation-speed 2) (debug 3) (safety 3)))
 
 (unless (find :asdf *features*)
-  #+(or clisp ecl)
-  (load (merge-pathnames "lisp/site/asdf/asdf.lisp"
-			 (user-homedir-pathname)))
-  #+(or sbcl ccl)
+  #+(or clisp ecl cmu)
+  (load (merge-pathnames "lisp/site/asdf/asdf"
+			 (user-homedir-pathname))
+        :verbose nil)
+  #+(or sbcl ccl acl)
   (require :asdf))
 
 (setf asdf:*central-registry*
       `(*default-pathname-defaults*
 	,(merge-pathnames "lisp/systems/" (user-homedir-pathname))))
 
-(asdf:operate 'asdf:load-op :asdf-binary-locations)
+(asdf:operate 'asdf:load-op :asdf-binary-locations :verbose nil)
 
 (setf asdf:*centralize-lisp-binaries* t
       asdf:*default-toplevel-directory*

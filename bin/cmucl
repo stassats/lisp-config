@@ -1,0 +1,3 @@
+#!/bin/sh
+
+lisp -init ~/lisp/configs/cmucl.lisp "$@"
