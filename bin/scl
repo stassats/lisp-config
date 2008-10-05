@@ -9,9 +9,9 @@
 (define (main args)
   (load "/home/stas/lisp/bin/data")
   (match (map string->symbol (cdr args))
-         (('get . arguments)
+         (('g . arguments)
           (act get arguments))
-         (('update . arguments)
+         (('u . arguments)
           (act update arguments))
          ((action . rest)
           (print

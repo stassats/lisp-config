@@ -93,10 +93,11 @@
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx8664/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
-    (clisp git "git://git.boinkor.net/clisp.git" ,(lisp "impl/clisp") ())
+    (clisp cvs ":pserver:anonymous@clisp.cvs.sourceforge.net:/cvsroot/clisp clisp" ,(lisp "impl/clisp") ())
     (ecl git "http://ecls.sourceforge.net/git/ecl/.git" ,(lisp "impl/ecl") ())
     (gosh svn "https://gauche.svn.sourceforge.net/svnroot/gauche/Gauche/trunk" ,(lisp "impl/gauche") ())
-
+    (gcl cvs ":pserver:anonymous@cvs.savannah.gnu.org:/sources/gcl gcl" ,(lisp "impl/gcl") ())
+    
     (slime cvs "_ _" ,(~ ".emacs.d/slime") ())
     (redshank darcs "http://www.foldr.org/~michaelw/projects/redshank"
               ,(~ ".emacs.d/redshank") ())
