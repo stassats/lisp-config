@@ -4,4 +4,4 @@ BUILD=~/lisp/impl/ecl/build
 
 LD_LIBRARY_PATH=${BUILD} \
     ${BUILD}/bin/ecl -norc \
-    -load ~/lisp/configs/ecl.lisp -dir ${BUILD} "$@"
+    -load ~/lisp/configs/ecl.lisp  "$@"
