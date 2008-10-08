@@ -4,7 +4,7 @@
 
 #-asdf
 (progn
-  #+(or clisp cmu lispworks)
+  #+(or clisp cmu lispworks scl)
   (load (merge-pathnames "lisp/site/asdf/asdf" (user-homedir-pathname)))
   #+(or sbcl ccl acl ecl)
   (require :asdf))
@@ -17,5 +17,9 @@
 
 (setf asdf:*centralize-lisp-binaries* t
       asdf:*default-toplevel-directory*
-      (merge-pathnames "lisp/fasls/" (user-homedir-pathname)))
+      (merge-pathnames "lisp/fasls/"
+                       #-scl (user-homedir-pathname)
+                       #+scl "/home/stas/"))
 
+(defun asdl (system)
+  (asdf:oos 'asdf:load-op system))

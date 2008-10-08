@@ -27,4 +27,3 @@
 	  (asdf:operate 'asdf:load-op name)
 	  t))))
   (pushnew 'module-provide-asdf ext:*module-provider-functions*))
-
