@@ -10,20 +10,13 @@
 
 (in-package #:asdf)
 
+(defun module-provide-asdf (name)
+  (handler-bind ((style-warning #'muffle-warning))
+    (let* ((*verbose-out* (make-broadcast-stream))
+           (name (string-downcase name))
+           (system (asdf:find-system name nil)))
+      (when system
+        (asdf:operate 'asdf:load-op name)
+        t))))
 
-(eval-when (:compile-toplevel :load-toplevel :execute)
-  (when (find-symbol "*MODULE-PROVIDER-FUNCTIONS*" "EXT")
-    (pushnew :cmu-hooks-require *features*)))
-
-
-#+cmu-hooks-require
-(progn
-  (defun module-provide-asdf (name)
-    (handler-bind ((style-warning #'muffle-warning))
-      (let* ((*verbose-out* (make-broadcast-stream))
-	     (name (string-downcase name))
-	     (system (asdf:find-system name nil)))
-	(when system
-	  (asdf:operate 'asdf:load-op name)
-	  t))))
-  (pushnew 'module-provide-asdf ext:*module-provider-functions*))
+(nconc ext:*module-provider-functions* '(module-provide-asdf))
