@@ -1,6 +1,6 @@
 ;;; -*- Mode: Lisp -*-
 
-(declaim (optimize (compilation-speed 2) (debug 3) (safety 3)))
+(declaim (optimize (debug 3) (safety 3)))
 
 #-asdf
 (progn

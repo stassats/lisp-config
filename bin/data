@@ -64,7 +64,8 @@
                        ,(lisp "site/cl-audioscrobbler") ("cl-audioscrobbler.asd"))
     (s-xml cvs ,(cl-net-cvs "s-xml" "s-xml") ,(lisp "site/s-xml") ("s-xml.asd"))
     (clx darcs "http://common-lisp.net/~crhodes/clx/" ,(lisp "site/clx") ("clx.asd"))
-    (mcclim cvs ,(cl-net-cvs "mcclim" "mcclim") ,(lisp "site/mcclim") ("mcclim.asd"))
+    (mcclim cvs ,(cl-net-cvs "mcclim" "mcclim") ,(lisp "site/mcclim")
+            ("mcclim.asd" "clim-listener.asd"))
     (climacs cvs ,(cl-net-cvs "climacs" "climacs") ,(lisp "site/climacs") ("climacs.asd"))
     (flexichain cvs ,(cl-net-cvs "flexichain" "flexichain") ,(lisp "site/flexichain") ("flexichain.asd"))
     (spatial-trees darcs "http://rvw.doc.gold.ac.uk/gibbons/darcs/spatial-trees"
@@ -90,21 +91,29 @@
     (asdf-binary-locations darcs ,(cl-net-darcs "asdf-binary-locations")
                            ,(lisp "site/asdf-binary-locations") ("asdf-system-connections.asd"))
     (stumpwm git "git://git.savannah.nongnu.org/stumpwm.git" ,(lisp "site/stumwpm") ("stumpwm.asd"))
+    (closer-mop darcs "http://common-lisp.net/project/closer/repos/closer-mop/" ,(lisp "site/closer-mop") ("closer-mop.asd"))
+    (ltk wget "http://www.peter-herth.de/ltk/ltk-0.91.tgz" ,(lisp "site/ltk") ("ltk.asd"))
+    (tstree wget "http://phil.nullable.eu/downloads/tstree-0.3-src.tar.gz" ,(lisp "site/tstree") ("tstree.asd"))
+    (able wget "http://phil.nullable.eu/downloads/able-0.15-src.tar.gz" ,(lisp "site/able") ("able.asd"))
+
 ;;;
-    (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx8664/ccl" ,(lisp "impl/ccl") ())
+    (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
     (clisp cvs ":pserver:anonymous@clisp.cvs.sourceforge.net:/cvsroot/clisp clisp" ,(lisp "impl/clisp") ())
     (ecl git "http://ecls.sourceforge.net/git/ecl/.git" ,(lisp "impl/ecl") ())
     (gosh svn "https://gauche.svn.sourceforge.net/svnroot/gauche/Gauche/trunk" ,(lisp "impl/gauche") ())
     (gcl cvs ":pserver:anonymous@cvs.savannah.gnu.org:/sources/gcl gcl" ,(lisp "impl/gcl") ())
-    
-    (slime cvs "_ _" ,(~ ".emacs.d/slime") ())
+
+    (slime cvs ,(cl-net-cvs "slime" "slime") ,(~ ".emacs.d/slime") ())
     (redshank darcs "http://www.foldr.org/~michaelw/projects/redshank"
               ,(~ ".emacs.d/redshank") ())
-    (jabber-el cvs "_ _" ,(~ ".emacs.d/jabber") ())
-    (emacs git "git://git.sv.gnu.org/emacs.git" ,(~ "tmp/emacs") ())
+    (jabber-el cvs ":pserver:anonymous@emacs-jabber.cvs.sourceforge.net:/cvsroot/emacs-jabber emacs-jabber" ,(~ ".emacs.d/jabber") ())
+    (emacs git "git://git.sv.gnu.org/emacs.git" ,(~ "c/emacs") ())
     (haskell-mode cvs ":pserver:anoncvs@cvs.haskell.org:/cvs fptools/CONTRIB/haskell-modes/emacs"
                   ,(~ ".emacs.d/haskell") ())
+    (emms git "git://git.sv.gnu.org/emms.git" ,(~ ".emacs.d/emms") ())
+    (emacs-chess git "git://github.com/jwiegley/emacs-chess.git" ,(~ ".emacs.d/chess") ())
+
     (mplayer svn "svn://svn.mplayerhq.hu/mplayer/trunk" ,(~ "c/mplayer") ())
 
     (maxima cvs ":pserver:anonymous@maxima.cvs.sourceforge.net:/cvsroot/maxima maxima" ,(~ "c/maxima") ())))

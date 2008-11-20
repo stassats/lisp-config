@@ -2,7 +2,9 @@
 (load (merge-pathnames "lisp/configs/share.lisp" (user-homedir-pathname)))
 
 (setf ccl:*default-file-character-encoding* :utf-8
-      ccl:*default-socket-character-encoding* :utf-8)
+      ccl:*default-socket-character-encoding* :utf-8
+      (pathname-encoding-name) :utf-8
+      ccl:*default-external-format* :utf-8)
 
 (nconc asdf:*central-registry*
        '("ccl:tools;advice-profiler;"))
