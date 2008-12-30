@@ -1,7 +1,5 @@
 ;;; -*- Mode: Lisp -*-
 
-(declaim (optimize (debug 3) (safety 3)))
-
 #-asdf
 (progn
   #+(or clisp cmu lispworks scl)
@@ -21,5 +19,13 @@
                        #-scl (user-homedir-pathname)
                        #+scl "/home/stas/"))
 
+;;; Useful functions
+
 (defun asdl (system)
   (asdf:oos 'asdf:load-op system))
+
+(defun safe-code ()
+  (proclaim '(optimize (speed 1) (safety 2) (debug 2))))
+
+(defun fast-code ()
+  (proclaim '(optimize (speed 3) (safety 0) (debug 1))))

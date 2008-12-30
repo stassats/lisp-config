@@ -90,12 +90,16 @@
                              ,(lisp "site/asdf-system-connections") ("asdf-system-connections.asd"))
     (asdf-binary-locations darcs ,(cl-net-darcs "asdf-binary-locations")
                            ,(lisp "site/asdf-binary-locations") ("asdf-system-connections.asd"))
-    (stumpwm git "git://git.savannah.nongnu.org/stumpwm.git" ,(lisp "site/stumwpm") ("stumpwm.asd"))
+    (stumpwm git "git://git.savannah.nongnu.org/stumpwm.git" ,(lisp "site/stumpwm") ("stumpwm.asd"))
     (closer-mop darcs "http://common-lisp.net/project/closer/repos/closer-mop/" ,(lisp "site/closer-mop") ("closer-mop.asd"))
     (ltk wget "http://www.peter-herth.de/ltk/ltk-0.91.tgz" ,(lisp "site/ltk") ("ltk.asd"))
     (tstree wget "http://phil.nullable.eu/downloads/tstree-0.3-src.tar.gz" ,(lisp "site/tstree") ("tstree.asd"))
     (able wget "http://phil.nullable.eu/downloads/able-0.15-src.tar.gz" ,(lisp "site/able") ("able.asd"))
-
+    (png-read git "git://github.com/Ramarren/png-read.git" ,(lisp "site/png-read") ("png-read.asd"))
+    (chipz wget "http://www.method-combination.net/lisp/files/chipz.tar.gz" ,(lisp "site/chipz") ("chipz.asd"))
+    (ironclad wget "http://www.method-combination.net/lisp/files/ironclad.tar.gz" ,(lisp "site/ironclad") ("ironclad.asd"))
+    (xcvb git "http://common-lisp.net/project/xcvb/xcvb.git/" ,(lisp "site/xcvb") ())
+    (bordeaux-threads darcs ,(cl-net-darcs "bordeaux-threads") ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
@@ -116,4 +120,5 @@
 
     (mplayer svn "svn://svn.mplayerhq.hu/mplayer/trunk" ,(~ "c/mplayer") ())
 
-    (maxima cvs ":pserver:anonymous@maxima.cvs.sourceforge.net:/cvsroot/maxima maxima" ,(~ "c/maxima") ())))
+    (maxima cvs ":pserver:anonymous@maxima.cvs.sourceforge.net:/cvsroot/maxima maxima" ,(~ "c/maxima") ())
+    (x264 git "git://git.videolan.org/x264.git" ,(~ "c/x264") ())))

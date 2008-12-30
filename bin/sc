@@ -37,11 +37,13 @@
     (svn update)
     (hg update)))
 
+(define (run command)
+  (run-process command :wait #t :error "/dev/null"))
+
 (define (update method url path asds)
   (when (file-exists? path)
     (current-directory path)
-    (run-process (assq method *update*)
-                 :wait #t)))
+    (run (assq method *update*))))
 
 (define *get*
   '((git clone)
@@ -59,8 +61,7 @@
            (sys-symlink existing new))))
      asds))
 
-  (run-process (get-command method url path)
-               :wait #t)
+  (run (get-command method url path))
   (link-asd path asds))
 
 (define (get-command method url path)
