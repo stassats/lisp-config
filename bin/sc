@@ -13,7 +13,7 @@
           (act get arguments))
          (('u . arguments)
           (act update arguments))
-         ((action . rest)
+         ((action . _)
           (print
            (format "There is no such action: ~s." action)))))
 
@@ -21,7 +21,7 @@
   (define (act-1 config)
     (match-let1 (name method url path asd)
                 config
-                (display (format "Acting on ~a:~%" name))
+                (print (format "Acting on ~a:" name))
                 (action method url path asd)))
   (if (null? arguments)
       (for-each act-1 *projects*)

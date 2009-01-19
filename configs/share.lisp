@@ -25,7 +25,10 @@
   (asdf:oos 'asdf:load-op system))
 
 (defun safe-code ()
-  (proclaim '(optimize (speed 1) (safety 2) (debug 2))))
+  (proclaim '(optimize (speed 0) (safety 3) (debug 3))))
 
 (defun fast-code ()
   (proclaim '(optimize (speed 3) (safety 0) (debug 1))))
+
+(defun normal-code ()
+  (proclaim '(optimize (speed 1) (safety 1) (debug 1))))
