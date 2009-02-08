@@ -13,8 +13,12 @@
           (act get arguments))
          (('u . arguments)
           (act update arguments))
+         (('remove . arguments)
+          (if (> (length arguments) 0)
+              (act remove arguments)
+              (error "Remove action requires an one or more arguments.")))
          ((action . _)
-          (print
+          (error
            (format "There is no such action: ~s." action)))))
 
 (define (act action arguments)
@@ -83,3 +87,6 @@
   (process-output->string
    (format "wget -O - \"~a\" | tar --strip-components 1 -xz" url))
   '(true))
+
+(define (remove method url path asds)
+  (delete-files (filter file-exists? (append path asds))))

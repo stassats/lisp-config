@@ -41,11 +41,12 @@
     (cl-who darcs ,(ediware "cl-who") ,(lisp "site/cl-who") ("cl-who.asd"))
     (hunchentoot darcs ,(ediware "hunchentoot") ,(lisp "site/hunchentoot") ("hunchentoot.asd"))
     (cl-fad darcs ,(ediware "cl-fad") ,(lisp "site/cl-fad") ("cl-fad.asd"))
-
+    (cl-gd darcs ,(ediware "cl-gd") ,(lisp "site/cl-gd") ("cl-gd.asd"))
+    
     (cl+ssl cvs ,(cl-net-cvs "cl-plus-ssl" "cl+ssl") ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
     (trivial-gray-streams cvs ,(cl-net-cvs "cl-plus-ssl" "trivial-gray-streams")
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
-    (cffi darcs ,(cl-net-darcs "cffi") ,(lisp "site/cffi") ("cffi.asd"))
+    (cffi darcs ,(cl-net-darcs "cffi") ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd"))
     (babel darcs ,(cl-net-darcs "babel") ,(lisp "site/babel") ("babel.asd"))
     (alexandria darcs ,(cl-net-darcs "alexandria") ,(lisp "site/alexandria") ("alexandria.asd"))
 
@@ -100,6 +101,10 @@
     (ironclad wget "http://www.method-combination.net/lisp/files/ironclad.tar.gz" ,(lisp "site/ironclad") ("ironclad.asd"))
     (xcvb git "http://common-lisp.net/project/xcvb/xcvb.git/" ,(lisp "site/xcvb") ())
     (bordeaux-threads darcs ,(cl-net-darcs "bordeaux-threads") ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
+    (stefil darcs ,(cl-net-darcs "stefil") ,(lisp "site/stefil") ("stefil.asd"))
+    (metabang-bind darcs "http://common-lisp.net/project/metabang-bind/" ,(lisp "site/metabang-bind") ("metabang-bind.asd"))
+    (gbbopen svn "http://GBBopen.org/svn/GBBopen/trunk/" ,(lisp "site/gbbopen") ("gbbopen.asd"))
+
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
@@ -108,7 +113,9 @@
     (gosh svn "https://gauche.svn.sourceforge.net/svnroot/gauche/Gauche/trunk" ,(lisp "impl/gauche") ())
     (gcl cvs ":pserver:anonymous@cvs.savannah.gnu.org:/sources/gcl gcl" ,(lisp "impl/gcl") ())
 
-    (slime cvs ,(cl-net-cvs "slime" "slime") ,(~ ".emacs.d/slime") ())
+;;;
+
+    (slime cvs ,(cl-net-cvs "slime" "slime") ,(~ ".emacs.d/slime") ("swank.asd"))
     (redshank darcs "http://www.foldr.org/~michaelw/projects/redshank"
               ,(~ ".emacs.d/redshank") ())
     (jabber-el cvs ":pserver:anonymous@emacs-jabber.cvs.sourceforge.net:/cvsroot/emacs-jabber emacs-jabber" ,(~ ".emacs.d/jabber") ())
