@@ -1,12 +1,13 @@
 ;;; -*- Mode: Lisp -*-
 
 (setf
- (ext:search-list "target:") '("/usr/share/cmucl/src/")
  *compile-verbose* nil
  *compile-print* nil
  ext:*gc-verbose* nil)
 
 (load (merge-pathnames "lisp/configs/share.lisp" (user-homedir-pathname)))
+
+(setf (ext:search-list "target:") (list (~ "lisp/impl/cmucl/src/")))
 
 (in-package #:asdf)
 

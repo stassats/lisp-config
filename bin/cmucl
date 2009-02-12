@@ -1,3 +1,4 @@
 #!/bin/sh
 
-lisp -init ~/lisp/configs/cmucl.lisp "$@"
+~/lisp/impl/cmucl/lisp -lib ~/lisp/impl/cmucl/lib \
+    -init ~/lisp/configs/cmucl.lisp "$@"
