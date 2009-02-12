@@ -1,23 +1,25 @@
 ;;; -*- Mode: Lisp -*-
 
+(defun ~ (path)
+  (#+cmu truename #-cmu or
+         (merge-pathnames path (user-homedir-pathname))))
+
 #-asdf
 (progn
   #+(or clisp cmu lispworks scl)
-  (load (merge-pathnames "lisp/site/asdf/asdf" (user-homedir-pathname)))
+  (load (~ "lisp/site/asdf/asdf"))
   #+(or sbcl ccl acl ecl)
   (require :asdf))
 
 (setf asdf:*central-registry*
       `(*default-pathname-defaults*
-	,(merge-pathnames "lisp/systems/" (user-homedir-pathname))))
+	,(~ "lisp/systems/")))
 
 (asdf:oos 'asdf:load-op '#:asdf-binary-locations :verbose nil)
 
 (setf asdf:*centralize-lisp-binaries* t
       asdf:*default-toplevel-directory*
-      (merge-pathnames "lisp/fasls/"
-                       #-scl (user-homedir-pathname)
-                       #+scl "/home/stas/"))
+      (~ "lisp/fasls/"))
 
 ;;; Useful functions
 
@@ -32,3 +34,4 @@
 
 (defun normal-code ()
   (proclaim '(optimize (speed 1) (safety 1) (debug 1))))
+

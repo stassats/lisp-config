@@ -1,3 +1,5 @@
 #!/bin/sh
 
-exec lisp -init ~/lisp/configs/cmucl.lisp "$@"
+exec ~/lisp/impl/cmucl/lisp -lib ~/lisp/impl/cmucl/lib \
+    -init ~/lisp/configs/cmucl.lisp "$@"
+

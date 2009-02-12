@@ -89,4 +89,4 @@
   '(true))
 
 (define (remove method url path asds)
-  (delete-files (filter file-exists? (append path asds))))
+  (delete-files (filter file-exists? (cons path asds))))
