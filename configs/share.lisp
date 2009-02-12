@@ -7,7 +7,7 @@
 #-asdf
 (progn
   #+(or clisp cmu lispworks scl)
-  (load (~ "lisp/site/asdf/asdf"))
+  (load (~ "lisp/site/asdf/asdf.lisp"))
   #+(or sbcl ccl acl ecl)
   (require :asdf))
 
