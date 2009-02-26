@@ -42,7 +42,7 @@
     (hunchentoot darcs ,(ediware "hunchentoot") ,(lisp "site/hunchentoot") ("hunchentoot.asd"))
     (cl-fad darcs ,(ediware "cl-fad") ,(lisp "site/cl-fad") ("cl-fad.asd"))
     (cl-gd darcs ,(ediware "cl-gd") ,(lisp "site/cl-gd") ("cl-gd.asd"))
-    
+
     (cl+ssl cvs ,(cl-net-cvs "cl-plus-ssl" "cl+ssl") ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
     (trivial-gray-streams cvs ,(cl-net-cvs "cl-plus-ssl" "trivial-gray-streams")
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
@@ -79,7 +79,7 @@
     (iterate darcs ,(cl-net-darcs "iterate") ,(lisp "site/iterate") ("iterate.asd"))
     (cl-utilities cvs ,(cl-net-cvs "cl-utilities" "cl-utilities") ,(lisp "site/cl-utilities") ("cl-utilities.asd"))
     (acl-compat cvs ,(sf-cvs "portableaserve" "portableaserve/acl-compat")
-                    ,(lisp "site/acl-compat") ("acl-compat.asd"))
+                ,(lisp "site/acl-compat") ("acl-compat.asd"))
     (trivial-http svn "svn://unmutual.info/trivial-http" ,(lisp "site/trivial-http") ("trivial-http.asd"))
     (org-davep-dict wget "http://www.davep.org/lisp/org-davep-dict-2.3.tar.gz"
                     ,(lisp "site/org-davep-dict") ("org-davep-dict.asd"))
@@ -94,8 +94,7 @@
     (stumpwm git "git://git.savannah.nongnu.org/stumpwm.git" ,(lisp "site/stumpwm") ("stumpwm.asd"))
     (closer-mop darcs "http://common-lisp.net/project/closer/repos/closer-mop/" ,(lisp "site/closer-mop") ("closer-mop.asd"))
     (ltk wget "http://www.peter-herth.de/ltk/ltk-0.91.tgz" ,(lisp "site/ltk") ("ltk.asd"))
-    (tstree wget "http://phil.nullable.eu/downloads/tstree-0.3-src.tar.gz" ,(lisp "site/tstree") ("tstree.asd"))
-    (able wget "http://phil.nullable.eu/downloads/able-0.15-src.tar.gz" ,(lisp "site/able") ("able.asd"))
+    (able wget "http://phil.nullable.eu/files/able-src-0.18.zip" ,(lisp "site/able") ("able.asd"))
     (png-read git "git://github.com/Ramarren/png-read.git" ,(lisp "site/png-read") ("png-read.asd"))
     (chipz wget "http://www.method-combination.net/lisp/files/chipz.tar.gz" ,(lisp "site/chipz") ("chipz.asd"))
     (ironclad wget "http://www.method-combination.net/lisp/files/ironclad.tar.gz" ,(lisp "site/ironclad") ("ironclad.asd"))
@@ -104,6 +103,11 @@
     (stefil darcs ,(cl-net-darcs "stefil") ,(lisp "site/stefil") ("stefil.asd"))
     (metabang-bind darcs "http://common-lisp.net/project/metabang-bind/" ,(lisp "site/metabang-bind") ("metabang-bind.asd"))
     (gbbopen svn "http://GBBopen.org/svn/GBBopen/trunk/" ,(lisp "site/gbbopen") ("gbbopen.asd"))
+    (s-xml-rpc cvs ,(cl-net-cvs "s-xml-rpc" "s-xml-rpc") ,(lisp "site/s-xml-rpc") ("s-xml-rpc.asd"))
+    (montezuma svn "http://montezuma.googlecode.com/svn/trunk/montezuma" ,(lisp "site/montezuma") ("montezuma.asd"))
+    (closure cvs ,(cl-net-cvs "closure" "closure") ,(lisp "site/closure") ("closure.asd"))
+    (skippy wget "http://www.xach.com/lisp/skippy.tgz" ,(lisp "site/skippy") ("skippy.asd"))
+
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())

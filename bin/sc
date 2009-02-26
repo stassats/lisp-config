@@ -47,7 +47,9 @@
 (define (update method url path asds)
   (when (file-exists? path)
     (current-directory path)
-    (run (assq method *update*))))
+    (if (equal? method 'wget)
+        (update-wget method url path asds)
+        (run (assq method *update*)))))
 
 (define *get*
   '((git clone)
@@ -87,6 +89,10 @@
   (process-output->string
    (format "wget -O - \"~a\" | tar --strip-components 1 -xz" url))
   '(true))
+
+(define (update-wget method url path asds)
+  (remove #f #f path asds)
+  (get method url path asds))
 
 (define (remove method url path asds)
   (delete-files (filter file-exists? (cons path asds))))
