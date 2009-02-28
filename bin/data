@@ -107,7 +107,12 @@
     (montezuma svn "http://montezuma.googlecode.com/svn/trunk/montezuma" ,(lisp "site/montezuma") ("montezuma.asd"))
     (closure cvs ,(cl-net-cvs "closure" "closure") ,(lisp "site/closure") ("closure.asd"))
     (skippy wget "http://www.xach.com/lisp/skippy.tgz" ,(lisp "site/skippy") ("skippy.asd"))
-
+    (salza2 wget "http://www.xach.com/lisp/salza2.tgz" ,(lisp "site/salza2") ("salza2.asd"))
+    (zip cvs ,(cl-net-cvs "zip" "zip") ,(lisp "site/zip") ("zip.asd"))
+    (trivial-usocket svn "svn://common-lisp.net/project/usocket/svn/trivial-usocket/trunk"
+             ,(lisp "site/trivial-usocket") ("trivial-usocket.asd"))
+    (trivial-sockets svn "svn://common-lisp.net/project/usocket/svn/trivial-sockets"
+             ,(lisp "site/trivial-sockets") ("trivial-sockets.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
@@ -116,6 +121,7 @@
     (ecl git "http://ecls.sourceforge.net/git/ecl/.git" ,(lisp "impl/ecl") ())
     (gosh svn "https://gauche.svn.sourceforge.net/svnroot/gauche/Gauche/trunk" ,(lisp "impl/gauche") ())
     (gcl cvs ":pserver:anonymous@cvs.savannah.gnu.org:/sources/gcl gcl" ,(lisp "impl/gcl") ())
+    (abcl svn "svn://common-lisp.net/project/armedbear/svn/trunk/abcl" ,(lisp "impl/abcl") ())
 
 ;;;
 
@@ -128,6 +134,9 @@
                   ,(~ ".emacs.d/haskell") ())
     (emms git "git://git.sv.gnu.org/emms.git" ,(~ ".emacs.d/emms") ())
     (emacs-chess git "git://github.com/jwiegley/emacs-chess.git" ,(~ ".emacs.d/chess") ())
+;;    (clojure-mode git "git://github.com/jochu/clojure-mode.git" ,(~ ".emacs.d/clojure") ())
+    (clojure-mode darcs "http://www.lysator.liu.se/~lenst/darcs/clojure-mode/" ,(~ ".emacs.d/clojure") ())
+    (swank-clojure git "git://github.com/jochu/swank-clojure.git" ,(~ ".emacs.d/swank-clojure") ())
 
     (mplayer svn "svn://svn.mplayerhq.hu/mplayer/trunk" ,(~ "c/mplayer") ())
 

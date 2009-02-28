@@ -8,7 +8,7 @@
 (progn
   #+(or clisp cmu lispworks scl)
   (load (~ "lisp/site/asdf/asdf.lisp"))
-  #+(or sbcl ccl acl ecl)
+  #+(or sbcl ccl acl ecl abcl)
   (require :asdf))
 
 (setf asdf:*central-registry*
