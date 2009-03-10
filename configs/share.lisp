@@ -35,3 +35,24 @@
 (defun normal-code ()
   (proclaim '(optimize (speed 1) (safety 1) (debug 1))))
 
+
+;;;
+
+(defun eval-code (code)
+  (let (result)
+    (values (with-output-to-string (*standard-output*)
+              (setf result (multiple-value-list
+                            (handler-case (eval (read-from-string code))
+                              (error (error) error)))))
+            result)))
+
+(defun format-error (stream object &rest rest)
+  (declare (ignore rest))
+  (format stream (if (typep object 'error) "~a" "~s")
+          object))
+
+(defun test-code (code)
+  (multiple-value-bind (output result) (eval-code code)
+   (format t "~a - ~a:~%~a => ~{~/format-error/~^; ~}~%Output:~%\"~a\"~%~%"
+           (lisp-implementation-type) (lisp-implementation-version)
+           code result output)))
