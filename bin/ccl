@@ -13,4 +13,4 @@ else
 fi
 
 CCL_DEFAULT_DIRECTORY=${DD} exec ${DD}/${KERNEL} \
-    -n --load ${LISP}/configs/ccl.lisp -K utf-8 "$@"
+    -n --load ${LISP}/configs/ccl.lisp -b -K utf-8 "$@"
