@@ -1,5 +1,5 @@
 #!/bin/sh
 
-exec ~/lisp/impl/cmucl/lisp -lib ~/lisp/impl/cmucl/lib \
+exec ~/lisp/impl/cmucl/bin/lisp \
     -init ~/lisp/configs/cmucl.lisp "$@"
 
