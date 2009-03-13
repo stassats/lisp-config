@@ -113,6 +113,17 @@
              ,(lisp "site/trivial-usocket") ("trivial-usocket.asd"))
     (trivial-sockets svn "svn://common-lisp.net/project/usocket/svn/trivial-sockets"
              ,(lisp "site/trivial-sockets") ("trivial-sockets.asd"))
+    (gsharp cvs ,(cl-net-cvs "gsharp" "gsharp") ,(lisp "site/gsharp") ("gsharp.asd"))
+    (midi wget "http://doc.gold.ac.uk/isms/lisp/midi/midi-20070618.tar.gz" ,(lisp "site/midi") ("midi.asd"))
+    (cl-irc svn "svn://common-lisp.net/project/cl-irc/svn/trunk" ,(lisp "site/cl-irc") ("cl-irc.asd"))
+    (tab-layout wget "http://bl0rg.net/~mgr/flux/tab-layout_2005-09-19_02-52+0200.tar.bz2"
+                     ,(lisp "site/tab-layout-pane") ("tab-layout.asd" "radio-layout.asd" "stack-layout.asd"))
+    (beirc cvs ,(cl-net-cvs "beirc" "beirc") ,(lisp "site/beirc") ("beirc.asd"))
+    (gsll git "git://repo.or.cz/gsll.git" ,(lisp "site/gsll") ("gsll.asd"))
+    (trivial-garbage darcs "http://common-lisp.net/~loliveira/darcs/trivial-garbage/"
+                     ,(lisp "site/trivial-garbage") ("trivial-garbage.asd"))
+    
+    
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())

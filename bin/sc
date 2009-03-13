@@ -42,7 +42,8 @@
     (hg update)))
 
 (define (run command)
-  (run-process command :wait #t :error "/dev/null"))
+  (run-process command :wait #t ;; :error "/dev/null"
+               ))
 
 (define (update method url path asds)
   (when (file-exists? path)
