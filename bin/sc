@@ -37,8 +37,8 @@
 (define *update*
   '((git pull)
     (darcs pull -a)
-    (cvs update)
-    (svn update)
+    (cvs -Q update)
+    (svn -q update)
     (hg update)))
 
 (define (run command)
@@ -82,7 +82,7 @@
   (receive (parent name _) (decompose-path path)
     (current-directory parent)
     (match-let1 (root module) (string-split url " ")
-                `(cvs -z3 -d ,root co -d ,name ,module))))
+                `(cvs -q -z3 -d ,root co -d ,name ,module))))
 
 (define (wget url path)
   (make-directory* path)
@@ -92,8 +92,9 @@
   '(true))
 
 (define (update-wget method url path asds)
-  (remove #f #f path asds)
-  (get method url path asds))
+  ;;(remove #f #f path asds)
+  ;; (get method url path asds)
+  )
 
 (define (remove method url path asds)
   (delete-files (filter file-exists? (cons path asds))))
