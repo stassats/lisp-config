@@ -37,8 +37,8 @@
 (define *update*
   '((git pull)
     (darcs pull -a)
-    (cvs -Q update)
-    (svn -q update)
+    (cvs -q update)
+    (svn update)
     (hg update)))
 
 (define (run command)
@@ -63,7 +63,7 @@
     (for-each
      (lambda (asd)
        (let ((existing (build-path path asd))
-             (new (build-path *asdf-registry* asd)))
+             (new (build-path *asdf-registry* (sys-basename asd))))
          (when (and (file-exists? existing) (not (file-exists? new)))
            (sys-symlink existing new))))
      asds))

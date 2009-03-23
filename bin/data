@@ -122,6 +122,9 @@
     (gsll git "git://repo.or.cz/gsll.git" ,(lisp "site/gsll") ("gsll.asd"))
     (trivial-garbage darcs "http://common-lisp.net/~loliveira/darcs/trivial-garbage/"
                      ,(lisp "site/trivial-garbage") ("trivial-garbage.asd"))
+    (commonqt git "git://repo.or.cz/commonqt.git" ,(lisp "site/commonqt") ("qt.asd" "qt-tutorial.asd"))
+    (editor-hints darcs "http://common-lisp.net/~trittweiler/darcs/editor-hints" ,(lisp "site/editor-hints")
+            ("named-readtables/named-readtables.asd"))
     
     
 
