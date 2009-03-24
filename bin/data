@@ -148,6 +148,8 @@
                   ,(~ ".emacs.d/haskell") ())
     (emms git "git://git.sv.gnu.org/emms.git" ,(~ ".emacs.d/emms") ())
     (emacs-chess git "git://github.com/jwiegley/emacs-chess.git" ,(~ ".emacs.d/chess") ())
+    (emacs-w3m cvs ":pserver:anonymous@cvs.namazu.org:/storage/cvsroot emacs-w3m" ,(~ ".emacs.d/w3m") ())
+    
 ;;    (clojure-mode git "git://github.com/jochu/clojure-mode.git" ,(~ ".emacs.d/clojure") ())
     (clojure-mode darcs "http://www.lysator.liu.se/~lenst/darcs/clojure-mode/" ,(~ ".emacs.d/clojure") ())
     (swank-clojure git "git://github.com/jochu/swank-clojure.git" ,(~ ".emacs.d/swank-clojure") ())

@@ -5,7 +5,8 @@
  *compile-print* nil
  ext:*gc-verbose* nil)
 
-(load (merge-pathnames "lisp/configs/share.lisp" (user-homedir-pathname)))
+(with-open-file (*error-output* "/dev/null" :direction :output :if-exists :append)
+  (load (merge-pathnames "lisp/configs/share.lisp" (user-homedir-pathname))))
 
 (setf (ext:search-list "target:") (list (~ "lisp/impl/cmucl/src/")))
 
