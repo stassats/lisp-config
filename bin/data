@@ -13,9 +13,10 @@
   (lisp "systems"))
 
 (define (ediware name)
-  (string-append "http://common-lisp.net/~loliveira/ediware/" name)
-  ;; (string-append "svn://svn.bknr.net/svn/trunk/thirdparty/" name)
-  )
+  (string-append "http://common-lisp.net/~loliveira/ediware/" name))
+
+(define (ediware-bknr name)
+  (string-append "svn://svn.bknr.net/svn/trunk/thirdparty/" name))
 
 (define (cl-net-cvs name module)
   (format
@@ -38,15 +39,16 @@
     (cl-ppcre darcs ,(ediware "cl-ppcre") ,(lisp "site/cl-ppcre") ("cl-ppcre.asd"))
     (chunga darcs ,(ediware "chunga") ,(lisp "site/chunga") ("chunga.asd"))
     (url-rewrite darcs ,(ediware "url-rewrite") ,(lisp "site/url-rewrite") ("url-rewrite.asd"))
-    (cl-who darcs ,(ediware "cl-who") ,(lisp "site/cl-who") ("cl-who.asd"))
+    (cl-who svn ,(ediware-bknr "cl-who") ,(lisp "site/cl-who") ("cl-who.asd"))
     (hunchentoot darcs ,(ediware "hunchentoot") ,(lisp "site/hunchentoot") ("hunchentoot.asd"))
     (cl-fad darcs ,(ediware "cl-fad") ,(lisp "site/cl-fad") ("cl-fad.asd"))
     (cl-gd darcs ,(ediware "cl-gd") ,(lisp "site/cl-gd") ("cl-gd.asd"))
+    (cl-unicode darcs ,(ediware "cl-unicode") ,(lisp "site/cl-unicode") ("cl-unicode.asd"))
 
     (cl+ssl cvs ,(cl-net-cvs "cl-plus-ssl" "cl+ssl") ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
     (trivial-gray-streams cvs ,(cl-net-cvs "cl-plus-ssl" "trivial-gray-streams")
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
-    (cffi darcs ,(cl-net-darcs "cffi") ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd"))
+    (cffi darcs ,(cl-net-darcs "cffi") ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"))
     (babel darcs ,(cl-net-darcs "babel") ,(lisp "site/babel") ("babel.asd"))
     (alexandria darcs ,(cl-net-darcs "alexandria") ,(lisp "site/alexandria") ("alexandria.asd"))
 
@@ -66,7 +68,7 @@
     (s-xml cvs ,(cl-net-cvs "s-xml" "s-xml") ,(lisp "site/s-xml") ("s-xml.asd"))
     (clx darcs "http://common-lisp.net/~crhodes/clx/" ,(lisp "site/clx") ("clx.asd"))
     (mcclim cvs ,(cl-net-cvs "mcclim" "mcclim") ,(lisp "site/mcclim")
-            ("mcclim.asd" "clim-listener.asd"))
+            ("mcclim.asd" "clim-listener.asd" "mcclim-jpeg-bitmaps.asd" "mcclim-gif-bitmaps.asd"))
     (climacs cvs ,(cl-net-cvs "climacs" "climacs") ,(lisp "site/climacs") ("climacs.asd"))
     (flexichain cvs ,(cl-net-cvs "flexichain" "flexichain") ,(lisp "site/flexichain") ("flexichain.asd"))
     (spatial-trees darcs "http://rvw.doc.gold.ac.uk/gibbons/darcs/spatial-trees"
@@ -122,11 +124,18 @@
     (gsll git "git://repo.or.cz/gsll.git" ,(lisp "site/gsll") ("gsll.asd"))
     (trivial-garbage darcs "http://common-lisp.net/~loliveira/darcs/trivial-garbage/"
                      ,(lisp "site/trivial-garbage") ("trivial-garbage.asd"))
-    (commonqt git "git://repo.or.cz/commonqt.git" ,(lisp "site/commonqt") ("qt.asd" "qt-tutorial.asd"))
+    (commonqt git "git://repo.or.cz/commonqt.git" ,(lisp "site/commonqt") ("qt.asd" "qt-tutorial.asd" "qt-repl.asd"))
     (editor-hints darcs "http://common-lisp.net/~trittweiler/darcs/editor-hints" ,(lisp "site/editor-hints")
             ("named-readtables/named-readtables.asd"))
-    
-    
+    (movitz cvs ,(cl-net-cvs "movitz" "movitz") ,(lisp "site/movitz") ("movitz.asd"))
+    (binary-types cvs ,(cl-net-cvs "movitz" "binary-types") ,(lisp "site/binary-types") ("binary-types.asd"))
+    (ia-x86 cvs ,(cl-net-cvs "movitz" "ia-x86") ,(lisp "site/ia-x86") ("ia-x86.asd"))
+    (cl-cont darcs "http://common-lisp.net/project/cl-cont/darcs/cl-cont" ,(lisp "site/cl-cont") ("cl-cont.asd"))
+    (lispbuilder svn "http://lispbuilder.googlecode.com/svn/trunk/lispbuilder" ,(lisp "site/lispbuilder") ("lispbuilder.asd"))    
+    (iolib git "http://common-lisp.net/project/iolib/git/iolib.git" ,(lisp "site/iolib")
+           ("src/iolib.asd" "src/iolib.asd" "src/iolib.pathnames.asd" "src/iolib.syscalls.asd"
+            "src/iolib.base.asd" "src/iolib.sockets.asd" "src/iolib.trivial-sockets.asd"
+            "src/iolib.multiplex.asd" "src/iolib.streams.asd" "src/iolib.zeta-streams.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
@@ -139,7 +148,9 @@
 
 ;;;
 
-    (slime cvs ,(cl-net-cvs "slime" "slime") ,(~ ".emacs.d/slime") ("swank.asd"))
+    ;; (slime cvs ,(cl-net-cvs "slime" "slime") ,(~ ".emacs.d/slime") ("swank.asd"))
+    (slime git "http://www.foldr.org/~michaelw/projects/redshank" ,(~ ".emacs.d/slime") ("swank.asd"))
+    
     (redshank darcs "http://www.foldr.org/~michaelw/projects/redshank"
               ,(~ ".emacs.d/redshank") ())
     (jabber-el cvs ":pserver:anonymous@emacs-jabber.cvs.sourceforge.net:/cvsroot/emacs-jabber emacs-jabber" ,(~ ".emacs.d/jabber") ())

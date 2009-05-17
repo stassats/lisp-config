@@ -35,7 +35,6 @@
 (defun normal-code ()
   (proclaim '(optimize (speed 1) (safety 1) (debug 1))))
 
-
 ;;;
 
 (defun eval-code (code)
