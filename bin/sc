@@ -35,7 +35,7 @@
        arguments)))
 
 (define *update*
-  '((git pull)
+  '((git pull origin master)
     (darcs pull -a)
     (cvs -q update)
     (svn update)

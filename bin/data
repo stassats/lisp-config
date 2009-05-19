@@ -93,6 +93,8 @@
                              ,(lisp "site/asdf-system-connections") ("asdf-system-connections.asd"))
     (asdf-binary-locations darcs ,(cl-net-darcs "asdf-binary-locations")
                            ,(lisp "site/asdf-binary-locations") ("asdf-system-connections.asd"))
+    (asdf-dependency-grovel git "http://git.boinkor.net/git/asdf-dependency-grovel.git/" ,(lisp "site/asdf-dependency-grovel")
+                            ("asdf-dependency-grovel.asd"))
     (stumpwm git "git://git.savannah.nongnu.org/stumpwm.git" ,(lisp "site/stumpwm") ("stumpwm.asd"))
     (closer-mop darcs "http://common-lisp.net/project/closer/repos/closer-mop/" ,(lisp "site/closer-mop") ("closer-mop.asd"))
     (ltk wget "http://www.peter-herth.de/ltk/ltk-0.91.tgz" ,(lisp "site/ltk") ("ltk.asd"))
@@ -100,7 +102,8 @@
     (png-read git "git://github.com/Ramarren/png-read.git" ,(lisp "site/png-read") ("png-read.asd"))
     (chipz wget "http://www.method-combination.net/lisp/files/chipz.tar.gz" ,(lisp "site/chipz") ("chipz.asd"))
     (ironclad wget "http://www.method-combination.net/lisp/files/ironclad.tar.gz" ,(lisp "site/ironclad") ("ironclad.asd"))
-    (xcvb git "http://common-lisp.net/project/xcvb/xcvb.git/" ,(lisp "site/xcvb") ())
+    (xcvb git "git://github.com/fare/xcvb.git" ,(lisp "site/xcvb") ("xcvb.asd"))
+    
     (bordeaux-threads darcs ,(cl-net-darcs "bordeaux-threads") ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
     (stefil darcs ,(cl-net-darcs "stefil") ,(lisp "site/stefil") ("stefil.asd"))
     (metabang-bind darcs "http://common-lisp.net/project/metabang-bind/" ,(lisp "site/metabang-bind") ("metabang-bind.asd"))
@@ -136,7 +139,8 @@
            ("src/iolib.asd" "src/iolib.asd" "src/iolib.pathnames.asd" "src/iolib.syscalls.asd"
             "src/iolib.base.asd" "src/iolib.sockets.asd" "src/iolib.trivial-sockets.asd"
             "src/iolib.multiplex.asd" "src/iolib.streams.asd" "src/iolib.zeta-streams.asd"))
-
+    (cl-launch wget "http://fare.tunes.org/files/cl-launch/cl-launch.tar.gz" ,(lisp "site/cl-launch") ("cl-launch.asd"))
+    
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
