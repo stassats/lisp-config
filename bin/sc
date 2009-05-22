@@ -17,6 +17,10 @@
           (if (> (length arguments) 0)
               (act remove arguments)
               (error "Remove action requires an one or more arguments.")))
+         (('dir . arguments)
+          (act directory arguments))
+         (('list)
+          (list-all))
          ((action . _)
           (error
            (format "There is no such action: ~s." action)))))
@@ -25,7 +29,6 @@
   (define (act-1 config)
     (match-let1 (name method url path asd)
                 config
-                (print (format "Acting on ~a:" name))
                 (action method url path asd)))
   (if (null? arguments)
       (for-each act-1 *projects*)
@@ -47,6 +50,7 @@
 
 (define (update method url path asds)
   (when (file-exists? path)
+    (display (format "Acting on ~a:~%" name) (standard-error-port))
     (current-directory path)
     (if (equal? method 'wget)
         (update-wget method url path asds)
@@ -98,3 +102,10 @@
 
 (define (remove method url path asds)
   (delete-files (filter file-exists? (cons path asds))))
+
+(define (directory method url path asds)
+  (print path))
+
+(define (list-all)
+  (for-each (lambda (project) (print (car project)))
+   *projects*))
