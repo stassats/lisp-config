@@ -17,7 +17,7 @@
           (if (> (length arguments) 0)
               (act remove arguments)
               (error "Remove action requires an one or more arguments.")))
-         (('dir . arguments)
+         (('cd . arguments)
           (act directory arguments))
          (('list)
           (list-all))
@@ -105,7 +105,7 @@
   (delete-files (filter file-exists? (cons path asds))))
 
 (define (directory method url path asds)
-  (print path))
+  (print (format "cd ~a" path)))
 
 (define (list-all)
   (for-each (lambda (project) (print (car project)))
