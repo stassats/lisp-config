@@ -5,5 +5,5 @@ SBCL=~/lisp/impl/sbcl
 export SBCL_HOME=$SBCL/contrib
 
 exec $SBCL/src/runtime/sbcl \
-    --core $SBCL/output/sbcl.core  \
-    --userinit ~/lisp/configs/sbcl.lisp "$@"
+    --core $SBCL/output/sbcl.core "$@" \
+    --userinit ~/lisp/configs/sbcl.lisp 

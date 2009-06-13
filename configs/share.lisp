@@ -1,5 +1,7 @@
 ;;; -*- Mode: Lisp -*-
 
+(in-package #:cl-user)
+
 (defun ~ (path)
   (#+cmu truename #-cmu or
          (merge-pathnames path (user-homedir-pathname))))
@@ -22,7 +24,7 @@
       (~ "lisp/fasls/"))
 
 ;;; Useful functions
-
+(export '(asdl safe-code fast-code normal-code))
 (defun asdl (system)
   (asdf:oos 'asdf:load-op system))
 

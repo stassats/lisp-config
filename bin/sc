@@ -29,6 +29,8 @@
   (define (act-1 config)
     (match-let1 (name method url path asd)
                 config
+                (when (eq? action update)
+                  (display (format "Acting on ~a:~%" name) (standard-error-port)))
                 (action method url path asd)))
   (if (null? arguments)
       (for-each act-1 *projects*)
@@ -50,7 +52,6 @@
 
 (define (update method url path asds)
   (when (file-exists? path)
-    (display (format "Acting on ~a:~%" name) (standard-error-port))
     (current-directory path)
     (if (equal? method 'wget)
         (update-wget method url path asds)

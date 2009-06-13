@@ -13,7 +13,7 @@
   (lisp "systems"))
 
 (define (ediware name)
-  (string-append "http://common-lisp.net/~loliveira/ediware/" name))
+  (string-append "http://common-lisp.net/~loliveira/ediware/ " name))
 
 (define (ediware-bknr name)
   (string-append "svn://svn.bknr.net/svn/trunk/thirdparty/" name))
@@ -36,7 +36,7 @@
 (define *projects*
   `((flexi-streams darcs ,(ediware "flexi-streams") ,(lisp "site/flexi-streams") ("flexi-streams.asd"))
     (drakma darcs ,(ediware "drakma") ,(lisp "site/drakma") ("drakma.asd"))
-    (cl-ppcre darcs ,(ediware "cl-ppcre") ,(lisp "site/cl-ppcre") ("cl-ppcre.asd"))
+    (cl-ppcre darcs ,(ediware "cl-ppcre") ,(lisp "site/cl-ppcre") ("cl-ppcre.asd" "cl-ppcre-unicode.asd"))
     (chunga darcs ,(ediware "chunga") ,(lisp "site/chunga") ("chunga.asd"))
     (url-rewrite darcs ,(ediware "url-rewrite") ,(lisp "site/url-rewrite") ("url-rewrite.asd"))
     (cl-who svn ,(ediware-bknr "cl-who") ,(lisp "site/cl-who") ("cl-who.asd"))
@@ -61,7 +61,7 @@
     (cl-base64 git "git://git.b9.com/cl-base64.git" ,(lisp "site/cl-base64") ("cl-base64.asd"))
     (md5 git "git://git.b9.com/md5.git" ,(lisp "site/md5") ("md5.asd"))
     (clsql git "git://git.b9.com/clsql.git" ,(lisp "site/clsql") ("clsql.asd"))
-    (asdf cvs ,(sf-cvs "cclan" "asdf") ,(lisp "site/asdf") ())
+    (asdf git "http://common-lisp.net/project/asdf/asdf.git" ,(lisp "site/asdf") ())
 
     (cl-audioscrobbler svn "http://cl-audioscrobbler.googlecode.com/svn/trunk/"
                        ,(lisp "site/cl-audioscrobbler") ("cl-audioscrobbler.asd"))
@@ -140,6 +140,11 @@
             "src/iolib.base.asd" "src/iolib.sockets.asd" "src/iolib.trivial-sockets.asd"
             "src/iolib.multiplex.asd" "src/iolib.streams.asd" "src/iolib.zeta-streams.asd"))
     (cl-launch wget "http://fare.tunes.org/files/cl-launch/cl-launch.tar.gz" ,(lisp "site/cl-launch") ("cl-launch.asd"))
+    (cl-l10n darcs "http://www.common-lisp.net/project/cl-l10n/repos/cl-l10n" ,(lisp "site/cl-l10n") ("cl-l10n.asd"))
+    (sb-simple-audio wget "http://v16.org/lisp/sb-simple-audio_latest.tar.gz" ,(lisp "site/sb-simple-audio") ("sb-simple-audio.asd"))
+    (parse-number wget "http://common-lisp.net/project/asdf-packaging/parse-number-latest.tar.gz"
+                  ,(lisp "site/parse-number") ("parse-number.asd"))
+    (cl-wav-synth cvs ,(cl-net-cvs "cl-wav-synth" "cl-wav-synth") ,(lisp "site/cl-wav-synth") ("cl-wav-synth.asd" "cl-wav-synth-clim.asd"))
     
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
