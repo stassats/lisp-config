@@ -1,9 +1,6 @@
 ;;; -*- Mode: Lisp -*-
 
-(setf
- *compile-verbose* nil
- *compile-print* nil
- ext:*gc-verbose* nil)
+(setf ext:*gc-verbose* nil)
 
 (with-open-file (*error-output* "/dev/null" :direction :output :if-exists :append)
   (load (merge-pathnames "lisp/configs/share.lisp" (user-homedir-pathname))))
