@@ -27,7 +27,7 @@
       (~ "lisp/fasls/"))
 
 ;;; Useful functions
-(defun :asdl (system)
+(defun :asd (system)
   (format t "Loading system: ~a~%" system)
   (asdf:oos 'asdf:load-op system :verbose nil))
 
