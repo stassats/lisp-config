@@ -157,8 +157,7 @@
 
 ;;;
 
-    ;; (slime cvs ,(cl-net-cvs "slime" "slime") ,(~ ".emacs.d/slime") ("swank.asd"))
-    (slime git "git://git.boinkor.net/slime.git" ,(~ ".emacs.d/slime") ("swank.asd"))
+    (slime cvs ,(cl-net-cvs "slime" "slime") ,(~ ".emacs.d/slime") ("swank.asd"))
     
     (redshank darcs "http://www.foldr.org/~michaelw/projects/redshank"
               ,(~ ".emacs.d/redshank") ())

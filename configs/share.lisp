@@ -27,17 +27,17 @@
       (~ "lisp/fasls/"))
 
 ;;; Useful functions
-(export '(asdl safe-code fast-code normal-code))
-(defun asdl (system)
-  (asdf:oos 'asdf:load-op system))
+(defun :asdl (system)
+  (format t "Loading system: ~a~%" system)
+  (asdf:oos 'asdf:load-op system :verbose nil))
 
-(defun safe-code ()
+(defun :safe-code ()
   (proclaim '(optimize (speed 0) (safety 3) (debug 3))))
 
-(defun fast-code ()
+(defun :fast-code ()
   (proclaim '(optimize (speed 3) (safety 0) (debug 1))))
 
-(defun normal-code ()
+(defun :normal-code ()
   (proclaim '(optimize (speed 1) (safety 1) (debug 1))))
 
 ;;;
