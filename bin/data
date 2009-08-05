@@ -145,16 +145,17 @@
     (parse-number wget "http://common-lisp.net/project/asdf-packaging/parse-number-latest.tar.gz"
                   ,(lisp "site/parse-number") ("parse-number.asd"))
     (cl-wav-synth cvs ,(cl-net-cvs "cl-wav-synth" "cl-wav-synth") ,(lisp "site/cl-wav-synth") ("cl-wav-synth.asd" "cl-wav-synth-clim.asd"))
+    (qthemlock git "git://gitorious.org/qthemlock/qthemlock.git" ,(lisp "site/qthemlock") ("hemlock.asd"))
     
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
     (clisp cvs ":pserver:anonymous@clisp.cvs.sourceforge.net:/cvsroot/clisp clisp" ,(lisp "impl/clisp") ())
     (ecl git "http://ecls.sourceforge.net/git/ecl/.git" ,(lisp "impl/ecl") ())
-    (gosh svn "https://gauche.svn.sourceforge.net/svnroot/gauche/Gauche/trunk" ,(lisp "impl/gauche") ())
     (gcl cvs ":pserver:anonymous@cvs.savannah.gnu.org:/sources/gcl gcl" ,(lisp "impl/gcl") ())
     (abcl svn "svn://common-lisp.net/project/armedbear/svn/trunk/abcl" ,(lisp "impl/abcl") ())
 
+    (gosh svn "https://gauche.svn.sourceforge.net/svnroot/gauche/Gauche/trunk" ,(lisp "impl/gauche") ())
 ;;;
 
     (slime cvs ,(cl-net-cvs "slime" "slime") ,(~ ".emacs.d/slime") ("swank.asd"))
