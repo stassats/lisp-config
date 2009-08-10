@@ -146,12 +146,15 @@
                   ,(lisp "site/parse-number") ("parse-number.asd"))
     (cl-wav-synth cvs ,(cl-net-cvs "cl-wav-synth" "cl-wav-synth") ,(lisp "site/cl-wav-synth") ("cl-wav-synth.asd" "cl-wav-synth-clim.asd"))
     (qthemlock git "git://gitorious.org/qthemlock/qthemlock.git" ,(lisp "site/qthemlock") ("hemlock.asd"))
-    
+    (cl-vectors git "git://git.tuxee.net/cl-vectors" ,(lisp "site/cl-vectors")
+                ("cl-vectors.asd" "cl-paths.asd" "cl-paths-ttf.asd" "cl-aa.asd"))
+    (zpb-ttf wget "http://www.xach.com/lisp/zpb-ttf.tgz" ,(lisp "site/zpb-ttf") ("zpb-ttf.asd"))
+
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
     (clisp cvs ":pserver:anonymous@clisp.cvs.sourceforge.net:/cvsroot/clisp clisp" ,(lisp "impl/clisp") ())
-    (ecl git "http://ecls.sourceforge.net/git/ecl/.git" ,(lisp "impl/ecl") ())
+    (ecl git "git://ecls.git.sourceforge.net/gitroot/ecls/ecl" ,(lisp "impl/ecl") ())
     (gcl cvs ":pserver:anonymous@cvs.savannah.gnu.org:/sources/gcl gcl" ,(lisp "impl/gcl") ())
     (abcl svn "svn://common-lisp.net/project/armedbear/svn/trunk/abcl" ,(lisp "impl/abcl") ())
 

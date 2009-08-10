@@ -20,7 +20,8 @@
       `(*default-pathname-defaults*
 	,(~ "lisp/systems/")))
 
-(asdf:oos 'asdf:load-op '#:asdf-binary-locations :verbose nil)
+(asdf:oos 'asdf:load-op '#:asdf-binary-locations
+          #-abcl :verbose #-abcl nil)
 
 (setf asdf:*centralize-lisp-binaries* t
       asdf:*default-toplevel-directory*
