@@ -18,7 +18,8 @@
 
 (setf asdf:*central-registry*
       `(*default-pathname-defaults*
-	,(~ "lisp/systems/")))
+	,(~ "lisp/systems/"))
+      asdf:*compile-file-failure-behaviour* :warn)
 
 (asdf:oos 'asdf:load-op '#:asdf-binary-locations
           #-abcl :verbose #-abcl nil)

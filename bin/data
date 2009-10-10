@@ -13,7 +13,7 @@
   (lisp "systems"))
 
 (define (ediware name)
-  (string-append "http://common-lisp.net/~loliveira/ediware/ " name))
+  (string-append "http://common-lisp.net/~loliveira/ediware/" name))
 
 (define (ediware-bknr name)
   (string-append "svn://svn.bknr.net/svn/trunk/thirdparty/" name))
@@ -103,7 +103,7 @@
     (chipz wget "http://www.method-combination.net/lisp/files/chipz.tar.gz" ,(lisp "site/chipz") ("chipz.asd"))
     (ironclad wget "http://www.method-combination.net/lisp/files/ironclad.tar.gz" ,(lisp "site/ironclad") ("ironclad.asd"))
     (xcvb git "git://github.com/fare/xcvb.git" ,(lisp "site/xcvb") ("xcvb.asd"))
-    
+
     (bordeaux-threads darcs ,(cl-net-darcs "bordeaux-threads") ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
     (stefil darcs ,(cl-net-darcs "stefil") ,(lisp "site/stefil") ("stefil.asd"))
     (metabang-bind darcs "http://common-lisp.net/project/metabang-bind/" ,(lisp "site/metabang-bind") ("metabang-bind.asd"))
@@ -128,13 +128,13 @@
     (trivial-garbage darcs "http://common-lisp.net/~loliveira/darcs/trivial-garbage/"
                      ,(lisp "site/trivial-garbage") ("trivial-garbage.asd"))
     (commonqt git "git://repo.or.cz/commonqt.git" ,(lisp "site/commonqt") ("qt.asd" "qt-tutorial.asd" "qt-repl.asd"))
-    (editor-hints darcs "http://common-lisp.net/~trittweiler/darcs/editor-hints" ,(lisp "site/editor-hints")
+    (editor-hints darcs "http://common-lisp.net/project/editor-hints/darcs/named-readtables/" ,(lisp "site/editor-hints")
             ("named-readtables/named-readtables.asd"))
     (movitz cvs ,(cl-net-cvs "movitz" "movitz") ,(lisp "site/movitz") ("movitz.asd"))
     (binary-types cvs ,(cl-net-cvs "movitz" "binary-types") ,(lisp "site/binary-types") ("binary-types.asd"))
     (ia-x86 cvs ,(cl-net-cvs "movitz" "ia-x86") ,(lisp "site/ia-x86") ("ia-x86.asd"))
     (cl-cont darcs "http://common-lisp.net/project/cl-cont/darcs/cl-cont" ,(lisp "site/cl-cont") ("cl-cont.asd"))
-    (lispbuilder svn "http://lispbuilder.googlecode.com/svn/trunk/lispbuilder" ,(lisp "site/lispbuilder") ("lispbuilder.asd"))    
+    (lispbuilder svn "http://lispbuilder.googlecode.com/svn/trunk/lispbuilder" ,(lisp "site/lispbuilder") ("lispbuilder.asd"))
     (iolib git "http://common-lisp.net/project/iolib/git/iolib.git" ,(lisp "site/iolib")
            ("src/iolib.asd" "src/iolib.asd" "src/iolib.pathnames.asd" "src/iolib.syscalls.asd"
             "src/iolib.base.asd" "src/iolib.sockets.asd" "src/iolib.trivial-sockets.asd"
@@ -149,6 +149,21 @@
     (cl-vectors git "git://git.tuxee.net/cl-vectors" ,(lisp "site/cl-vectors")
                 ("cl-vectors.asd" "cl-paths.asd" "cl-paths-ttf.asd" "cl-aa.asd"))
     (zpb-ttf wget "http://www.xach.com/lisp/zpb-ttf.tgz" ,(lisp "site/zpb-ttf") ("zpb-ttf.asd"))
+    (cl-opengl darcs "http://www.common-lisp.net/project/cl-opengl/darcs/cl-opengl/" ,(lisp "site/cl-opengl")
+               ("cl-opengl.asd"))
+    (mel-base darcs "http://common-lisp.net/project/mel-base/darcs/mel-base/" ,(lisp "site/mel-base") ("mel-base.asd"))
+    (ansi-test svn "svn://common-lisp.net/project/ansi-test/svn/trunk/ansi-tests" ,(lisp "site/ansi-test") ())
+    (cl-python git "git://github.com/franzinc/cl-python.git" ,(lisp "site/cl-python") ("clpython.asd"))
+    (cl-yacc darcs "http://www.pps.jussieu.fr/~jch/software/repos/cl-yacc" ,(lisp "site/cl-yacc") ("yacc.asd") )
+    (adw-charting darcs "http://common-lisp.net/project/adw-charting/darcs/adw-charting/" ,(lisp "site/adw-charting")
+                  ("adw-charting.asd" "adw-charting-google.asd" "adw-charting-vecto.asd"))
+    (vecto wget "http://www.xach.com/lisp/vecto.tgz" ,(lisp "site/vecto") ("vecto.asd"))
+    (zpng wget "http://www.xach.com/lisp/zpng.tgz" ,(lisp "site/zpng") ("zpng.asd"))
+    (cl-json darcs "http://common-lisp.net/project/cl-json/darcs/cl-json" ,(lisp "site/cl-json") ("cl-json.asd"))
+    (cl-png svn "http://svn.ljosa.com/cl-png/trunk/" ,(lisp "site/cl-png") ("png.asd" "image.asd"))
+    (plexippus-xpath darcs "http://common-lisp.net/project/plexippus-xpath/darcs/plexippus-xpath/"
+                     ,(lisp "site/plexippus-xpath") ("xpath.asd"))
+    (cxml-stp git "http://www.lichteblau.com/git/cxml-stp.git" ,(lisp "site/cxml-stp") ("cxml-stp.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
@@ -162,17 +177,17 @@
 ;;;
 
     (slime cvs ,(cl-net-cvs "slime" "slime") ,(~ ".emacs.d/slime") ("swank.asd"))
-    
+
     (redshank darcs "http://www.foldr.org/~michaelw/projects/redshank"
               ,(~ ".emacs.d/redshank") ())
-    (jabber-el cvs ":pserver:anonymous@emacs-jabber.cvs.sourceforge.net:/cvsroot/emacs-jabber emacs-jabber" ,(~ ".emacs.d/jabber") ())
+    (jabber-el git "git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber" ,(~ ".emacs.d/jabber") ())
     (emacs git "git://git.sv.gnu.org/emacs.git" ,(~ "c/emacs") ())
     (haskell-mode cvs ":pserver:anoncvs@cvs.haskell.org:/cvs fptools/CONTRIB/haskell-modes/emacs"
                   ,(~ ".emacs.d/haskell") ())
     (emms git "git://git.sv.gnu.org/emms.git" ,(~ ".emacs.d/emms") ())
     (emacs-chess git "git://github.com/jwiegley/emacs-chess.git" ,(~ ".emacs.d/chess") ())
     (emacs-w3m cvs ":pserver:anonymous@cvs.namazu.org:/storage/cvsroot emacs-w3m" ,(~ ".emacs.d/w3m") ())
-    
+
 ;;    (clojure-mode git "git://github.com/jochu/clojure-mode.git" ,(~ ".emacs.d/clojure") ())
     (clojure-mode darcs "http://www.lysator.liu.se/~lenst/darcs/clojure-mode/" ,(~ ".emacs.d/clojure") ())
     (swank-clojure git "git://github.com/jochu/swank-clojure.git" ,(~ ".emacs.d/swank-clojure") ())
