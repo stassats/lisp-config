@@ -128,13 +128,19 @@
     (trivial-garbage darcs "http://common-lisp.net/~loliveira/darcs/trivial-garbage/"
                      ,(lisp "site/trivial-garbage") ("trivial-garbage.asd"))
     (commonqt git "git://repo.or.cz/commonqt.git" ,(lisp "site/commonqt") ("qt.asd" "qt-tutorial.asd" "qt-repl.asd"))
-    (editor-hints darcs "http://common-lisp.net/project/editor-hints/darcs/named-readtables/" ,(lisp "site/editor-hints")
-            ("named-readtables/named-readtables.asd"))
+    (named-readtables darcs "http://common-lisp.net/project/editor-hints/darcs/named-readtables/"
+                      ,(lisp "site/named-readtables") ("named-readtables.asd"))
     (movitz cvs ,(cl-net-cvs "movitz" "movitz") ,(lisp "site/movitz") ("movitz.asd"))
     (binary-types cvs ,(cl-net-cvs "movitz" "binary-types") ,(lisp "site/binary-types") ("binary-types.asd"))
     (ia-x86 cvs ,(cl-net-cvs "movitz" "ia-x86") ,(lisp "site/ia-x86") ("ia-x86.asd"))
     (cl-cont darcs "http://common-lisp.net/project/cl-cont/darcs/cl-cont" ,(lisp "site/cl-cont") ("cl-cont.asd"))
-    (lispbuilder svn "http://lispbuilder.googlecode.com/svn/trunk/lispbuilder" ,(lisp "site/lispbuilder") ("lispbuilder.asd"))
+    (lispbuilder-sdl svn "http://lispbuilder.googlecode.com/svn/trunk/lispbuilder-sdl"
+                     ,(lisp "site/lispbuilder-sdl")
+                     ("lispbuilder-sdl-assets.asd" "lispbuilder-sdl-base.asd" "lispbuilder-sdl-binaries.asd"
+                      "lispbuilder-sdl-cffi.asd" "lispbuilder-sdl-cl-vectors-examples.asd"
+                      "lispbuilder-sdl-cl-vectors.asd" "lispbuilder-sdl-examples.asd"
+                      "lispbuilder-sdl-vecto-examples.asd" "lispbuilder-sdl-vecto.asd"
+                      "lispbuilder-sdl.asd"))
     (iolib git "http://common-lisp.net/project/iolib/git/iolib.git" ,(lisp "site/iolib")
            ("src/iolib.asd" "src/iolib.asd" "src/iolib.pathnames.asd" "src/iolib.syscalls.asd"
             "src/iolib.base.asd" "src/iolib.sockets.asd" "src/iolib.trivial-sockets.asd"
