@@ -11,9 +11,9 @@
 
 #-asdf
 (progn
-  #+(or clisp cmu lispworks scl)
+  #+(or clisp cmu lispworks scl allegro )
   (load (~ "lisp/site/asdf/asdf.lisp"))
-  #+(or sbcl ccl acl ecl abcl)
+  #+(or sbcl ccl ecl abcl)
   (require :asdf))
 
 (setf asdf:*central-registry*
@@ -29,18 +29,20 @@
       (~ "lisp/fasls/"))
 
 ;;; Useful functions
-(defun :asd (system)
-  (format t "Loading system: ~a~%" system)
-  (asdf:oos 'asdf:load-op system :verbose nil))
+#-lispworks
+(progn
+  (defun :asd (system)
+    (format t "Loading system: ~a~%" system)
+    (asdf:oos 'asdf:load-op system :verbose nil))
 
-(defun :safe-code ()
-  (proclaim '(optimize (speed 0) (safety 3) (debug 3))))
+  (defun :safe-code ()
+    (proclaim '(optimize (speed 0) (safety 3) (debug 3))))
 
-(defun :fast-code ()
-  (proclaim '(optimize (speed 3) (safety 0) (debug 1))))
+  (defun :fast-code ()
+    (proclaim '(optimize (speed 3) (safety 0) (debug 1))))
 
-(defun :normal-code ()
-  (proclaim '(optimize (speed 1) (safety 1) (debug 1))))
+  (defun :normal-code ()
+    (proclaim '(optimize (speed 1) (safety 1) (debug 1)))))
 
 ;;;
 

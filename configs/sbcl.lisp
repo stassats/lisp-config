@@ -16,3 +16,4 @@
 	  (when (and asdf::home (not (string= asdf::home "")))
 	    (merge-pathnames "site-systems/" (truename asdf::home))))))
 
+(declaim (optimize (sb-c::let-conversion 0)))

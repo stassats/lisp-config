@@ -68,7 +68,8 @@
     (s-xml cvs ,(cl-net-cvs "s-xml" "s-xml") ,(lisp "site/s-xml") ("s-xml.asd"))
     (clx darcs "http://common-lisp.net/~crhodes/clx/" ,(lisp "site/clx") ("clx.asd"))
     (mcclim cvs ,(cl-net-cvs "mcclim" "mcclim") ,(lisp "site/mcclim")
-            ("mcclim.asd" "clim-listener.asd" "mcclim-jpeg-bitmaps.asd" "mcclim-gif-bitmaps.asd"))
+            ("mcclim.asd" "clim-listener.asd" "mcclim-jpeg-bitmaps.asd" "mcclim-gif-bitmaps.asd"
+             "mcclim-tiff-bitmaps.asd" "mcclim-png-bitmaps.asd"))
     (climacs cvs ,(cl-net-cvs "climacs" "climacs") ,(lisp "site/climacs") ("climacs.asd"))
     (flexichain cvs ,(cl-net-cvs "flexichain" "flexichain") ,(lisp "site/flexichain") ("flexichain.asd"))
     (spatial-trees darcs "http://rvw.doc.gold.ac.uk/gibbons/darcs/spatial-trees"
@@ -170,6 +171,11 @@
     (plexippus-xpath darcs "http://common-lisp.net/project/plexippus-xpath/darcs/plexippus-xpath/"
                      ,(lisp "site/plexippus-xpath") ("xpath.asd"))
     (cxml-stp git "http://www.lichteblau.com/git/cxml-stp.git" ,(lisp "site/cxml-stp") ("cxml-stp.asd"))
+    (hyperdoc darcs "http://common-lisp.net/project/editor-hints/darcs/hyperdoc/"
+              ,(lisp "site/hyperdoc") ("hyperdoc.asd"))
+    (cl-store darcs "http://common-lisp.net/project/cl-store/darcs/cl-store/" ,(lisp "site/cl-store") ("cl-store.asd"))
+    (trees wget "http://www.method-combination.net/lisp/files/trees.tar.gz" ,(lisp "site/trees") ("trees.asd"))
+    (rucksack cvs ,(cl-net-cvs "rucksack" "rucksack") ,(lisp "site/rucksack") ("rucksack.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
