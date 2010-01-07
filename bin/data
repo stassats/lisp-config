@@ -145,14 +145,16 @@
     (iolib git "http://common-lisp.net/project/iolib/git/iolib.git" ,(lisp "site/iolib")
            ("src/iolib.asd" "src/iolib.asd" "src/iolib.pathnames.asd" "src/iolib.syscalls.asd"
             "src/iolib.base.asd" "src/iolib.sockets.asd" "src/iolib.trivial-sockets.asd"
-            "src/iolib.multiplex.asd" "src/iolib.streams.asd" "src/iolib.zeta-streams.asd"))
+            "src/iolib.multiplex.asd" "src/iolib.streams.asd" "src/iolib.zeta-streams.asd"
+            "src/iolib.os.asd"))
     (cl-launch wget "http://fare.tunes.org/files/cl-launch/cl-launch.tar.gz" ,(lisp "site/cl-launch") ("cl-launch.asd"))
     (cl-l10n darcs "http://www.common-lisp.net/project/cl-l10n/repos/cl-l10n" ,(lisp "site/cl-l10n") ("cl-l10n.asd"))
     (sb-simple-audio wget "http://v16.org/lisp/sb-simple-audio_latest.tar.gz" ,(lisp "site/sb-simple-audio") ("sb-simple-audio.asd"))
     (parse-number wget "http://common-lisp.net/project/asdf-packaging/parse-number-latest.tar.gz"
                   ,(lisp "site/parse-number") ("parse-number.asd"))
     (cl-wav-synth cvs ,(cl-net-cvs "cl-wav-synth" "cl-wav-synth") ,(lisp "site/cl-wav-synth") ("cl-wav-synth.asd" "cl-wav-synth-clim.asd"))
-    (qthemlock git "git://gitorious.org/qthemlock/qthemlock.git" ,(lisp "site/qthemlock") ("hemlock.asd"))
+    (hemlock git "git://gitorious.org/hemlock/hemlock.git" ,(lisp "site/hemlock")
+             ("hemlock.tty.asd" "hemlock.base.asd" "hemlock.qt.asd"))
     (cl-vectors git "git://git.tuxee.net/cl-vectors" ,(lisp "site/cl-vectors")
                 ("cl-vectors.asd" "cl-paths.asd" "cl-paths-ttf.asd" "cl-aa.asd"))
     (zpb-ttf wget "http://www.xach.com/lisp/zpb-ttf.tgz" ,(lisp "site/zpb-ttf") ("zpb-ttf.asd"))
@@ -176,6 +178,13 @@
     (cl-store darcs "http://common-lisp.net/project/cl-store/darcs/cl-store/" ,(lisp "site/cl-store") ("cl-store.asd"))
     (trees wget "http://www.method-combination.net/lisp/files/trees.tar.gz" ,(lisp "site/trees") ("trees.asd"))
     (rucksack cvs ,(cl-net-cvs "rucksack" "rucksack") ,(lisp "site/rucksack") ("rucksack.asd"))
+    (gzip-stream wget "http://common-lisp.net/project/gzip-stream/files/gzip-stream_latest.tgz" ,(lisp "site/gzip-stream") ("gzip-stream.asd"))
+    (osicat git "git://common-lisp.net/projects/osicat/osicat.git" ,(lisp "site/osicat")
+            ("osicat.asd"))
+    (prepl git "git://gitorious.org/prepl/prepl.git" ,(lisp "site/prepl") ("prepl.asd"))
+    (conium git "git://gitorious.org/conium/conium.git" ,(lisp "site/conium") ("conium.asd"))
+    (manardb git "git://github.com/ilitirit/manardb.git" ,(lisp "site/manardb") ("manardb.asd"))
+    (cl-irregsexp git "http://common-lisp.net/projects/cl-irregsexp/cl-irregsexp.git" ,(lisp "site/cl-irregsexp") ("cl-irregsexp.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
