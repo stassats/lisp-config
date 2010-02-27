@@ -69,7 +69,8 @@
     (clx darcs "http://common-lisp.net/~crhodes/clx/" ,(lisp "site/clx") ("clx.asd"))
     (mcclim cvs ,(cl-net-cvs "mcclim" "mcclim") ,(lisp "site/mcclim")
             ("mcclim.asd" "clim-listener.asd" "mcclim-jpeg-bitmaps.asd" "mcclim-gif-bitmaps.asd"
-             "mcclim-tiff-bitmaps.asd" "mcclim-png-bitmaps.asd"))
+             "mcclim-tiff-bitmaps.asd" "mcclim-png-bitmaps.asd"
+             "clim-examples.asd"))
     (climacs cvs ,(cl-net-cvs "climacs" "climacs") ,(lisp "site/climacs") ("climacs.asd"))
     (flexichain cvs ,(cl-net-cvs "flexichain" "flexichain") ,(lisp "site/flexichain") ("flexichain.asd"))
     (spatial-trees darcs "http://rvw.doc.gold.ac.uk/gibbons/darcs/spatial-trees"
@@ -157,12 +158,12 @@
                   ,(lisp "site/parse-number") ("parse-number.asd"))
     (cl-wav-synth cvs ,(cl-net-cvs "cl-wav-synth" "cl-wav-synth") ,(lisp "site/cl-wav-synth") ("cl-wav-synth.asd" "cl-wav-synth-clim.asd"))
     (hemlock git "git://gitorious.org/hemlock/hemlock.git" ,(lisp "site/hemlock")
-             ("hemlock.tty.asd" "hemlock.base.asd" "hemlock.qt.asd"))
+             ("hemlock.tty.asd" "hemlock.base.asd" "hemlock.qt.asd" "hemlock.clx.asd"))
     (cl-vectors git "git://git.tuxee.net/cl-vectors" ,(lisp "site/cl-vectors")
-                ("cl-vectors.asd" "cl-paths.asd" "cl-paths-ttf.asd" "cl-aa.asd"))
+                ("cl-vectors.asd" "cl-paths.asd" "cl-paths-ttf.asd" "cl-aa.asd" "cl-aa-misc.asd"))
     (zpb-ttf wget "http://www.xach.com/lisp/zpb-ttf.tgz" ,(lisp "site/zpb-ttf") ("zpb-ttf.asd"))
     (cl-opengl darcs "http://www.common-lisp.net/project/cl-opengl/darcs/cl-opengl/" ,(lisp "site/cl-opengl")
-               ("cl-opengl.asd"))
+               ("cl-opengl.asd" "cl-opengl.asd" "cl-glut.asd" "cl-glut-examples.asd" "cl-glu.asd"))
     (mel-base darcs "http://common-lisp.net/project/mel-base/darcs/mel-base/" ,(lisp "site/mel-base") ("mel-base.asd"))
     (ansi-test svn "svn://common-lisp.net/project/ansi-test/svn/trunk/ansi-tests" ,(lisp "site/ansi-test") ())
     (cl-python git "git://github.com/franzinc/cl-python.git" ,(lisp "site/cl-python") ("clpython.asd"))
@@ -188,6 +189,16 @@
     (conium git "git://gitorious.org/conium/conium.git" ,(lisp "site/conium") ("conium.asd"))
     (manardb git "git://github.com/ilitirit/manardb.git" ,(lisp "site/manardb") ("manardb.asd"))
     (cl-irregsexp git "http://common-lisp.net/projects/cl-irregsexp/cl-irregsexp.git" ,(lisp "site/cl-irregsexp") ("cl-irregsexp.asd"))
+    (command-line-arguments git "git://common-lisp.net/projects/qitab/command-line-arguments.git"
+                            ,(lisp "site/command-line-arguments") ("command-line-arguments.asd"))
+    (cl-containers darcs "http://common-lisp.net/project/cl-containers"
+                   ,(lisp "site/cl-containers") ("cl-containers.asd"))
+    (metatilities darcs "http://common-lisp.net/project/metatilities"
+                   ,(lisp "site/metatilities") ("metatilities.asd"))
+    (metatilities-base darcs "http://common-lisp.net/project/metatilities-base"
+                   ,(lisp "site/metatilities-base") ("metatilities-base.asd"))
+    (moptilities darcs "http://common-lisp.net/project/moptilities"
+                   ,(lisp "site/moptilities") ("moptilities.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
@@ -205,7 +216,7 @@
     (redshank darcs "http://www.foldr.org/~michaelw/projects/redshank"
               ,(~ ".emacs.d/redshank") ())
     (jabber-el git "git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber" ,(~ ".emacs.d/jabber") ())
-    (emacs git "git://git.sv.gnu.org/emacs.git" ,(~ "c/emacs") ())
+    (emacs git "git://repo.or.cz/emacs.git" ,(~ "c/emacs") ())
     (haskell-mode cvs ":pserver:anoncvs@cvs.haskell.org:/cvs fptools/CONTRIB/haskell-modes/emacs"
                   ,(~ ".emacs.d/haskell") ())
     (emms git "git://git.sv.gnu.org/emms.git" ,(~ ".emacs.d/emms") ())
