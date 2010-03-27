@@ -1,7 +1,3 @@
 #!/bin/sh
 
-BUILD=~/lisp/impl/ecl/build
-
-LD_LIBRARY_PATH=${BUILD} \
-    exec ${BUILD}/bin/ecl -norc \
-    -load ~/lisp/configs/ecl.lisp "$@"
+exec /usr/local/bin/ecl -norc -load ~/lisp/configs/ecl.lisp "$@"

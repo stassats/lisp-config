@@ -1,3 +1,7 @@
 #!/bin/sh
 
-exec ~/lisp/impl/clisp/src/clisp "$@" -i ~/lisp/configs/clisp.lisp
+if [ -x ~/lisp/impl/clisp/src/clisp ]; then
+    exec ~/lisp/impl/clisp/src/clisp "$@" -i ~/lisp/configs/clisp.lisp
+else
+    /usr/bin/clisp "$@" -i ~/lisp/configs/clisp.lisp
+fi

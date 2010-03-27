@@ -25,4 +25,4 @@ if [ ! -e ~/lisp/fasls/ccl-core ]; then
     dump_core
 fi
 
-$CCL -n -I ~/lisp/fasls/ccl-core -K utf-8 "$@"
+exec $CCL -n -I ~/lisp/fasls/ccl-core "$@"

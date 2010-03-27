@@ -123,7 +123,7 @@
              ,(lisp "site/trivial-usocket") ("trivial-usocket.asd"))
     (trivial-sockets svn "svn://common-lisp.net/project/usocket/svn/trivial-sockets"
              ,(lisp "site/trivial-sockets") ("trivial-sockets.asd"))
-    (gsharp cvs ,(cl-net-cvs "gsharp" "gsharp") ,(lisp "site/gsharp") ("gsharp.asd"))
+    (gsharp git "git://common-lisp.net/projects/gsharp/gsharp.git" ,(lisp "site/gsharp") ("gsharp.asd"))
     (midi wget "http://doc.gold.ac.uk/isms/lisp/midi/midi-20070618.tar.gz" ,(lisp "site/midi") ("midi.asd"))
     (cl-irc svn "svn://common-lisp.net/project/cl-irc/svn/trunk" ,(lisp "site/cl-irc") ("cl-irc.asd"))
     (tab-layout wget "http://bl0rg.net/~mgr/flux/tab-layout_2005-09-19_02-52+0200.tar.bz2"
@@ -199,11 +199,15 @@
                    ,(lisp "site/metatilities-base") ("metatilities-base.asd"))
     (moptilities darcs "http://common-lisp.net/project/moptilities"
                    ,(lisp "site/moptilities") ("moptilities.asd"))
+    (s-base64 darcs "http://www.beta9.be/darcs/s-base64" ,(lisp "site/s-base64") ("s-base64.asd"))
+    (s-sysdeps darcs "http://www.beta9.be/darcs/s-sysdeps" ,(lisp "site/s-sysdeps") ("s-sysdeps.asd"))
+    (matlisp cvs ,(sf-cvs "matlisp" "matlisp") ,(lisp "site/matlisp") ("matlisp.asd"))
+    (ieee-floats darcs ,(cl-net-darcs "ieee-floats") ,(lisp "site/ieee-floats") ("ieee-floats.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
-    (clisp cvs ":pserver:anonymous@clisp.cvs.sourceforge.net:/cvsroot/clisp clisp" ,(lisp "impl/clisp") ())
+    (clisp cvs ,(sf-cvs "clisp" "clisp") ,(lisp "impl/clisp") ())
     (ecl git "git://ecls.git.sourceforge.net/gitroot/ecls/ecl" ,(lisp "impl/ecl") ())
     (gcl cvs ":pserver:anonymous@cvs.savannah.gnu.org:/sources/gcl gcl" ,(lisp "impl/gcl") ())
     (abcl svn "svn://common-lisp.net/project/armedbear/svn/trunk/abcl" ,(lisp "impl/abcl") ())
@@ -217,11 +221,11 @@
               ,(~ ".emacs.d/redshank") ())
     (jabber-el git "git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber" ,(~ ".emacs.d/jabber") ())
     (emacs git "git://repo.or.cz/emacs.git" ,(~ "c/emacs") ())
-    (haskell-mode cvs ":pserver:anoncvs@cvs.haskell.org:/cvs fptools/CONTRIB/haskell-modes/emacs"
-                  ,(~ ".emacs.d/haskell") ())
+    (haskell-mode darcs "http://code.haskell.org/haskellmode-emacs" ,(~ ".emacs.d/haskell") ())
     (emms git "git://git.sv.gnu.org/emms.git" ,(~ ".emacs.d/emms") ())
     (emacs-chess git "git://github.com/jwiegley/emacs-chess.git" ,(~ ".emacs.d/chess") ())
     (emacs-w3m cvs ":pserver:anonymous@cvs.namazu.org:/storage/cvsroot emacs-w3m" ,(~ ".emacs.d/w3m") ())
+    (vc-darcs darcs "http://www.pps.jussieu.fr/~jch/software/repos/vc-darcs/" ,(~ ".emacs.d/vc-darcs") ())
 
 ;;    (clojure-mode git "git://github.com/jochu/clojure-mode.git" ,(~ ".emacs.d/clojure") ())
     (clojure-mode darcs "http://www.lysator.liu.se/~lenst/darcs/clojure-mode/" ,(~ ".emacs.d/clojure") ())
