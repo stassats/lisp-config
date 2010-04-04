@@ -132,7 +132,7 @@
     (gsll git "git://repo.or.cz/gsll.git" ,(lisp "site/gsll") ("gsll.asd"))
     (trivial-garbage darcs "http://common-lisp.net/~loliveira/darcs/trivial-garbage/"
                      ,(lisp "site/trivial-garbage") ("trivial-garbage.asd"))
-    (commonqt git "git://repo.or.cz/commonqt.git" ,(lisp "site/commonqt") ("qt.asd" "qt-tutorial.asd" "qt-repl.asd"))
+    (commonqt git "git://gitorious.org/commonqt/commonqt.git" ,(lisp "site/commonqt") ("qt.asd" "qt-tutorial.asd" "qt-repl.asd"))
     (named-readtables darcs "http://common-lisp.net/project/editor-hints/darcs/named-readtables/"
                       ,(lisp "site/named-readtables") ("named-readtables.asd"))
     (movitz cvs ,(cl-net-cvs "movitz" "movitz") ,(lisp "site/movitz") ("movitz.asd"))
