@@ -151,44 +151,58 @@
             "src/iolib.base.asd" "src/iolib.sockets.asd" "src/iolib.trivial-sockets.asd"
             "src/iolib.multiplex.asd" "src/iolib.streams.asd" "src/iolib.zeta-streams.asd"
             "src/iolib.os.asd"))
-    (cl-launch wget "http://fare.tunes.org/files/cl-launch/cl-launch.tar.gz" ,(lisp "site/cl-launch") ("cl-launch.asd"))
-    (cl-l10n darcs "http://www.common-lisp.net/project/cl-l10n/repos/cl-l10n" ,(lisp "site/cl-l10n") ("cl-l10n.asd"))
-    (sb-simple-audio wget "http://v16.org/lisp/sb-simple-audio_latest.tar.gz" ,(lisp "site/sb-simple-audio") ("sb-simple-audio.asd"))
+    (cl-launch wget "http://fare.tunes.org/files/cl-launch/cl-launch.tar.gz"
+               ,(lisp "site/cl-launch") ("cl-launch.asd"))
+    (cl-l10n darcs "http://www.common-lisp.net/project/cl-l10n/repos/cl-l10n"
+             ,(lisp "site/cl-l10n") ("cl-l10n.asd"))
+    (sb-simple-audio wget "http://v16.org/lisp/sb-simple-audio_latest.tar.gz"
+                     ,(lisp "site/sb-simple-audio") ("sb-simple-audio.asd"))
     (parse-number wget "http://common-lisp.net/project/asdf-packaging/parse-number-latest.tar.gz"
                   ,(lisp "site/parse-number") ("parse-number.asd"))
-    (cl-wav-synth cvs ,(cl-net-cvs "cl-wav-synth" "cl-wav-synth") ,(lisp "site/cl-wav-synth") ("cl-wav-synth.asd" "cl-wav-synth-clim.asd"))
+    (cl-wav-synth cvs ,(cl-net-cvs "cl-wav-synth" "cl-wav-synth")
+                  ,(lisp "site/cl-wav-synth") ("cl-wav-synth.asd" "cl-wav-synth-clim.asd"))
     (hemlock git "git://gitorious.org/hemlock/hemlock.git" ,(lisp "site/hemlock")
              ("hemlock.tty.asd" "hemlock.base.asd" "hemlock.qt.asd" "hemlock.clx.asd"))
     (cl-vectors git "git://git.tuxee.net/cl-vectors" ,(lisp "site/cl-vectors")
                 ("cl-vectors.asd" "cl-paths.asd" "cl-paths-ttf.asd" "cl-aa.asd" "cl-aa-misc.asd"))
     (zpb-ttf wget "http://www.xach.com/lisp/zpb-ttf.tgz" ,(lisp "site/zpb-ttf") ("zpb-ttf.asd"))
-    (cl-opengl darcs "http://www.common-lisp.net/project/cl-opengl/darcs/cl-opengl/" ,(lisp "site/cl-opengl")
+    (cl-opengl git "git://github.com/3b/cl-opengl.git" ,(lisp "site/cl-opengl")
                ("cl-opengl.asd" "cl-opengl.asd" "cl-glut.asd" "cl-glut-examples.asd" "cl-glu.asd"))
-    (mel-base darcs "http://common-lisp.net/project/mel-base/darcs/mel-base/" ,(lisp "site/mel-base") ("mel-base.asd"))
-    (ansi-test svn "svn://common-lisp.net/project/ansi-test/svn/trunk/ansi-tests" ,(lisp "site/ansi-test") ())
+    (mel-base darcs "http://common-lisp.net/project/mel-base/darcs/mel-base/"
+              ,(lisp "site/mel-base") ("mel-base.asd"))
+    (ansi-test svn "svn://common-lisp.net/project/ansi-test/svn/trunk/ansi-tests"
+               ,(lisp "site/ansi-test") ())
     (cl-python git "git://github.com/franzinc/cl-python.git" ,(lisp "site/cl-python") ("clpython.asd"))
-    (cl-yacc darcs "http://www.pps.jussieu.fr/~jch/software/repos/cl-yacc" ,(lisp "site/cl-yacc") ("yacc.asd") )
-    (adw-charting darcs "http://common-lisp.net/project/adw-charting/darcs/adw-charting/" ,(lisp "site/adw-charting")
+    (cl-yacc darcs "http://www.pps.jussieu.fr/~jch/software/repos/cl-yacc"
+             ,(lisp "site/cl-yacc") ("yacc.asd") )
+    (adw-charting darcs "http://common-lisp.net/project/adw-charting/darcs/adw-charting/"
+                  ,(lisp "site/adw-charting")
                   ("adw-charting.asd" "adw-charting-google.asd" "adw-charting-vecto.asd"))
     (vecto wget "http://www.xach.com/lisp/vecto.tgz" ,(lisp "site/vecto") ("vecto.asd"))
     (zpng wget "http://www.xach.com/lisp/zpng.tgz" ,(lisp "site/zpng") ("zpng.asd"))
-    (cl-json darcs "http://common-lisp.net/project/cl-json/darcs/cl-json" ,(lisp "site/cl-json") ("cl-json.asd"))
+    (cl-json darcs "http://common-lisp.net/project/cl-json/darcs/cl-json"
+             ,(lisp "site/cl-json") ("cl-json.asd"))
     (cl-png svn "http://svn.ljosa.com/cl-png/trunk/" ,(lisp "site/cl-png") ("png.asd" "image.asd"))
     (plexippus-xpath darcs "http://common-lisp.net/project/plexippus-xpath/darcs/plexippus-xpath/"
                      ,(lisp "site/plexippus-xpath") ("xpath.asd"))
-    (cxml-stp git "http://www.lichteblau.com/git/cxml-stp.git" ,(lisp "site/cxml-stp") ("cxml-stp.asd"))
+    (cxml-stp git "http://www.lichteblau.com/git/cxml-stp.git"
+              ,(lisp "site/cxml-stp") ("cxml-stp.asd"))
     (hyperdoc darcs "http://common-lisp.net/project/editor-hints/darcs/hyperdoc/"
               ,(lisp "site/hyperdoc") ("hyperdoc.asd"))
-    (cl-store darcs "http://common-lisp.net/project/cl-store/darcs/cl-store/" ,(lisp "site/cl-store") ("cl-store.asd"))
-    (trees wget "http://www.method-combination.net/lisp/files/trees.tar.gz" ,(lisp "site/trees") ("trees.asd"))
+    (cl-store darcs "http://common-lisp.net/project/cl-store/darcs/cl-store/"
+              ,(lisp "site/cl-store") ("cl-store.asd"))
+    (trees wget "http://www.method-combination.net/lisp/files/trees.tar.gz"
+           ,(lisp "site/trees") ("trees.asd"))
     (rucksack cvs ,(cl-net-cvs "rucksack" "rucksack") ,(lisp "site/rucksack") ("rucksack.asd"))
-    (gzip-stream wget "http://common-lisp.net/project/gzip-stream/files/gzip-stream_latest.tgz" ,(lisp "site/gzip-stream") ("gzip-stream.asd"))
+    (gzip-stream wget "http://common-lisp.net/project/gzip-stream/files/gzip-stream_latest.tgz"
+                 ,(lisp "site/gzip-stream") ("gzip-stream.asd"))
     (osicat git "git://common-lisp.net/projects/osicat/osicat.git" ,(lisp "site/osicat")
             ("osicat.asd"))
     (prepl git "git://gitorious.org/prepl/prepl.git" ,(lisp "site/prepl") ("prepl.asd"))
     (conium git "git://gitorious.org/conium/conium.git" ,(lisp "site/conium") ("conium.asd"))
     (manardb git "git://github.com/ilitirit/manardb.git" ,(lisp "site/manardb") ("manardb.asd"))
-    (cl-irregsexp git "http://common-lisp.net/projects/cl-irregsexp/cl-irregsexp.git" ,(lisp "site/cl-irregsexp") ("cl-irregsexp.asd"))
+    (cl-irregsexp git "http://common-lisp.net/projects/cl-irregsexp/cl-irregsexp.git"
+                  ,(lisp "site/cl-irregsexp") ("cl-irregsexp.asd"))
     (command-line-arguments git "git://common-lisp.net/projects/qitab/command-line-arguments.git"
                             ,(lisp "site/command-line-arguments") ("command-line-arguments.asd"))
     (cl-containers darcs "http://common-lisp.net/project/cl-containers"
@@ -203,6 +217,14 @@
     (s-sysdeps darcs "http://www.beta9.be/darcs/s-sysdeps" ,(lisp "site/s-sysdeps") ("s-sysdeps.asd"))
     (matlisp cvs ,(sf-cvs "matlisp" "matlisp") ,(lisp "site/matlisp") ("matlisp.asd"))
     (ieee-floats darcs ,(cl-net-darcs "ieee-floats") ,(lisp "site/ieee-floats") ("ieee-floats.asd"))
+    (clon git "git://github.com/dto/clon.git" ,(lisp "site/clon") ("clon.asd"))
+    (sb-vector-io git "git://github.com/nikodemus/sb-vector-io.git" ,(lisp "site/sb-vector-io")
+                  ("sb-vector-io.asd"))
+    (cxml-rpc git "git://git.boinkor.net/cxml-rpc.git" ,(lisp "site/cxml-rpc") ("cxml-rpc.asd"))
+    (trivial-backtrace git "http://common-lisp.net/project/trivial-backtrace/trivial-backtrace.git"
+                       ,(lisp "site/trivial-backtrace") ("trivial-backtrace.asd"))
+    (postmodern git "http://marijn.haverbeke.nl/git/postmodern" ,(lisp "site/postmodern")
+                ("cl-postgres.asd" "postmodern.asd" "s-sql.asd" "simple-date.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
@@ -219,7 +241,8 @@
 
     (redshank darcs "http://www.foldr.org/~michaelw/projects/redshank"
               ,(~ ".emacs.d/redshank") ())
-    (jabber-el git "git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber" ,(~ ".emacs.d/jabber") ())
+    (jabber-el git "git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber"
+               ,(~ ".emacs.d/jabber") ())
     (emacs git "git://repo.or.cz/emacs.git" ,(~ "c/emacs") ())
     (haskell-mode darcs "http://code.haskell.org/haskellmode-emacs" ,(~ ".emacs.d/haskell") ())
     (emms git "git://git.sv.gnu.org/emms.git" ,(~ ".emacs.d/emms") ())
