@@ -146,7 +146,7 @@
                       "lispbuilder-sdl-cl-vectors.asd" "lispbuilder-sdl-examples.asd"
                       "lispbuilder-sdl-vecto-examples.asd" "lispbuilder-sdl-vecto.asd"
                       "lispbuilder-sdl.asd"))
-    (iolib git "http://common-lisp.net/project/iolib/git/iolib.git" ,(lisp "site/iolib")
+    (iolib git "git://gitorious.org/iolib/iolib.git" ,(lisp "site/iolib")
            ("src/iolib.asd" "src/iolib.asd" "src/iolib.pathnames.asd" "src/iolib.syscalls.asd"
             "src/iolib.base.asd" "src/iolib.sockets.asd" "src/iolib.trivial-sockets.asd"
             "src/iolib.multiplex.asd" "src/iolib.streams.asd" "src/iolib.zeta-streams.asd"
