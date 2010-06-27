@@ -109,7 +109,7 @@
     (ironclad wget "http://www.method-combination.net/lisp/files/ironclad.tar.gz" ,(lisp "site/ironclad") ("ironclad.asd"))
     (xcvb git "git://github.com/fare/xcvb.git" ,(lisp "site/xcvb") ("xcvb.asd"))
 
-    (bordeaux-threads darcs ,(cl-net-darcs "bordeaux-threads") ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
+    (bordeaux-threads git "git://common-lisp.net/projects/bordeaux-threads/bordeaux-threads.git" ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
     (stefil darcs ,(cl-net-darcs "stefil") ,(lisp "site/stefil") ("stefil.asd"))
     (metabang-bind darcs "http://common-lisp.net/project/metabang-bind/" ,(lisp "site/metabang-bind") ("metabang-bind.asd"))
     (gbbopen svn "http://GBBopen.org/svn/GBBopen/trunk/" ,(lisp "site/gbbopen") ("gbbopen.asd"))
@@ -225,7 +225,8 @@
                        ,(lisp "site/trivial-backtrace") ("trivial-backtrace.asd"))
     (postmodern git "http://marijn.haverbeke.nl/git/postmodern" ,(lisp "site/postmodern")
                 ("cl-postgres.asd" "postmodern.asd" "s-sql.asd" "simple-date.asd"))
-
+    (cl-bencode git "git://github.com/nja/cl-bencode.git" ,(lisp "site/cl-bencode") ("bencode.asd"))
+    (lift git "git://github.com/gwkkwg/lift" ,(lisp "site/lift")  ("lift.asd"))
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())

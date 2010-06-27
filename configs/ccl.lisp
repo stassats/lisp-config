@@ -15,3 +15,5 @@
     t))
 
 (pushnew 'module-provide-asdf CCL::*MODULE-PROVIDER-FUNCTIONS*)
+
+;; (declaim (optimize debug))

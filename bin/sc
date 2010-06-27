@@ -51,11 +51,13 @@
                ))
 
 (define (update method url path asds)
-  (when (file-exists? path)
-    (current-directory path)
-    (if (equal? method 'wget)
-        (update-wget method url path asds)
-        (run (assq method *update*)))))
+  (cond ((file-exists? path)
+         (current-directory path)
+         (if (equal? method 'wget)
+             (update-wget method url path asds)
+             (run (assq method *update*))))
+        (else
+         (print (format "Isn't installed")))))
 
 (define *get*
   '((git clone)

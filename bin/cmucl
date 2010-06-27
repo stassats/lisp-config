@@ -2,4 +2,3 @@
 
 exec ~/lisp/impl/cmucl/bin/lisp \
     -init ~/lisp/configs/cmucl.lisp "$@"
-

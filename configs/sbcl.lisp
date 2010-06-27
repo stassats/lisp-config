@@ -11,9 +11,3 @@
 	(asdf:perform (make-instance 'asdf:compile-op) c)
 	(call-next-method)))))
 
-(nconc asdf:*central-registry*
-      '((let ((asdf::home (posix-getenv "sbcl_home")))
-	  (when (and asdf::home (not (string= asdf::home "")))
-	    (merge-pathnames "site-systems/" (truename asdf::home))))))
-
-(declaim (optimize (sb-c::let-conversion 0)))

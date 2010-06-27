@@ -11,22 +11,28 @@
 
 #-asdf
 (progn
-  #+(or clisp cmu lispworks scl allegro )
+  #+(or clisp cmu lispworks scl allegro abcl )
   (load (~ "lisp/site/asdf/asdf.lisp"))
-  #+(or sbcl ccl ecl abcl)
+  #+(or sbcl ccl ecl)
   (require :asdf))
 
 (setf asdf:*central-registry*
       `(*default-pathname-defaults*
-	,(~ "lisp/systems/"))
+        ,(~ "lisp/systems/"))
       asdf:*compile-file-failure-behaviour* :warn)
 
-(asdf:oos 'asdf:load-op '#:asdf-binary-locations
-          #-abcl :verbose #-abcl nil)
+#+asdf2 (asdf:enable-asdf-binary-locations-compatibility
+         :centralize-lisp-binaries t
+        :default-toplevel-directory (~ "lisp/fasls/"))
 
-(setf asdf:*centralize-lisp-binaries* t
-      asdf:*default-toplevel-directory*
-      (~ "lisp/fasls/"))
+#-asdf2
+(progn
+  (asdf:oos 'asdf:load-op '#:asdf-binary-locations
+            #-abcl :verbose #-abcl nil)
+
+  (setf asdf:*centralize-lisp-binaries* t
+        asdf:*default-toplevel-directory*
+        (~ "lisp/fasls/")))
 
 ;;; Useful functions
 #-lispworks
