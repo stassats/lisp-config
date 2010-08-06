@@ -44,7 +44,10 @@
     (cl-fad darcs ,(ediware "cl-fad") ,(lisp "site/cl-fad") ("cl-fad.asd"))
     (cl-gd darcs ,(ediware "cl-gd") ,(lisp "site/cl-gd") ("cl-gd.asd"))
     (cl-unicode darcs ,(ediware "cl-unicode") ,(lisp "site/cl-unicode") ("cl-unicode.asd"))
-
+    (cl-webdav darcs ,(ediware "cl-webdav") ,(lisp "site/cl-webdav") ("cl-webdav.asd"))
+    (cl-interpol darcs ,(ediware "cl-interpol") ,(lisp "site/cl-interpol") ("cl-interpol.asd"))
+    (html-template darcs ,(ediware "html-template") ,(lisp "site/html-template") ("html-template.asd"))
+    
     (cl+ssl cvs ,(cl-net-cvs "cl-plus-ssl" "cl+ssl") ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
     (trivial-gray-streams cvs ,(cl-net-cvs "cl-plus-ssl" "trivial-gray-streams")
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
@@ -227,6 +230,8 @@
                 ("cl-postgres.asd" "postmodern.asd" "s-sql.asd" "simple-date.asd"))
     (cl-bencode git "git://github.com/nja/cl-bencode.git" ,(lisp "site/cl-bencode") ("bencode.asd"))
     (lift git "git://github.com/gwkkwg/lift" ,(lisp "site/lift")  ("lift.asd"))
+    (uffi git "git://git.b9.com/uffi.git" ,(lisp "site/uffi") ("uffi.asd"))
+    
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())

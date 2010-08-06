@@ -4,6 +4,7 @@
 (use file.util)
 (use gauche.process)
 (use srfi-1)
+(use srfi-13)
 (use util.match)
 
 (define (main args)
@@ -29,8 +30,7 @@
   (define (act-1 config)
     (match-let1 (name method url path asd)
                 config
-                (when (eq? action update)
-                  (display (format "Acting on ~a:~%" name) (standard-error-port)))
+                (display (format "Acting on ~a:~%" name) (standard-error-port))
                 (action method url path asd)))
   (if (null? arguments)
       (for-each act-1 *projects*)
@@ -47,8 +47,7 @@
     (hg update)))
 
 (define (run command)
-  (run-process command :wait #t ;; :error "/dev/null"
-               ))
+  (run-process command :wait #t))
 
 (define (update method url path asds)
   (cond ((file-exists? path)
@@ -74,9 +73,11 @@
          (when (and (file-exists? existing) (not (file-exists? new)))
            (sys-symlink existing new))))
      asds))
-
-  (run (get-command method url path))
-  (link-asd path asds))
+  (cond ((file-exists? path)
+         (print (format "Already installed")))
+        (else
+         (run (get-command method url path))
+         (link-asd path asds))))
 
 (define (get-command method url path)
   (case method
@@ -92,10 +93,15 @@
                 `(cvs -q -z3 -d ,root co -d ,name ,module))))
 
 (define (wget url path)
+  (define (compression-type)
+    (let ((extension (path-extension url)))
+      (cond ((string-suffix? "bz2" url) "j")
+            ((string-suffix? "gz" url) "z"))))
   (make-directory* path)
   (current-directory path)
   (process-output->string
-   (format "wget -O - \"~a\" | tar --strip-components 1 -xz" url))
+   (format "wget -O - \"~a\" | tar --strip-components 1 -x~a"
+           url (compression-type)))
   '(true))
 
 (define (update-wget method url path asds)
