@@ -13,7 +13,7 @@
 (progn
   #+(or clisp lispworks scl allegro)
   (load (~ "lisp/site/asdf/asdf.lisp"))
-  #+(or sbcl ccl abcl ecl cmucl)
+  #+(or sbcl ccl abcl ecl cmu)
   (require '#:asdf))
 
 (setf asdf:*central-registry*
@@ -21,6 +21,7 @@
         ,(~ "lisp/systems/"))
       asdf:*compile-file-failure-behaviour* :warn)
 
+#-ecl
 (asdf:enable-asdf-binary-locations-compatibility
          :centralize-lisp-binaries t
         :default-toplevel-directory (~ "lisp/fasls/"))
