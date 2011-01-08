@@ -51,7 +51,7 @@
     (cl+ssl cvs ,(cl-net-cvs "cl-plus-ssl" "cl+ssl") ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
     (trivial-gray-streams cvs ,(cl-net-cvs "cl-plus-ssl" "trivial-gray-streams")
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
-    (cffi darcs ,(cl-net-darcs "cffi") ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"))
+    (cffi git "git://common-lisp.net/projects/cffi/cffi.git" ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"))
     (babel darcs ,(cl-net-darcs "babel") ,(lisp "site/babel") ("babel.asd"))
     (alexandria darcs ,(cl-net-darcs "alexandria") ,(lisp "site/alexandria") ("alexandria.asd"))
 
@@ -108,8 +108,8 @@
     (ltk wget "http://www.peter-herth.de/ltk/ltk-0.91.tgz" ,(lisp "site/ltk") ("ltk.asd"))
     (able wget "http://phil.nullable.eu/files/able-src-0.18.zip" ,(lisp "site/able") ("able.asd"))
     (png-read git "git://github.com/Ramarren/png-read.git" ,(lisp "site/png-read") ("png-read.asd"))
-    (chipz wget "http://www.method-combination.net/lisp/files/chipz.tar.gz" ,(lisp "site/chipz") ("chipz.asd"))
-    (ironclad wget "http://www.method-combination.net/lisp/files/ironclad.tar.gz" ,(lisp "site/ironclad") ("ironclad.asd"))
+    (chipz git "git://github.com/froydnj/chipz.git" ,(lisp "site/chipz") ("chipz.asd"))
+    (ironclad git "git://github.com/froydnj/ironclad.git" ,(lisp "site/ironclad") ("ironclad.asd"))
     (xcvb git "git://github.com/fare/xcvb.git" ,(lisp "site/xcvb") ("xcvb.asd"))
 
     (bordeaux-threads git "git://common-lisp.net/projects/bordeaux-threads/bordeaux-threads.git" ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
@@ -153,7 +153,9 @@
            ("src/iolib.asd" "src/iolib.asd" "src/iolib.pathnames.asd" "src/iolib.syscalls.asd"
             "src/iolib.base.asd" "src/iolib.sockets.asd" "src/iolib.trivial-sockets.asd"
             "src/iolib.multiplex.asd" "src/iolib.streams.asd" "src/iolib.zeta-streams.asd"
-            "src/iolib.os.asd"))
+            "src/iolib.os.asd" "src/iolib-grovel.asd" "src/iolib.asdf.asd"
+            "src/iolib.conf.asd"))
+    (libfixposix git "git://gitorious.org/libfixposix/libfixposix.git" ,(lisp "site/libfixposix") ())
     (cl-launch wget "http://fare.tunes.org/files/cl-launch/cl-launch.tar.gz"
                ,(lisp "site/cl-launch") ("cl-launch.asd"))
     (cl-l10n darcs "http://www.common-lisp.net/project/cl-l10n/repos/cl-l10n"
@@ -231,7 +233,14 @@
     (cl-bencode git "git://github.com/nja/cl-bencode.git" ,(lisp "site/cl-bencode") ("bencode.asd"))
     (lift git "git://github.com/gwkkwg/lift" ,(lisp "site/lift")  ("lift.asd"))
     (uffi git "git://git.b9.com/uffi.git" ,(lisp "site/uffi") ("uffi.asd"))
-    
+    (external-program wget "http://common-lisp.net/project/external-program/releases/external-program_latest.tar.gz"
+                      ,(lisp "site/external-program") ("external-program.asd"))
+    (sicl git "git://common-lisp.net/projects/sicl/SICL.git" ,(lisp "site/sicl") ())
+    (date-calc wget "http://common-lisp.net/project/cl-date-calc/date-calc-0.3.tar.gz" ,(lisp "site/date-calc") ("date-calc.asd"))
+    (idna git "git://github.com/antifuchs/idna.git" ,(lisp "site/idna") ("idna.asd"))
+    (rt git "http://git.b9.com/rt.git" ,(lisp "site/rt") ("rt.asd"))
+    (weblocks hg "http://bitbucket.org/S11001001/weblocks-dev" ,(lisp "site/weblocks") ())
+
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
@@ -239,6 +248,7 @@
     (ecl git "git://ecls.git.sourceforge.net/gitroot/ecls/ecl" ,(lisp "impl/ecl") ())
     (gcl cvs ":pserver:anonymous@cvs.savannah.gnu.org:/sources/gcl gcl" ,(lisp "impl/gcl") ())
     (abcl svn "svn://common-lisp.net/project/armedbear/svn/trunk/abcl" ,(lisp "impl/abcl") ())
+    (xcl git "git://github.com/gnooth/xcl.git" ,(lisp "impl/xcl") ())
 
     (gosh svn "https://gauche.svn.sourceforge.net/svnroot/gauche/Gauche/trunk" ,(lisp "impl/gauche") ())
 ;;;
@@ -255,6 +265,7 @@
     (emacs-chess git "git://github.com/jwiegley/emacs-chess.git" ,(~ ".emacs.d/chess") ())
     (emacs-w3m cvs ":pserver:anonymous@cvs.namazu.org:/storage/cvsroot emacs-w3m" ,(~ ".emacs.d/w3m") ())
     (vc-darcs darcs "http://www.pps.jussieu.fr/~jch/software/repos/vc-darcs/" ,(~ ".emacs.d/vc-darcs") ())
+    (magit git "https://github.com/philjackson/magit.git" ,(~ ".emacs.d/magit") ())
 
 ;;    (clojure-mode git "git://github.com/jochu/clojure-mode.git" ,(~ ".emacs.d/clojure") ())
     (clojure-mode darcs "http://www.lysator.liu.se/~lenst/darcs/clojure-mode/" ,(~ ".emacs.d/clojure") ())

@@ -8,7 +8,7 @@ dump_core() {
     $SBCL/src/runtime/sbcl \
         --core $SBCL/output/sbcl.core  \
         --userinit ~/lisp/configs/sbcl.lisp \
-        --eval "(mapc 'require '(sb-bsd-sockets sb-posix sb-introspect sb-cltl2 asdf sb-sprof))" \
+        --eval "(mapc 'require '(sb-bsd-sockets sb-posix sb-introspect sb-cltl2 asdf sb-sprof closer-mop cl-ppcre cxml-stp closure-html drakma named-readtables iterate cffi trivial-garbage bordeaux-threads chipz trivial-gray-streams conium prepl osicat command-line-arguments))" \
         --eval '(sb-ext:save-lisp-and-die (merge-pathnames "lisp/fasls/sbcl-core" (user-homedir-pathname)))'
 }
 

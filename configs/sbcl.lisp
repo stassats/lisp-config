@@ -11,3 +11,4 @@
 	(asdf:perform (make-instance 'asdf:compile-op) c)
 	(call-next-method)))))
 
+(sb-ext:restrict-compiler-policy 'debug 2)
