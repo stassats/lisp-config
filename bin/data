@@ -53,10 +53,10 @@
     (trivial-gray-streams cvs ,(cl-net-cvs "cl-plus-ssl" "trivial-gray-streams")
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
     (cffi git "git://common-lisp.net/projects/cffi/cffi.git" ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"))
-    (babel darcs ,(cl-net-darcs "babel") ,(lisp "site/babel") ("babel.asd"))
+    (babel git "git://github.com/cl-babel/babel.git" ,(lisp "site/babel") ("babel.asd"))
     (alexandria darcs ,(cl-net-darcs "alexandria") ,(lisp "site/alexandria") ("alexandria.asd"))
 
-    (trivial-features darcs "http://common-lisp.net/~loliveira/darcs/trivial-features/"
+    (trivial-features git "git://github.com/trivial-features/trivial-features.git"
                       ,(lisp "site/trivial-features") ("trivial-features.asd"))
     (trivial-utf-8 darcs ,(cl-net-darcs "trivial-utf-8") ,(lisp "site/trivial-utf-8") ("trivial-utf-8.asd"))
     (usocket svn "svn://common-lisp.net/project/usocket/svn/usocket/trunk"
@@ -134,7 +134,7 @@
                      ,(lisp "site/tab-layout-pane") ("tab-layout.asd" "radio-layout.asd" "stack-layout.asd"))
     (beirc cvs ,(cl-net-cvs "beirc" "beirc") ,(lisp "site/beirc") ("beirc.asd"))
     (gsll git "git://repo.or.cz/gsll.git" ,(lisp "site/gsll") ("gsll.asd"))
-    (trivial-garbage darcs "http://common-lisp.net/~loliveira/darcs/trivial-garbage/"
+    (trivial-garbage git "git://github.com/trivial-garbage/trivial-garbage.git"
                      ,(lisp "site/trivial-garbage") ("trivial-garbage.asd"))
     (commonqt git "git://gitorious.org/commonqt/commonqt.git" ,(lisp "site/commonqt") ("qt.asd" "qt-tutorial.asd" "qt-repl.asd"))
     (named-readtables darcs "http://common-lisp.net/project/editor-hints/darcs/named-readtables/"
