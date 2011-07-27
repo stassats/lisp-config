@@ -47,7 +47,8 @@
     (cl-webdav darcs ,(ediware "cl-webdav") ,(lisp "site/cl-webdav") ("cl-webdav.asd"))
     (cl-interpol darcs ,(ediware "cl-interpol") ,(lisp "site/cl-interpol") ("cl-interpol.asd"))
     (html-template darcs ,(ediware "html-template") ,(lisp "site/html-template") ("html-template.asd"))
-    
+    (documentation-template darcs ,(ediware "documentation-template") ,(lisp "site/documentation-template") ("documentation-template.asd"))
+
     (cl+ssl cvs ,(cl-net-cvs "cl-plus-ssl" "cl+ssl") ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
     (trivial-gray-streams cvs ,(cl-net-cvs "cl-plus-ssl" "trivial-gray-streams")
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
@@ -210,7 +211,7 @@
                   ,(lisp "site/cl-irregsexp") ("cl-irregsexp.asd"))
     (command-line-arguments git "git://common-lisp.net/projects/qitab/command-line-arguments.git"
                             ,(lisp "site/command-line-arguments") ("command-line-arguments.asd"))
-    (cl-containers darcs "http://common-lisp.net/project/cl-containers"
+    (cl-containers git "git://github.com/gwkkwg/cl-containers.git"
                    ,(lisp "site/cl-containers") ("cl-containers.asd"))
     (metatilities darcs "http://common-lisp.net/project/metatilities"
                    ,(lisp "site/metatilities") ("metatilities.asd"))
@@ -240,11 +241,41 @@
     (idna git "git://github.com/antifuchs/idna.git" ,(lisp "site/idna") ("idna.asd"))
     (rt git "http://git.b9.com/rt.git" ,(lisp "site/rt") ("rt.asd"))
     (weblocks hg "http://bitbucket.org/S11001001/weblocks-dev" ,(lisp "site/weblocks") ())
+    (vectometry git "git://github.com/xach/vectometry.git" ,(lisp "site/vectometry") ("vectometry.asd"))
+    (geometry git "git://github.com/xach/geometry.git" ,(lisp "site/geometry") ("geometry.asd"))
+    (cl-pdf svn "http://www.fractalconcept.com:8000/public/open-source/cl-pdf/"
+                    ,(lisp "site/cl-pdf") ("cl-pdf.asd"))
+    (cl-typesetting svn "http://www.fractalconcept.com:8000/public/open-source/cl-typesetting/"
+                    ,(lisp "site/cl-typesetting") ("cl-typesetting.asd"))
+        (opticl git "git://github.com/slyrus/opticl.git" ,(lisp "site/opticl") ("opticl.asd"))
+    (retrospectiff git "git://github.com/slyrus/retrospectiff.git" ,(lisp "site/retrospectiff") ("retrospectiff.asd"))
+    (cl-jpeg cvs ,(cl-net-cvs "cl-jpeg" "cljl") ,(lisp "site/cl-jpeg") ("cl-jpeg.asd"))
+    (binary-data git "git://github.com/gigamonkey/monkeylib-binary-data.git" ,(lisp "site/binary-data")
+                 ("com.gigamonkeys.binary-data.asd"))
+    (monkeylib-macro-utilities git "git://github.com/gigamonkey/monkeylib-macro-utilities.git" ,(lisp "site/monkeylib-macro-utilities")
+                               ("com.gigamonkeys.macro-utilities.asd"))
+    (cl-gtk2 git "git://github.com/dmitryvk/cl-gtk2.git" ,(lisp "site/cl-gtk2")
+             ("glib/cl-gtk2-glib.asd" "gtk/cl-gtk2-gtk.asd" "pango/cl-gtk2-pango.asd"
+              "gtk-glext/cl-gtk2-gtkglext.asd" "glib/cl-gtk2-glib.asd"
+              "cairo/cl-gtk2-cairo.asd" "gdk/cl-gtk2-gdk.asd"))
+    (ht-simple-ajax wget "http://martin-loetzsch.de/ht-simple-ajax/ht-simple-ajax.tar.gz"
+                    ,(lisp "site/ht-simple-ajax")
+                    ("ht-simple-ajax.asd"))
+    (3bmd git "git://github.com/3b/3bmd.git" ,(lisp "site/3bmd") ("3bmd.asd"))
+    (esrap git "git://github.com/nikodemus/esrap.git" ,(lisp "site/esrap") ("esrap.asd"))
+    (cl-mongo git "git://github.com/fons/cl-mongo.git" ,(lisp "site/cl-mongo") ("cl-mongo.asd"))
+    (parenscript git "git://common-lisp.net/projects/parenscript/parenscript.git" ,(lisp "site/parenscript") ("parenscript.asd"))
+    (anaphora cvs ,(cl-net-cvs "anaphora" "") ,(lisp "site/anaphora") ("src/anaphora.asd"))
+    (uuid wget "http://www.dardoria.net/software/uuid.tar.gz" ,(lisp "site/uuid") ("uuid.asd"))
+    (trivial-timeout darcs "http://common-lisp.net/project/trivial-timeout/" ,(lisp "site/trivial-timeout") ("trivial-timeout.asd"))
+    (f-underscore darcs "http://common-lisp.net/project/bpm/darcs/f-underscore" ,(lisp "site/f-underscore") ("f-underscore.asd"))
+    (fare-matcher git "git://common-lisp.net/users/frideau/fare-matcher.git" ,(lisp "site/fare-matcher") ("fare-matcher.asd"))
+    (fare-utils git "git://common-lisp.net/users/frideau/fare-utils.git" ,(lisp "site/fare-utils") ("fare-utils.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
-    (clisp cvs ,(sf-cvs "clisp" "clisp") ,(lisp "impl/clisp") ())
+    (clisp hg "http://clisp.hg.sourceforge.net:8000/hgroot/clisp/clisp" ,(lisp "impl/clisp") ())
     (ecl git "git://ecls.git.sourceforge.net/gitroot/ecls/ecl" ,(lisp "impl/ecl") ())
     (gcl cvs ":pserver:anonymous@cvs.savannah.gnu.org:/sources/gcl gcl" ,(lisp "impl/gcl") ())
     (abcl svn "svn://common-lisp.net/project/armedbear/svn/trunk/abcl" ,(lisp "impl/abcl") ())
@@ -259,13 +290,14 @@
               ,(~ ".emacs.d/redshank") ())
     (jabber-el git "git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber"
                ,(~ ".emacs.d/jabber") ())
-    (emacs git "git://repo.or.cz/emacs.git" ,(~ "c/emacs") ())
+    (emacs git "git://git.savannah.gnu.org/emacs.git" ,(~ "c/emacs") ())
     (haskell-mode darcs "http://code.haskell.org/haskellmode-emacs" ,(~ ".emacs.d/haskell") ())
     (emms git "git://git.sv.gnu.org/emms.git" ,(~ ".emacs.d/emms") ())
     (emacs-chess git "git://github.com/jwiegley/emacs-chess.git" ,(~ ".emacs.d/chess") ())
     (emacs-w3m cvs ":pserver:anonymous@cvs.namazu.org:/storage/cvsroot emacs-w3m" ,(~ ".emacs.d/w3m") ())
     (vc-darcs darcs "http://www.pps.jussieu.fr/~jch/software/repos/vc-darcs/" ,(~ ".emacs.d/vc-darcs") ())
     (magit git "https://github.com/philjackson/magit.git" ,(~ ".emacs.d/magit") ())
+    (dvc bzr "http://bzr.xsteve.at/dvc/" ,(~ ".emacs.d/dvc") ())
 
 ;;    (clojure-mode git "git://github.com/jochu/clojure-mode.git" ,(~ ".emacs.d/clojure") ())
     (clojure-mode darcs "http://www.lysator.liu.se/~lenst/darcs/clojure-mode/" ,(~ ".emacs.d/clojure") ())
