@@ -20,10 +20,13 @@
       `(*default-pathname-defaults*
         ,(~ "lisp/systems/"))
       asdf:*compile-file-failure-behaviour* :warn)
+
+(ensure-directories-exist "/tmp/fasls/")
+
 #-ecl
 (asdf:enable-asdf-binary-locations-compatibility
  :centralize-lisp-binaries t
- :default-toplevel-directory (~ "lisp/fasls/"))
+ :default-toplevel-directory "/tmp/fasls/")
 
 
 ;;; Useful functions
