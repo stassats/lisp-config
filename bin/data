@@ -298,10 +298,7 @@
     (vc-darcs darcs "http://www.pps.jussieu.fr/~jch/software/repos/vc-darcs/" ,(~ ".emacs.d/vc-darcs") ())
     (magit git "https://github.com/philjackson/magit.git" ,(~ ".emacs.d/magit") ())
     (dvc bzr "http://bzr.xsteve.at/dvc/" ,(~ ".emacs.d/dvc") ())
-
-;;    (clojure-mode git "git://github.com/jochu/clojure-mode.git" ,(~ ".emacs.d/clojure") ())
-    (clojure-mode darcs "http://www.lysator.liu.se/~lenst/darcs/clojure-mode/" ,(~ ".emacs.d/clojure") ())
-    (swank-clojure git "git://github.com/jochu/swank-clojure.git" ,(~ ".emacs.d/swank-clojure") ())
+    (mouse-copy git "git://github.com/vsedach/mouse-copy.git" ,(~ ".emacs.d/mouse-copy") ())
 
     (mplayer svn "svn://svn.mplayerhq.hu/mplayer/trunk" ,(~ "c/mplayer") ())
 
