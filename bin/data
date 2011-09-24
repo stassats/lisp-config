@@ -54,7 +54,7 @@
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
     (cffi git "git://common-lisp.net/projects/cffi/cffi.git" ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"))
     (babel git "git://github.com/cl-babel/babel.git" ,(lisp "site/babel") ("babel.asd"))
-    (alexandria darcs ,(cl-net-darcs "alexandria") ,(lisp "site/alexandria") ("alexandria.asd"))
+    (alexandria git "git://common-lisp.net/projects/alexandria/alexandria.git" ,(lisp "site/alexandria") ("alexandria.asd"))
 
     (trivial-features git "git://github.com/trivial-features/trivial-features.git"
                       ,(lisp "site/trivial-features") ("trivial-features.asd"))
