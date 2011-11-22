@@ -299,6 +299,7 @@
     (magit git "https://github.com/philjackson/magit.git" ,(~ ".emacs.d/magit") ())
     (dvc bzr "http://bzr.xsteve.at/dvc/" ,(~ ".emacs.d/dvc") ())
     (mouse-copy git "git://github.com/vsedach/mouse-copy.git" ,(~ ".emacs.d/mouse-copy") ())
+    (tramp-adb git "git://github.com/juergenhoetzel/tramp-adb.git" ,(~ ".emacs.d/tramp-adb") ())
 
     (mplayer svn "svn://svn.mplayerhq.hu/mplayer/trunk" ,(~ "c/mplayer") ())
 
