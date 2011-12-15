@@ -8,12 +8,18 @@ dump_core() {
     $SBCL/src/runtime/sbcl \
         --core $SBCL/output/sbcl.core  \
         --userinit ~/lisp/configs/sbcl.lisp \
-        --eval "(mapc 'require '(sb-bsd-sockets sb-posix sb-introspect sb-cltl2 asdf sb-sprof closer-mop cl-ppcre cxml-stp closure-html drakma named-readtables iterate cffi trivial-garbage bordeaux-threads chipz trivial-gray-streams conium prepl osicat command-line-arguments))" \
-        --eval '(sb-ext:save-lisp-and-die (merge-pathnames "lisp/fasls/sbcl-core" (user-homedir-pathname)))'
+        --eval "(mapc 'require '(sb-bsd-sockets sb-posix sb-introspect
+sb-cltl2 asdf sb-sprof closer-mop cl-ppcre cxml cxml-stp closure-html
+drakma named-readtables iterate cffi trivial-garbage bordeaux-threads
+chipz trivial-gray-streams conium prepl osicat command-line-arguments
+cl-pdf cl-typesetting postmodern alexandria csv-parser ironclad cl-json
+ht-simple-ajax hunchentoot local-time vecto simple-date cl-who cl-jpeg
+salza2))" \
+        --eval '(sb-ext:save-lisp-and-die "/tmp/fasls/sbcl-core")'
 }
 
-if [ ! -e ~/lisp/fasls/sbcl-core ]; then
+if [ ! -e /tmp/fasls/sbcl-core ]; then
     dump_core
 fi
 
-exec $SBCL/src/runtime/sbcl --core ~/lisp/fasls/sbcl-core "$@"
+exec $SBCL/src/runtime/sbcl --core /tmp/fasls/sbcl-core "$@"
