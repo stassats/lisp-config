@@ -2,7 +2,7 @@
 
 CCL_DIR=~/lisp/impl/ccl
 
-if [ `hostname` = desktop ]; then
+if [ `hostname` = debian ]; then
     FASL_DIR=/tmp/fasls
 else
     FASL_DIR=~/lisp/fasls

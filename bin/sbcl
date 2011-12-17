@@ -4,7 +4,7 @@ SBCL=~/lisp/impl/sbcl
 
 export SBCL_HOME=$SBCL/contrib
 
-if [ `hostname` = desktop ]; then
+if [ `hostname` = debian ]; then
     FASL_DIR=/tmp/fasls
 else
     FASL_DIR=~/lisp/fasls

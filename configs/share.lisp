@@ -21,7 +21,7 @@
         ,(~ "lisp/systems/"))
       asdf:*compile-file-failure-behaviour* :warn)
 
-(defvar *fasl-dir* (if (equal (machine-instance) "desktop")
+(defvar *fasl-dir* (if (equal (machine-instance) "debian")
                        "/tmp/fasls/"
                        (~ "lisp/fasls/")))
 
