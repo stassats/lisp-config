@@ -66,3 +66,6 @@
    (format t "~a - ~a:~%~a => ~{~/format-error/~^; ~}~%Output:~%\"~a\"~%~%"
            (lisp-implementation-type) (lisp-implementation-version)
            code result output)))
+
+(let ((private-file (merge-pathnames "private " #.*load-pathname*)))
+  (load private-file :if-does-not-exist nil))
