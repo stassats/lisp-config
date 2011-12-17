@@ -4,6 +4,12 @@ SBCL=~/lisp/impl/sbcl
 
 export SBCL_HOME=$SBCL/contrib
 
+if [ `hostname` = desktop ]; then
+    FASL_DIR=/tmp/fasls
+else
+    FASL_DIR=~/lisp/fasls
+fi
+
 dump_core() {
     $SBCL/src/runtime/sbcl \
         --core $SBCL/output/sbcl.core  \
@@ -15,11 +21,11 @@ chipz trivial-gray-streams conium prepl osicat command-line-arguments
 cl-pdf cl-typesetting postmodern alexandria csv-parser ironclad cl-json
 ht-simple-ajax hunchentoot local-time vecto simple-date cl-who cl-jpeg
 salza2))" \
-        --eval '(sb-ext:save-lisp-and-die "/tmp/fasls/sbcl-core")'
+        --eval "(sb-ext:save-lisp-and-die \"$FASL_DIR/sbcl-core\")"
 }
 
-if [ ! -e /tmp/fasls/sbcl-core ]; then
+if [ ! -e $FASL_DIR/sbcl-core ]; then
     dump_core
 fi
 
-exec $SBCL/src/runtime/sbcl --core /tmp/fasls/sbcl-core "$@"
+exec $SBCL/src/runtime/sbcl --core $FASL_DIR/sbcl-core "$@"
