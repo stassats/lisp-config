@@ -40,7 +40,7 @@
     (chunga darcs ,(ediware "chunga") ,(lisp "site/chunga") ("chunga.asd"))
     (url-rewrite darcs ,(ediware "url-rewrite") ,(lisp "site/url-rewrite") ("url-rewrite.asd"))
     (cl-who svn ,(ediware-bknr "cl-who") ,(lisp "site/cl-who") ("cl-who.asd"))
-    (hunchentoot darcs ,(ediware "hunchentoot") ,(lisp "site/hunchentoot") ("hunchentoot.asd"))
+    (hunchentoot git "git://github.com/edicl/hunchentoot.git" ,(lisp "site/hunchentoot") ("hunchentoot.asd"))
     (cl-fad darcs ,(ediware "cl-fad") ,(lisp "site/cl-fad") ("cl-fad.asd"))
     (cl-gd darcs ,(ediware "cl-gd") ,(lisp "site/cl-gd") ("cl-gd.asd"))
     (cl-unicode darcs ,(ediware "cl-unicode") ,(lisp "site/cl-unicode") ("cl-unicode.asd"))
