@@ -44,7 +44,7 @@
   (defmacro :dbg (x &optional tag)
     `(let ((results (multiple-value-list ,x)))
        (format *debug-io* "~&~@[~a ~]~{~s~^, ~}~%" ,tag results)
-       (values-list results)))))
+       (values-list results))))
 
 ;;;
 
