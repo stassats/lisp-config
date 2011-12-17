@@ -1,28 +1,29 @@
 #!/bin/sh
 
-arch=`uname -m`
+CCL_DIR=~/lisp/impl/ccl
 
-LISP=/home/stas/lisp
-DD=${LISP}/impl/ccl
-
-if [ $arch = x86_64 ]
-then
-    KERNEL=lx86cl64
+if [ `hostname` = desktop ]; then
+    FASL_DIR=/tmp/fasls
 else
-    KERNEL=lx86cl
+    FASL_DIR=~/lisp/fasls
 fi
 
-CCL=${DD}/${KERNEL}
+if [ `uname -m` = x86_64 ]
+then
+    CCL=${CCL_DIR}/lx86cl64
+else
+    CCL=${CCL_DIR}/lx86cl
+fi
 
-export CCL_DEFAULT_DIRECTORY=${DD}
+export CCL_DEFAULT_DIRECTORY=${CCL_DIR}
 
 dump_core() {
-    $CCL -n --load ${LISP}/configs/ccl.lisp -K utf-8 \
-    --eval '(ccl:save-application (merge-pathnames "lisp/fasls/ccl-core" (user-homedir-pathname)))'
+    $CCL -n --load ~/lisp/configs/ccl.lisp -K utf-8 \
+    --eval "(ccl:save-application \"$FASL_DIR/ccl-core\")"
 }
 
-if [ ! -e ~/lisp/fasls/ccl-core ]; then
+if [ ! -e $FASL_DIR/ccl-core ]; then
     dump_core
 fi
 
-exec $CCL -n -I ~/lisp/fasls/ccl-core "$@"
+exec $CCL -n -I $FASL_DIR/ccl-core "$@"
