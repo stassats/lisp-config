@@ -21,12 +21,16 @@
         ,(~ "lisp/systems/"))
       asdf:*compile-file-failure-behaviour* :warn)
 
-(ensure-directories-exist "/tmp/fasls/")
+(defvar *fasl-dir* (if (equal (machine-instance) "desktop")
+                       "/tmp/fasls/"
+                       (~ "lisp/fasls/")))
+
+(ensure-directories-exist *fasl-dir*)
 
 #-ecl
 (asdf:enable-asdf-binary-locations-compatibility
  :centralize-lisp-binaries t
- :default-toplevel-directory "/tmp/fasls/")
+ :default-toplevel-directory *fasl-dir*)
 
 
 ;;; Useful functions
