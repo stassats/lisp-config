@@ -41,14 +41,10 @@
     (and (asdf:oos 'asdf:load-op system :verbose nil)
          t))
 
-  (defun :safe-code ()
-    (proclaim '(optimize (speed 0) (safety 3) (debug 3))))
-
-  (defun :fast-code ()
-    (proclaim '(optimize (speed 3) (safety 0) (debug 1))))
-
-  (defun :normal-code ()
-    (proclaim '(optimize (speed 1) (safety 1) (debug 1)))))
+  (defmacro :dbg (x &optional tag)
+    `(let ((results (multiple-value-list ,x)))
+       (format *debug-io* "~&~@[~a ~]~{~s~^, ~}~%" ,tag results)
+       (values-list results)))))
 
 ;;;
 
