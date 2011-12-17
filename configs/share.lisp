@@ -67,5 +67,5 @@
            (lisp-implementation-type) (lisp-implementation-version)
            code result output)))
 
-(let ((private-file (merge-pathnames "private " #.*load-pathname*)))
+(let ((private-file (merge-pathnames "private" #.*load-pathname*)))
   (load private-file :if-does-not-exist nil))
