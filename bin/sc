@@ -44,7 +44,8 @@
     (darcs pull -a)
     (cvs -q update)
     (svn update)
-    (hg update)))
+    (hg update)
+    (bzr update)))
 
 (define (run command)
   (run-process command :wait #t))
@@ -62,7 +63,8 @@
   '((git clone)
     (darcs get)
     (svn co)
-    (hg clone)))
+    (hg clone)
+    (bzr checkout)))
 
 (define (get method url path asds)
   (define (link-asd path asds)
