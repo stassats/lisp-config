@@ -64,7 +64,10 @@
     (puri git "git://git.b9.com/puri.git" ,(lisp "site/puri") ("puri.asd"))
     (cl-base64 git "git://git.b9.com/cl-base64.git" ,(lisp "site/cl-base64") ("cl-base64.asd"))
     (md5 git "git://git.b9.com/md5.git" ,(lisp "site/md5") ("md5.asd"))
-    (clsql git "git://git.b9.com/clsql.git" ,(lisp "site/clsql") ("clsql.asd"))
+    (clsql git "http://git.b9.com/clsql.git" ,(lisp "site/clsql")
+           ("clsql.asd" "clsql-aodbc.asd" "clsql-cffi.asd" "clsql-db2.asd" "clsql-mysql.asd"
+            "clsql-odbc.asd" "clsql-oracle.asd" "clsql-postgresql-socket.asd" "clsql-postgresql.asd"
+            "clsql-sqlite.asd" "clsql-sqlite3.asd" "clsql-uffi.asd"))
     (asdf git "http://common-lisp.net/project/asdf/asdf.git" ,(lisp "site/asdf") ())
 
     (cl-audioscrobbler svn "http://cl-audioscrobbler.googlecode.com/svn/trunk/"
