@@ -303,5 +303,5 @@
 
     (mplayer svn "svn://svn.mplayerhq.hu/mplayer/trunk" ,(~ "c/mplayer") ())
 
-    (maxima cvs ":pserver:anonymous@maxima.cvs.sourceforge.net:/cvsroot/maxima maxima" ,(~ "c/maxima") ())
+    (maxima git "git://maxima.git.sourceforge.net/gitroot/maxima/maxima" ,(~ "c/maxima") ())
     (x264 git "git://git.videolan.org/x264.git" ,(~ "c/x264") ())))
