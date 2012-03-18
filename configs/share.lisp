@@ -11,9 +11,9 @@
 
 #-asdf
 (progn
-  #+(or clisp lispworks scl allegro ccl)
+  #+(or clisp lispworks scl allegro)
   (load (~ "lisp/site/asdf/asdf.lisp"))
-  #+(or sbcl ecl abcl cmu)
+  #+(or sbcl ccl ecl abcl cmu)
   (require '#:asdf))
 
 (setf asdf:*central-registry*
@@ -27,7 +27,7 @@
 
 (ensure-directories-exist *fasl-dir*)
 
-#-ecl
+
 (asdf:enable-asdf-binary-locations-compatibility
  :centralize-lisp-binaries t
  :default-toplevel-directory *fasl-dir*)
@@ -44,6 +44,7 @@
   (defmacro :dbg (x &optional tag)
     `(let ((results (multiple-value-list ,x)))
        (format *debug-io* "~&~@[~a ~]~{~s~^, ~}~%" ,tag results)
+       (finish-output *debug-io*)
        (values-list results))))
 
 ;;;
