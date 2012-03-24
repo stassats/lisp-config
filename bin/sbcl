@@ -13,7 +13,6 @@ else
 fi
 
 dump_core() {
-    echo hello
     $SBCL/src/runtime/sbcl \
         --core $SBCL/output/sbcl.core \
         --userinit ~/lisp/configs/sbcl.lisp \
