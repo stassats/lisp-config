@@ -114,6 +114,8 @@
     (png-read git "git://github.com/Ramarren/png-read.git" ,(lisp "site/png-read") ("png-read.asd"))
     (chipz git "git://github.com/froydnj/chipz.git" ,(lisp "site/chipz") ("chipz.asd"))
     (ironclad git "git://github.com/froydnj/ironclad.git" ,(lisp "site/ironclad") ("ironclad.asd"))
+    (nibbles git "git://github.com/froydnj/nibbles.git" ,(lisp "site/nibbles") ("nibbles.asd"))
+    
     (xcvb git "git://github.com/fare/xcvb.git" ,(lisp "site/xcvb") ("xcvb.asd"))
 
     (bordeaux-threads git "git://common-lisp.net/projects/bordeaux-threads/bordeaux-threads.git" ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
@@ -166,7 +168,7 @@
              ,(lisp "site/cl-l10n") ("cl-l10n.asd"))
     (sb-simple-audio wget "http://v16.org/lisp/sb-simple-audio_latest.tar.gz"
                      ,(lisp "site/sb-simple-audio") ("sb-simple-audio.asd"))
-    (parse-number wget "http://common-lisp.net/project/asdf-packaging/parse-number-latest.tar.gz"
+    (parse-number git "git://github.com/sharplispers/parse-number.git"
                   ,(lisp "site/parse-number") ("parse-number.asd"))
     (cl-wav-synth cvs ,(cl-net-cvs "cl-wav-synth" "cl-wav-synth")
                   ,(lisp "site/cl-wav-synth") ("cl-wav-synth.asd" "cl-wav-synth-clim.asd"))
@@ -274,6 +276,8 @@
     (f-underscore darcs "http://common-lisp.net/project/bpm/darcs/f-underscore" ,(lisp "site/f-underscore") ("f-underscore.asd"))
     (fare-matcher git "git://common-lisp.net/users/frideau/fare-matcher.git" ,(lisp "site/fare-matcher") ("fare-matcher.asd"))
     (fare-utils git "git://common-lisp.net/users/frideau/fare-utils.git" ,(lisp "site/fare-utils") ("fare-utils.asd"))
+    (cl-simd git "git://github.com/angavrilov/cl-simd.git" ,(lisp "site/cl-simd") ("cl-simd.asd"))
+    (net-telent-date wget "http://www.defmacro.org/lisp-lib/net-telent-date.tar.gz" ,(lisp "site/net-telent-date") ("net-telent-date.asdg"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
