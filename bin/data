@@ -277,7 +277,7 @@
     (fare-matcher git "git://common-lisp.net/users/frideau/fare-matcher.git" ,(lisp "site/fare-matcher") ("fare-matcher.asd"))
     (fare-utils git "git://common-lisp.net/users/frideau/fare-utils.git" ,(lisp "site/fare-utils") ("fare-utils.asd"))
     (cl-simd git "git://github.com/angavrilov/cl-simd.git" ,(lisp "site/cl-simd") ("cl-simd.asd"))
-    (net-telent-date wget "http://www.defmacro.org/lisp-lib/net-telent-date.tar.gz" ,(lisp "site/net-telent-date") ("net-telent-date.asdg"))
+    (net-telent-date wget "http://www.defmacro.org/lisp-lib/net-telent-date.tar.gz" ,(lisp "site/net-telent-date") ("net-telent-date.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
