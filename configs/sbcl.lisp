@@ -2,6 +2,8 @@
 
 (load (merge-pathnames "lisp/configs/share.lisp" (user-homedir-pathname)))
 
+(sb-ext:set-sbcl-source-location (~ "lisp/impl/sbcl/"))
+
 (let ((sb-ext:*muffled-warnings* 'sb-kernel::redefinition-warning))
   (defmethod asdf:perform :around ((o asdf:load-op)
 				   (c asdf:cl-source-file))

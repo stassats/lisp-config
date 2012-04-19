@@ -13,10 +13,7 @@
   (lisp "systems"))
 
 (define (ediware name)
-  (string-append "http://common-lisp.net/~loliveira/ediware/" name))
-
-(define (ediware-bknr name)
-  (string-append "svn://svn.bknr.net/svn/trunk/thirdparty/" name))
+  (string-append "https://github.com/edicl/" name))
 
 (define (cl-net-cvs name module)
   (format
@@ -34,20 +31,20 @@
    name name module))
 
 (define *projects*
-  `((flexi-streams darcs ,(ediware "flexi-streams") ,(lisp "site/flexi-streams") ("flexi-streams.asd"))
-    (drakma darcs ,(ediware "drakma") ,(lisp "site/drakma") ("drakma.asd"))
-    (cl-ppcre darcs ,(ediware "cl-ppcre") ,(lisp "site/cl-ppcre") ("cl-ppcre.asd" "cl-ppcre-unicode.asd"))
-    (chunga darcs ,(ediware "chunga") ,(lisp "site/chunga") ("chunga.asd"))
-    (url-rewrite darcs ,(ediware "url-rewrite") ,(lisp "site/url-rewrite") ("url-rewrite.asd"))
-    (cl-who svn ,(ediware-bknr "cl-who") ,(lisp "site/cl-who") ("cl-who.asd"))
+  `((flexi-streams git ,(ediware "flexi-streams") ,(lisp "site/flexi-streams") ("flexi-streams.asd"))
+    (drakma git ,(ediware "drakma") ,(lisp "site/drakma") ("drakma.asd"))
+    (cl-ppcre git ,(ediware "cl-ppcre") ,(lisp "site/cl-ppcre") ("cl-ppcre.asd" "cl-ppcre-unicode.asd"))
+    (chunga git ,(ediware "chunga") ,(lisp "site/chunga") ("chunga.asd"))
+    (url-rewrite git ,(ediware "url-rewrite") ,(lisp "site/url-rewrite") ("url-rewrite.asd"))
+    (cl-who git ,(ediware "cl-who") ,(lisp "site/cl-who") ("cl-who.asd"))
     (hunchentoot git "git://github.com/edicl/hunchentoot.git" ,(lisp "site/hunchentoot") ("hunchentoot.asd"))
-    (cl-fad darcs ,(ediware "cl-fad") ,(lisp "site/cl-fad") ("cl-fad.asd"))
-    (cl-gd darcs ,(ediware "cl-gd") ,(lisp "site/cl-gd") ("cl-gd.asd"))
-    (cl-unicode darcs ,(ediware "cl-unicode") ,(lisp "site/cl-unicode") ("cl-unicode.asd"))
-    (cl-webdav darcs ,(ediware "cl-webdav") ,(lisp "site/cl-webdav") ("cl-webdav.asd"))
-    (cl-interpol darcs ,(ediware "cl-interpol") ,(lisp "site/cl-interpol") ("cl-interpol.asd"))
-    (html-template darcs ,(ediware "html-template") ,(lisp "site/html-template") ("html-template.asd"))
-    (documentation-template darcs ,(ediware "documentation-template") ,(lisp "site/documentation-template") ("documentation-template.asd"))
+    (cl-fad git ,(ediware "cl-fad") ,(lisp "site/cl-fad") ("cl-fad.asd"))
+    (cl-gd git ,(ediware "cl-gd") ,(lisp "site/cl-gd") ("cl-gd.asd"))
+    (cl-unicode git ,(ediware "cl-unicode") ,(lisp "site/cl-unicode") ("cl-unicode.asd"))
+    (cl-webdav git ,(ediware "cl-webdav") ,(lisp "site/cl-webdav") ("cl-webdav.asd"))
+    (cl-interpol git ,(ediware "cl-interpol") ,(lisp "site/cl-interpol") ("cl-interpol.asd"))
+    (html-template git ,(ediware "html-template") ,(lisp "site/html-template") ("html-template.asd"))
+    (documentation-template git ,(ediware "documentation-template") ,(lisp "site/documentation-template") ("documentation-template.asd"))
 
     (cl+ssl git "git://gitorious.org/cl-plus-ssl/cl-plus-ssl.git" ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
     (trivial-gray-streams cvs ,(cl-net-cvs "cl-plus-ssl" "trivial-gray-streams")
@@ -115,6 +112,7 @@
     (chipz git "git://github.com/froydnj/chipz.git" ,(lisp "site/chipz") ("chipz.asd"))
     (ironclad git "git://github.com/froydnj/ironclad.git" ,(lisp "site/ironclad") ("ironclad.asd"))
     (nibbles git "git://github.com/froydnj/nibbles.git" ,(lisp "site/nibbles") ("nibbles.asd"))
+    (qlmapper git "git://github.com/xach/qlmapper.git" ,(lisp "site/qlmapper") ("qlmapper.asd"))
     
     (xcvb git "git://github.com/fare/xcvb.git" ,(lisp "site/xcvb") ("xcvb.asd"))
 
