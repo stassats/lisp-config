@@ -177,7 +177,7 @@
     (zpb-ttf wget "http://www.xach.com/lisp/zpb-ttf.tgz" ,(lisp "site/zpb-ttf") ("zpb-ttf.asd"))
     (cl-opengl git "git://github.com/3b/cl-opengl.git" ,(lisp "site/cl-opengl")
                ("cl-opengl.asd" "cl-opengl.asd" "cl-glut.asd" "cl-glut-examples.asd" "cl-glu.asd"))
-    (mel-base darcs "http://common-lisp.net/project/mel-base/darcs/mel-base/"
+    (mel-base git "http://pmeta.net/projects/mel-base/mel-base.git"
               ,(lisp "site/mel-base") ("mel-base.asd"))
     (ansi-test svn "svn://common-lisp.net/project/ansi-test/svn/trunk/ansi-tests"
                ,(lisp "site/ansi-test") ())
