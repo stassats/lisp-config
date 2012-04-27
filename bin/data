@@ -277,6 +277,8 @@
     (cl-simd git "git://github.com/angavrilov/cl-simd.git" ,(lisp "site/cl-simd") ("cl-simd.asd"))
     (net-telent-date wget "http://www.defmacro.org/lisp-lib/net-telent-date.tar.gz" ,(lisp "site/net-telent-date") ("net-telent-date.asd"))
     (cl-smtp cvs ,(cl-net-cvs "cl-smtp" "cl-smtp") ,(lisp "site/cl-smtp") ("cl-smtp.asd"))
+    (rfc2388 wget "http://common-lisp.net/project/rfc2388/rfc2388_latest.tar.gz"
+             ,(lisp "site/rfc2388") ("rfc2388.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
