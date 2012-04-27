@@ -4,9 +4,17 @@ SBCL=~/lisp/impl/sbcl
 
 export SBCL_HOME=$SBCL/contrib
 
+SYSTEMS = "sb-bsd-sockets sb-posix sb-introspect sb-cltl2 asdf sb-sprof"
+
 if [ `hostname` = debian ]; then
     FASL_DIR=/tmp/fasls
     DYNAMIC_SPACE=8GB
+    SYSTEMS += " closer-mop cl-ppcre cxml cxml-stp closure-html
+drakma named-readtables iterate cffi trivial-garbage bordeaux-threads
+chipz trivial-gray-streams conium prepl osicat command-line-arguments
+cl-pdf cl-typesetting postmodern alexandria csv-parser ironclad cl-json
+ht-simple-ajax hunchentoot local-time vecto simple-date cl-who cl-jpeg
+salza2"
 else
     FASL_DIR=~/lisp/fasls
     DYNAMIC_SPACE=4GB
@@ -16,13 +24,7 @@ dump_core() {
     $SBCL/src/runtime/sbcl \
         --core $SBCL/output/sbcl.core \
         --userinit ~/lisp/configs/sbcl.lisp \
-        --eval "(mapc 'require '(sb-bsd-sockets sb-posix sb-introspect
-sb-cltl2 asdf sb-sprof closer-mop cl-ppcre cxml cxml-stp closure-html
-drakma named-readtables iterate cffi trivial-garbage bordeaux-threads
-chipz trivial-gray-streams conium prepl osicat command-line-arguments
-cl-pdf cl-typesetting postmodern alexandria csv-parser ironclad cl-json
-ht-simple-ajax hunchentoot local-time vecto simple-date cl-who cl-jpeg
-salza2))" \
+        --eval "(mapc 'require '($SYSTEMS))" \
         --eval "(sb-ext:save-lisp-and-die \"$FASL_DIR/sbcl-core\" :save-runtime-options t)"
 }
 
