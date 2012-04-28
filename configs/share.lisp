@@ -45,7 +45,15 @@
     `(let ((results (multiple-value-list ,x)))
        (format *debug-io* "~&~@[~a ~]~{~s~^, ~}~%" ,tag results)
        (finish-output *debug-io*)
-       (values-list results))))
+       (values-list results)))
+
+  (defun :preload ()
+    (mapcar :asd '(closer-mop cl-ppcre cxml cxml-stp closure-html
+                   drakma named-readtables iterate cffi trivial-garbage bordeaux-threads
+                   chipz trivial-gray-streams conium prepl osicat command-line-arguments
+                   cl-pdf cl-typesetting postmodern alexandria csv-parser ironclad cl-json
+                   ht-simple-ajax hunchentoot local-time vecto simple-date cl-who cl-jpeg
+                   salza2 qt iolib))))
 
 ;;;
 

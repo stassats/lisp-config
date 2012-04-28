@@ -9,12 +9,6 @@ SYSTEMS = "sb-bsd-sockets sb-posix sb-introspect sb-cltl2 asdf sb-sprof"
 if [ `hostname` = debian ]; then
     FASL_DIR=/tmp/fasls
     DYNAMIC_SPACE=8GB
-    SYSTEMS += " closer-mop cl-ppcre cxml cxml-stp closure-html
-drakma named-readtables iterate cffi trivial-garbage bordeaux-threads
-chipz trivial-gray-streams conium prepl osicat command-line-arguments
-cl-pdf cl-typesetting postmodern alexandria csv-parser ironclad cl-json
-ht-simple-ajax hunchentoot local-time vecto simple-date cl-who cl-jpeg
-salza2"
 else
     FASL_DIR=~/lisp/fasls
     DYNAMIC_SPACE=4GB
