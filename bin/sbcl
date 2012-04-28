@@ -4,7 +4,7 @@ SBCL=~/lisp/impl/sbcl
 
 export SBCL_HOME=$SBCL/contrib
 
-SYSTEMS = "sb-bsd-sockets sb-posix sb-introspect sb-cltl2 asdf sb-sprof"
+SYSTEMS="sb-bsd-sockets sb-posix sb-introspect sb-cltl2 asdf sb-sprof"
 
 if [ `hostname` = debian ]; then
     FASL_DIR=/tmp/fasls
