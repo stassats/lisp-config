@@ -271,7 +271,6 @@
     (anaphora cvs ,(cl-net-cvs "anaphora" "") ,(lisp "site/anaphora") ("src/anaphora.asd"))
     (uuid wget "http://www.dardoria.net/software/uuid.tar.gz" ,(lisp "site/uuid") ("uuid.asd"))
     (trivial-timeout darcs "http://common-lisp.net/project/trivial-timeout/" ,(lisp "site/trivial-timeout") ("trivial-timeout.asd"))
-    (f-underscore darcs "http://common-lisp.net/project/bpm/darcs/f-underscore" ,(lisp "site/f-underscore") ("f-underscore.asd"))
     (fare-matcher git "git://common-lisp.net/users/frideau/fare-matcher.git" ,(lisp "site/fare-matcher") ("fare-matcher.asd"))
     (fare-utils git "git://common-lisp.net/users/frideau/fare-utils.git" ,(lisp "site/fare-utils") ("fare-utils.asd"))
     (cl-simd git "git://github.com/angavrilov/cl-simd.git" ,(lisp "site/cl-simd") ("cl-simd.asd"))
@@ -279,6 +278,9 @@
     (cl-smtp cvs ,(cl-net-cvs "cl-smtp" "cl-smtp") ,(lisp "site/cl-smtp") ("cl-smtp.asd"))
     (rfc2388 wget "http://common-lisp.net/project/rfc2388/rfc2388_latest.tar.gz"
              ,(lisp "site/rfc2388") ("rfc2388.asd"))
+    (cl-oauth git "git://github.com/skypher/cl-oauth.git" ,(lisp "site/cl-oauth") ("cl-oauth.asd"))
+    (f-underscore git "git://github.com/nallen05/f-underscore.git" ,(lisp "site/f-underscore")
+                  ("f-underscore.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())

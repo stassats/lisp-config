@@ -44,7 +44,7 @@
     (darcs pull -a)
     (cvs -q update)
     (svn update)
-    (hg update)
+    (hg pull -u)
     (bzr update)))
 
 (define (run command)
