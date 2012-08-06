@@ -113,9 +113,7 @@
     (ironclad git "git://github.com/froydnj/ironclad.git" ,(lisp "site/ironclad") ("ironclad.asd"))
     (nibbles git "git://github.com/froydnj/nibbles.git" ,(lisp "site/nibbles") ("nibbles.asd"))
     (qlmapper git "git://github.com/xach/qlmapper.git" ,(lisp "site/qlmapper") ("qlmapper.asd"))
-    
     (xcvb git "git://github.com/fare/xcvb.git" ,(lisp "site/xcvb") ("xcvb.asd"))
-
     (bordeaux-threads git "git://common-lisp.net/projects/bordeaux-threads/bordeaux-threads.git" ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
     (stefil darcs ,(cl-net-darcs "stefil") ,(lisp "site/stefil") ("stefil.asd"))
     (metabang-bind darcs "http://common-lisp.net/project/metabang-bind/" ,(lisp "site/metabang-bind") ("metabang-bind.asd"))
@@ -281,6 +279,7 @@
     (cl-oauth git "git://github.com/skypher/cl-oauth.git" ,(lisp "site/cl-oauth") ("cl-oauth.asd"))
     (f-underscore git "git://github.com/nallen05/f-underscore.git" ,(lisp "site/f-underscore")
                   ("f-underscore.asd"))
+    (linedit git "git://common-lisp.net/projects/linedit/linedit.git" ,(lisp "site/linedit") ("linedit.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
