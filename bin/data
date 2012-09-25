@@ -280,6 +280,11 @@
     (f-underscore git "git://github.com/nallen05/f-underscore.git" ,(lisp "site/f-underscore")
                   ("f-underscore.asd"))
     (linedit git "git://common-lisp.net/projects/linedit/linedit.git" ,(lisp "site/linedit") ("linedit.asd"))
+    (series cvs ,(sf-cvs "series" "series") ,(lisp "site/series") ("series.asd"))
+    (cl-mime git "git://github.com/billitch/cl-mime.git" ,(lisp "site/cl-mime") ("cl-mime.asd"))
+    (cl-qprint git "git://github.com/mcna/cl-qprint.git" ,(lisp "site/cl-qprint") ("cl-qprint.asd"))
+    (trivial-timers wget "http://releases.unknownlamer.org/trivial-timers/trivial-timers_latest.tar.gz"
+                    ,(lisp "site/trivial-timers") ("trivial-timers.asd"))
 
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
