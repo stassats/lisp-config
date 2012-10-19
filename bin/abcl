@@ -1,5 +1,5 @@
 #!/bin/sh
 
-exec java -Djava.net.preferIPv4Stack=true \
+exec /usr/lib/jvm/java-6-openjdk-amd64/jre/bin/java -Djava.net.preferIPv4Stack=true \
     -jar ~/lisp/impl/abcl/dist/abcl.jar \
     --load ~/lisp/configs/abcl.lisp "$@"
