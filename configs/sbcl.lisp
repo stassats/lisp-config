@@ -14,3 +14,5 @@
 	(call-next-method)))))
 
 (sb-ext:restrict-compiler-policy 'debug 2)
+
+(setf sb-ext:*disassemble-annotate* nil)
