@@ -3,7 +3,9 @@
 (in-package #:cl-user)
 
 (setf *compile-verbose* nil
-      *compile-print* nil)
+      *compile-print* nil
+      *load-verbose* nil
+      *load-print* nil)
 
 (defun ~ (path)
   (#+cmu truename #-cmu or
