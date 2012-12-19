@@ -23,7 +23,7 @@
         ,(~ "lisp/systems/"))
       asdf:*compile-file-failure-behaviour* :warn)
 
-(defvar *fasl-dir* (if (search "debian" (machine-instance))
+(defvar *fasl-dir* (if (asdf:hostname)
                        "/tmp/fasls/"
                        (~ "lisp/fasls/")))
 
