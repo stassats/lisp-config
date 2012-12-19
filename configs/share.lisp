@@ -23,7 +23,7 @@
         ,(~ "lisp/systems/"))
       asdf:*compile-file-failure-behaviour* :warn)
 
-(defvar *fasl-dir* (if (equal (machine-instance) "debian")
+(defvar *fasl-dir* (if (search "debian" (machine-instance))
                        "/tmp/fasls/"
                        (~ "lisp/fasls/")))
 
@@ -45,7 +45,7 @@
 
   (defmacro :dbg (x &optional tag)
     `(let ((results (multiple-value-list ,x)))
-       (format *debug-io* "~&~@[~a ~]~{~s~^, ~}~%" ,tag results)
+       (format *debug-io* "~&~@[~a ~]~:[; no values~;~:*~{~s~^, ~}~]~%" ,tag results)
        (finish-output *debug-io*)
        (values-list results)))
 
