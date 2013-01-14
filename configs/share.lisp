@@ -23,17 +23,15 @@
         ,(~ "lisp/systems/"))
       asdf:*compile-file-failure-behaviour* :warn)
 
-(defvar *fasl-dir* (if (asdf:hostname)
-                       "/tmp/fasls/"
-                       (~ "lisp/fasls/")))
-
-(ensure-directories-exist *fasl-dir*)
-
+(defvar *fasl-dir*
+  (ensure-directories-exist
+   (if (asdf:hostname)
+       "/tmp/fasls/"
+       (~ "lisp/fasls/"))))
 
 (asdf:enable-asdf-binary-locations-compatibility
  :centralize-lisp-binaries t
  :default-toplevel-directory *fasl-dir*)
-
 
 ;;; Useful functions
 #-lispworks
