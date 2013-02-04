@@ -61,7 +61,7 @@
              ,(lisp "site/usocket") ("usocket.asd"))
     (puri git "http://git.b9.com/puri.git" ,(lisp "site/puri") ("puri.asd"))
     (cl-base64 git "http://git.b9.com/cl-base64.git" ,(lisp "site/cl-base64") ("cl-base64.asd"))
-    (md5 git "http://git.b9.com/md5.git" ,(lisp "site/md5") ("md5.asd"))
+    (md5 git "git://github.com/pmai/md5.git" ,(lisp "site/md5") ("md5.asd"))
     (clsql git "http://git.b9.com/clsql.git" ,(lisp "site/clsql")
            ("clsql.asd" "clsql-aodbc.asd" "clsql-cffi.asd" "clsql-db2.asd" "clsql-mysql.asd"
             "clsql-odbc.asd" "clsql-oracle.asd" "clsql-postgresql-socket.asd" "clsql-postgresql.asd"
@@ -71,7 +71,7 @@
     (cl-audioscrobbler svn "http://cl-audioscrobbler.googlecode.com/svn/trunk/"
                        ,(lisp "site/cl-audioscrobbler") ("cl-audioscrobbler.asd"))
     (s-xml cvs ,(cl-net-cvs "s-xml" "s-xml") ,(lisp "site/s-xml") ("s-xml.asd"))
-    (clx darcs "http://common-lisp.net/~crhodes/clx/" ,(lisp "site/clx") ("clx.asd"))
+    (clx git "git://github.com/sharplispers/clx.git" ,(lisp "site/clx") ("clx.asd"))
     (mcclim cvs ,(cl-net-cvs "mcclim" "mcclim") ,(lisp "site/mcclim")
             ("mcclim.asd" "clim-listener.asd" "mcclim-jpeg-bitmaps.asd" "mcclim-gif-bitmaps.asd"
              "mcclim-tiff-bitmaps.asd" "mcclim-png-bitmaps.asd"
@@ -140,6 +140,9 @@
 		,(lisp "site/tab-layout-pane") ("tab-layout.asd" "radio-layout.asd" "stack-layout.asd"))
     (beirc cvs ,(cl-net-cvs "beirc" "beirc") ,(lisp "site/beirc") ("beirc.asd"))
     (gsll git "git://repo.or.cz/gsll.git" ,(lisp "site/gsll") ("gsll.asd"))
+    (antik git "git://repo.or.cz/antik.git" ,(lisp "site/antik") ("antik.asd"))
+    (fsbv git "git://repo.or.cz/fsbv.git" ,(lisp "site/fsbv") ("fsbv.asd"))
+    
     (trivial-garbage git "git://github.com/trivial-garbage/trivial-garbage.git"
                      ,(lisp "site/trivial-garbage") ("trivial-garbage.asd"))
     (commonqt git "git://gitorious.org/commonqt/commonqt.git" ,(lisp "site/commonqt") ("qt.asd" "qt-tutorial.asd" "qt-repl.asd"))
@@ -163,6 +166,8 @@
             "src/iolib.os.asd" "src/iolib-grovel.asd" "src/iolib.asdf.asd"
             "src/iolib.conf.asd"
             "test/iolib-tests.asd"))
+    (static-vectors git "git://gitorious.org/iolib/static-vectors.git" ,(lisp "site/static-vectors")
+                    ("static-vectors.asd"))
     (libfixposix git "git://gitorious.org/libfixposix/libfixposix.git" ,(lisp "site/libfixposix") ())
     (cl-launch wget "http://fare.tunes.org/files/cl-launch/cl-launch.tar.gz"
                ,(lisp "site/cl-launch") ("cl-launch.asd"))
