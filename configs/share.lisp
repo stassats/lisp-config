@@ -16,16 +16,19 @@
   #+(or clisp lispworks scl allegro)
   (load (~ "lisp/site/asdf/asdf.lisp"))
   #+(or sbcl ccl ecl abcl cmu)
-  (require '#:asdf))
+  (load (~ "lisp/site/asdf/asdf.lisp")))
 
 (setf asdf:*central-registry*
       `(*default-pathname-defaults*
         ,(~ "lisp/systems/"))
       asdf:*compile-file-failure-behaviour* :warn)
 
+#+asdf3
+(setf asdf:*warnings-file-type* nil)
+
 (defvar *fasl-dir*
   (ensure-directories-exist
-   (if (asdf:hostname)
+   (if (equal (asdf:hostname) "desktop")
        "/tmp/fasls/"
        (~ "lisp/fasls/"))))
 
