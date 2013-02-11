@@ -15,7 +15,7 @@
 (progn
   #+(or clisp lispworks scl allegro)
   (load (~ "lisp/site/asdf/asdf.lisp"))
-  #+(or sbcl ccl ecl abcl cmu)
+  #+(or ccl sbcl ecl abcl cmu)
   (load (~ "lisp/site/asdf/asdf.lisp")))
 
 (setf asdf:*central-registry*
@@ -32,6 +32,10 @@
        "/tmp/fasls/"
        (~ "lisp/fasls/"))))
 
+#+asdf3
+(setf asdf/configuration::*user-cache*
+      *fasl-dir*)
+#-asdf3
 (asdf:enable-asdf-binary-locations-compatibility
  :centralize-lisp-binaries t
  :default-toplevel-directory *fasl-dir*)

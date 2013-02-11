@@ -9,4 +9,9 @@
       (logical-pathname-translations "BUILD")
       '(("**;*.*.*" "/home/stas/lisp/impl/ecl/build/**/*.*")))
 
+(setf *compile-verbose* nil
+      *compile-print* nil
+      *load-verbose* nil
+      *load-print* nil)
+
 (load (merge-pathnames "lisp/configs/share.lisp" (user-homedir-pathname)))

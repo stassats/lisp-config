@@ -29,5 +29,5 @@ if [ ! -e $FASL_DIR/ccl-core -o "$1" = --dump ]; then
     fi
     dump_core
 fi
-echo $@
+
 exec $CCL -K utf-8 -n -I $FASL_DIR/ccl-core "$@"
