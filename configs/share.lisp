@@ -28,7 +28,7 @@
 
 (defvar *fasl-dir*
   (ensure-directories-exist
-   (if (equal (asdf:hostname) "desktop")
+   (if (equal (asdf:hostname) "debian")
        "/tmp/fasls/"
        (~ "lisp/fasls/"))))
 
