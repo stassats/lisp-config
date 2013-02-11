@@ -34,7 +34,8 @@
 
 #+asdf3
 (setf asdf/configuration::*user-cache*
-      *fasl-dir*)
+      (asdf/pathname:ensure-directory-pathname
+       (merge-pathnames (asdf/os:implementation-identifier) *fasl-dir*)))
 #-asdf3
 (asdf:enable-asdf-binary-locations-compatibility
  :centralize-lisp-binaries t
