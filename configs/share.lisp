@@ -33,9 +33,9 @@
        (~ "lisp/fasls/"))))
 
 #+asdf3
-(setf asdf/configuration::*user-cache*
-      (asdf/pathname:ensure-directory-pathname
-       (merge-pathnames (asdf/os:implementation-identifier) *fasl-dir*)))
+(asdf:initialize-output-translations
+  `(:output-translations
+    (t (,*fasl-dir* :implementation)) :inherit-configuration))
 #-asdf3
 (asdf:enable-asdf-binary-locations-compatibility
  :centralize-lisp-binaries t
