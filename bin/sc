@@ -14,6 +14,8 @@
           (act get arguments))
          (('u . arguments)
           (act update arguments))
+         (('log . arguments)
+          (act history-log arguments))
          (('remove . arguments)
           (if (> (length arguments) 0)
               (act remove arguments)
@@ -120,3 +122,16 @@
 (define (list-all)
   (for-each (lambda (project) (print (car project)))
    *projects*))
+
+(define *log*
+  '((git "git log")
+    (darcs "darcs changes | less")
+    (svn "svn log | less")
+    (hg "hg log | less")))
+
+(define (history-log method url path asds)
+  (cond ((file-exists? path)
+         (current-directory path)
+         (sys-system (cadr (assq method *log*))))
+        (else
+         (print (format "Isn't installed")))))
