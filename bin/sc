@@ -19,7 +19,7 @@
          (('remove . arguments)
           (if (> (length arguments) 0)
               (act remove arguments)
-              (error "Remove action requires an one or more arguments.")))
+              (error "Remove requires one or more arguments.")))
          (('cd . arguments)
           (act directory arguments))
          (('list)
