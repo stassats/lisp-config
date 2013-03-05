@@ -348,6 +348,8 @@
     (optima git "git://github.com/m2ym/optima.git" ,(lisp "site/optima") ("optima.asd"))
     (lparallel git "git://github.com/lmj/lparallel.git" ,(lisp "site/lparallel")
                ("lparallel.asd" "lparallel-bench.asd" "lparallel-test.asd"))
+    (napa-fft git "git://github.com/pkhuong/Napa-FFT.git" ,(lisp "site/napa-fft")
+              ("napa-fft.asd"))
     
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
