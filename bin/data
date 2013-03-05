@@ -346,6 +346,8 @@
     (fare-mop git "git://common-lisp.net/users/frideau/fare-mop.git" ,(lisp "site/fare-mop")
               ("fare-mop.asd"))
     (optima git "git://github.com/m2ym/optima.git" ,(lisp "site/optima") ("optima.asd"))
+    (lparallel git "git://github.com/lmj/lparallel.git" ,(lisp "site/lparallel")
+               ("lparallel.asd" "lparallel-bench.asd" "lparallel-test.asd"))
     
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
