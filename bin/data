@@ -48,7 +48,7 @@
   		    ,(lisp "site/documentation-template") ("documentation-template.asd"))
 
     (cl+ssl git "git://gitorious.org/cl-plus-ssl/cl-plus-ssl.git" ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
-    (trivial-gray-streams cvs ,(cl-net-cvs "cl-plus-ssl" "trivial-gray-streams")
+    (trivial-gray-streams git "git://gitorious.org/trivial-gray-streams/trivial-gray-streams.git"
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
     (cffi git "git://common-lisp.net/projects/cffi/cffi.git" ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"))
     (babel git "git://github.com/cl-babel/babel.git" ,(lisp "site/babel") ("babel.asd"))
@@ -350,6 +350,7 @@
                ("lparallel.asd" "lparallel-bench.asd" "lparallel-test.asd"))
     (napa-fft git "git://github.com/pkhuong/Napa-FFT.git" ,(lisp "site/napa-fft")
               ("napa-fft.asd"))
+    (cl-freetype2 git "git://github.com/rpav/cl-freetype2.git" ,(lisp "site/cl-freetype2") ("cl-freetype2.asd"))
     
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
