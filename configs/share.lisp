@@ -21,7 +21,8 @@
 (setf asdf:*central-registry*
       `(*default-pathname-defaults*
         ,(~ "lisp/systems/"))
-      asdf:*compile-file-failure-behaviour* :warn)
+      asdf:*compile-file-failure-behaviour* :warn
+      asdf::*uninteresting-conditions* nil)
 
 #+asdf3
 (setf asdf:*warnings-file-type* nil)
