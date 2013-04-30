@@ -272,9 +272,9 @@
     (weblocks hg "http://bitbucket.org/S11001001/weblocks-dev" ,(lisp "site/weblocks") ())
     (vectometry git "git://github.com/xach/vectometry.git" ,(lisp "site/vectometry") ("vectometry.asd"))
     (geometry git "git://github.com/xach/geometry.git" ,(lisp "site/geometry") ("geometry.asd"))
-    (cl-pdf svn "http://www.fractalconcept.com:8000/public/open-source/cl-pdf/"
+    (cl-pdf git "git://github.com/mbattyani/cl-pdf.git"
 	    ,(lisp "site/cl-pdf") ("cl-pdf.asd"))
-    (cl-typesetting svn "http://www.fractalconcept.com:8000/public/open-source/cl-typesetting/"
+    (cl-typesetting git "git://github.com/mbattyani/cl-typesetting.git"
                     ,(lisp "site/cl-typesetting") ("cl-typesetting.asd"))
     (opticl git "git://github.com/slyrus/opticl.git" ,(lisp "site/opticl") ("opticl.asd"))
     (retrospectiff git "git://github.com/slyrus/retrospectiff.git" ,(lisp "site/retrospectiff") ("retrospectiff.asd"))
@@ -353,6 +353,9 @@
     (cl-freetype2 git "git://github.com/rpav/cl-freetype2.git" ,(lisp "site/cl-freetype2") ("cl-freetype2.asd"))
     (cl-gss git "git://github.com/lokedhs/cl-gss.git" ,(lisp "site/cl-gss") ("cl-gss.asd"))
     (yason git "git://github.com/hanshuebner/yason.git" ,(lisp "site/yason") ("yason.asd"))
+    (yaclml darcs "http://common-lisp.net/project/bese/repos/yaclml/" ,(lisp "site/yaclml") ("yaclml.asd"))
+    (arnesi darcs "http://common-lisp.net/project/bese/repos/arnesi_dev/" ,(lisp "site/arnesi") ("arnesi.asd"))
+
     
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
