@@ -352,6 +352,7 @@
               ("napa-fft.asd"))
     (cl-freetype2 git "git://github.com/rpav/cl-freetype2.git" ,(lisp "site/cl-freetype2") ("cl-freetype2.asd"))
     (cl-gss git "git://github.com/lokedhs/cl-gss.git" ,(lisp "site/cl-gss") ("cl-gss.asd"))
+    (yason git "git://github.com/hanshuebner/yason.git" ,(lisp "site/yason") ("yason.asd"))
     
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
