@@ -363,7 +363,7 @@
     (clisp hg "http://clisp.hg.sourceforge.net:8000/hgroot/clisp/clisp" ,(lisp "impl/clisp") ())
     (ecl git "git://ecls.git.sourceforge.net/gitroot/ecls/ecl" ,(lisp "impl/ecl") ())
     (gcl cvs ":pserver:anonymous@cvs.savannah.gnu.org:/sources/gcl gcl" ,(lisp "impl/gcl") ())
-    (abcl svn "svn://common-lisp.net/project/armedbear/svn/trunk/abcl" ,(lisp "impl/abcl") ())
+    (abcl svn "http://abcl.org/svn/trunk/abcl/" ,(lisp "impl/abcl") ())
     (xcl git "git://github.com/gnooth/xcl.git" ,(lisp "impl/xcl") ())
 
     (gosh svn "https://gauche.svn.sourceforge.net/svnroot/gauche/Gauche/trunk" ,(lisp "impl/gauche") ())
