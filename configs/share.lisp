@@ -16,7 +16,7 @@
   #+(or clisp lispworks scl allegro)
   (load (~ "lisp/site/asdf/asdf.lisp"))
   #+(or ccl sbcl ecl abcl cmu)
-  (load (~ "lisp/site/asdf/asdf.lisp")))
+  (require :asdf))
 
 (setf asdf:*central-registry*
       `(*default-pathname-defaults*
