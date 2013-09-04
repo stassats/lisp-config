@@ -51,7 +51,7 @@
     (trivial-gray-streams git "git://gitorious.org/trivial-gray-streams/trivial-gray-streams.git"
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
     (cffi git "git://common-lisp.net/projects/cffi/cffi.git" ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"))
-    (babel git "git://github.com/cl-babel/babel.git" ,(lisp "site/babel") ("babel.asd"))
+    (babel git "git://github.com/cl-babel/babel.git" ,(lisp "site/babel") ("babel.asd" "babel-streams.asd"))
     (alexandria git "git://common-lisp.net/projects/alexandria/alexandria.git" ,(lisp "site/alexandria") ("alexandria.asd"))
 
     (trivial-features git "git://github.com/trivial-features/trivial-features.git"
@@ -136,6 +136,7 @@
     (gsharp git "git://common-lisp.net/projects/gsharp/gsharp.git" ,(lisp "site/gsharp") ("gsharp.asd"))
     (midi wget "http://doc.gold.ac.uk/isms/lisp/midi/midi-20070618.tar.gz" ,(lisp "site/midi") ("midi.asd"))
     (cl-irc svn "svn://common-lisp.net/project/cl-irc/svn/trunk" ,(lisp "site/cl-irc") ("cl-irc.asd"))
+    (trivial-irc git "git://github.com/karvus/trivial-irc.git" ,(lisp "site/trivial-irc") ("trivial-irc.asd"))
     (tab-layout wget "http://bl0rg.net/~mgr/flux/tab-layout_2005-09-19_02-52+0200.tar.bz2"
 		,(lisp "site/tab-layout-pane") ("tab-layout.asd" "radio-layout.asd" "stack-layout.asd"))
     (beirc cvs ,(cl-net-cvs "beirc" "beirc") ,(lisp "site/beirc") ("beirc.asd"))
@@ -355,7 +356,7 @@
     (yason git "git://github.com/hanshuebner/yason.git" ,(lisp "site/yason") ("yason.asd"))
     (yaclml darcs "http://common-lisp.net/project/bese/repos/yaclml/" ,(lisp "site/yaclml") ("yaclml.asd"))
     (arnesi darcs "http://common-lisp.net/project/bese/repos/arnesi_dev/" ,(lisp "site/arnesi") ("arnesi.asd"))
-
+    (jsown git "git://github.com/madnificent/jsown.git" ,(lisp "site/jsown") ("jsown.asd"))
     
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
