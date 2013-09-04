@@ -6,11 +6,11 @@ export SBCL_HOME=$SBCL/contrib
 
 SYSTEMS="sb-bsd-sockets sb-posix sb-introspect sb-cltl2 sb-sprof sb-concurrency"
 
+FASL_DIR=~/lisp/fasls
+
 if [ `hostname` = debian ]; then
-    FASL_DIR=/tmp/fasls
     DYNAMIC_SPACE=8GB
 else
-    FASL_DIR=~/lisp/fasls
     DYNAMIC_SPACE=4GB
 fi
 

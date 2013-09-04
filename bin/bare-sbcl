@@ -5,10 +5,8 @@ SBCL=~/lisp/impl/sbcl
 export SBCL_HOME=$SBCL/contrib
 
 if [ `hostname` = debian ]; then
-    FASL_DIR=/tmp/fasls
     DYNAMIC_SPACE=8GB
 else
-    FASL_DIR=~/lisp/fasls
     DYNAMIC_SPACE=4GB
 fi
 

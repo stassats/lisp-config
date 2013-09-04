@@ -29,9 +29,7 @@
 
 (defvar *fasl-dir*
   (ensure-directories-exist
-   (if (equal (asdf:hostname) "debian")
-       "/tmp/fasls/"
-       (~ "lisp/fasls/"))))
+   (~ "lisp/fasls/")))
 
 #+asdf3
 (setf asdf/configuration::*user-cache*
