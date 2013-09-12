@@ -94,7 +94,7 @@
                     ,(lisp "site/org-davep-dict") ("org-davep-dict.asd"))
     (hunchentoot-cgi git "git://cyrusharmon.org/pub/git/hunchentoot-cgi.git"
                      ,(lisp "site/hunchentoot-cgi") ("hunchentoot-cgi.asd"))
-    (local-time darcs ,(cl-net-darcs "local-time") ,(lisp "site/local-time") ("local-time.asd"))
+    (local-time git "git://github.com/dlowe-net/local-time.git" ,(lisp "site/local-time") ("local-time.asd"))
     (asdf-system-connections darcs
                              "http://common-lisp.net/project/cl-containers/asdf-system-connections/darcs/asdf-system-connections"
                              ,(lisp "site/asdf-system-connections") ("asdf-system-connections.asd"))
