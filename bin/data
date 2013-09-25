@@ -357,6 +357,9 @@
     (yaclml darcs "http://common-lisp.net/project/bese/repos/yaclml/" ,(lisp "site/yaclml") ("yaclml.asd"))
     (arnesi darcs "http://common-lisp.net/project/bese/repos/arnesi_dev/" ,(lisp "site/arnesi") ("arnesi.asd"))
     (jsown git "git://github.com/madnificent/jsown.git" ,(lisp "site/jsown") ("jsown.asd"))
+    (cl-csv git "git://github.com/AccelerationNet/cl-csv.git" ,(lisp "site/cl-csv") ("cl-csv.asd"))
+    (femlisp cvs ":pserver:anonymous@cvs.savannah.nongnu.org:/sources/femlisp femlisp"
+             ,(lisp "site/femlisp") ("femlisp.asd"))
     
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
