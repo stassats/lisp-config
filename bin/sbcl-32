@@ -1,0 +1,14 @@
+#!/bin/sh
+
+SBCL=~/lisp/impl/sbcl-x86
+
+export SBCL_HOME=$SBCL/contrib
+
+FASL_DIR=~/lisp/fasls
+
+DYNAMIC_SPACE=2GB
+
+exec $SBCL/src/runtime/sbcl --dynamic-space-size $DYNAMIC_SPACE \
+    --core $SBCL/output/sbcl.core \
+    --load ~/lisp/configs/share.lisp "$@" \
+
