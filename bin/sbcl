@@ -2,7 +2,7 @@
 
 SBCL=~/lisp/impl/sbcl
 
-export SBCL_HOME=$SBCL/contrib
+export SBCL_HOME=$SBCL/obj/sbcl-home/
 
 SYSTEMS="sb-bsd-sockets sb-posix sb-introspect sb-cltl2 sb-sprof sb-concurrency"
 
@@ -17,8 +17,9 @@ fi
 dump_core() {
     $SBCL/src/runtime/sbcl \
         --core $SBCL/output/sbcl.core \
-        --userinit ~/lisp/configs/sbcl.lisp \
+        --no-sysinit --no-userinit \
         --eval "(mapc 'require '($SYSTEMS))" \
+        --load ~/lisp/configs/sbcl.lisp \
         --eval "(sb-ext:save-lisp-and-die \"$FASL_DIR/sbcl-core\" :save-runtime-options t)"
 }
 
@@ -27,4 +28,4 @@ if [ ! -e $FASL_DIR/sbcl-core -o "$1" = --dump ]; then
 fi
 
 exec $SBCL/src/runtime/sbcl --dynamic-space-size $DYNAMIC_SPACE \
-    --core $FASL_DIR/sbcl-core "$@"
+    --core $FASL_DIR/sbcl-core --no-sysinit --no-userinit "$@"

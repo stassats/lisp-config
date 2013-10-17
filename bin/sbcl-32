@@ -2,7 +2,7 @@
 
 SBCL=~/lisp/impl/sbcl-x86
 
-export SBCL_HOME=$SBCL/contrib
+export SBCL_HOME=$SBCL/obj/sbcl-home/
 
 FASL_DIR=~/lisp/fasls
 
