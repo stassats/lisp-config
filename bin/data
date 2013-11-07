@@ -360,6 +360,13 @@
     (cl-csv git "git://github.com/AccelerationNet/cl-csv.git" ,(lisp "site/cl-csv") ("cl-csv.asd"))
     (femlisp cvs ":pserver:anonymous@cvs.savannah.nongnu.org:/sources/femlisp femlisp"
              ,(lisp "site/femlisp") ("femlisp.asd"))
+    (cl-sasl git "git://github.com/legoscia/cl-sasl.git" ,(lisp "site/cl-sasl") ("cl-sasl.asd"))
+    (cl-async git "git://github.com/orthecreedence/cl-async" ,(lisp "site/cl-async")
+              ("cl-async.asd" "cl-async-ssl.asd" "cl-async-test.asd"))
+    (cl-libevent2 git "git://github.com/orthecreedence/cl-libevent2" ,(lisp "site/cl-libevent2")
+              ("cl-libevent2.asd" "cl-libevent2-ssl.asd"))
+    (cl-async-future git "git://github.com/orthecreedence/cl-async-future" ,(lisp "site/cl-async-future")
+              ("cl-async-future.asd" "cl-async-future-test.asd"))
     
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
