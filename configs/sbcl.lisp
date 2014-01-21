@@ -16,3 +16,7 @@
 (sb-ext:restrict-compiler-policy 'debug 2)
 
 (setf sb-ext:*disassemble-annotate* nil)
+
+(when (find-package :sb-regalloc)
+  (setf (symbol-value (find-symbol "*REGISTER-ALLOCATION-METHOD*" :sb-regalloc))
+        :greedy))

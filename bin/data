@@ -367,7 +367,11 @@
               ("cl-libevent2.asd" "cl-libevent2-ssl.asd"))
     (cl-async-future git "git://github.com/orthecreedence/cl-async-future" ,(lisp "site/cl-async-future")
               ("cl-async-future.asd" "cl-async-future-test.asd"))
-    
+
+    (lla git "git://github.com/tpapp/lla.git" ,(lisp "site/lla") ("lla.asd"))
+    (cl-slice git "git://github.com/tpapp/cl-slice.git" ,(lisp "site/cl-slice") ("cl-slice.asd"))
+    (cl-num-utils git "git://github.com/tpapp/cl-num-utils.git" ,(lisp "site/cl-num-utils") ("cl-num-utils.asd"))
+    (array-operations git "git://github.com/tpapp/array-operations.git" ,(lisp "site/array-operations") ("array-operations.asd"))
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
