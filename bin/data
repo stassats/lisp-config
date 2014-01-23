@@ -367,6 +367,7 @@
               ("cl-libevent2.asd" "cl-libevent2-ssl.asd"))
     (cl-async-future git "git://github.com/orthecreedence/cl-async-future" ,(lisp "site/cl-async-future")
               ("cl-async-future.asd" "cl-async-future-test.asd"))
+    (cl-mustache git "git://github.com/kanru/cl-mustache" ,(lisp "site/cl-mustache") ("cl-mustache.asd" "cl-mustache-test.asd"))
 
     (lla git "git://github.com/tpapp/lla.git" ,(lisp "site/lla") ("lla.asd"))
     (cl-slice git "git://github.com/tpapp/cl-slice.git" ,(lisp "site/cl-slice") ("cl-slice.asd"))
