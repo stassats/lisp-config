@@ -50,7 +50,7 @@
     (cl+ssl git "git://gitorious.org/cl-plus-ssl/cl-plus-ssl.git" ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
     (trivial-gray-streams git "git://gitorious.org/trivial-gray-streams/trivial-gray-streams.git"
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
-    (cffi git "git://common-lisp.net/projects/cffi/cffi.git" ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"))
+    (cffi git "git://github.com/cffi/cffi.git" ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"))
     (babel git "git://github.com/cl-babel/babel.git" ,(lisp "site/babel") ("babel.asd" "babel-streams.asd"))
     (alexandria git "git://common-lisp.net/projects/alexandria/alexandria.git" ,(lisp "site/alexandria") ("alexandria.asd"))
 
@@ -95,8 +95,8 @@
     (hunchentoot-cgi git "git://cyrusharmon.org/pub/git/hunchentoot-cgi.git"
                      ,(lisp "site/hunchentoot-cgi") ("hunchentoot-cgi.asd"))
     (local-time git "git://github.com/dlowe-net/local-time.git" ,(lisp "site/local-time") ("local-time.asd"))
-    (asdf-system-connections darcs
-                             "http://common-lisp.net/project/cl-containers/asdf-system-connections/darcs/asdf-system-connections"
+    (asdf-system-connections git
+                             "git://github.com/gwkkwg/asdf-system-connections"
                              ,(lisp "site/asdf-system-connections") ("asdf-system-connections.asd"))
     (asdf-binary-locations darcs "http://common-lisp.net/project/asdf-binary-locations/"
                            ,(lisp "site/asdf-binary-locations") ("asdf-system-connections.asd"))
