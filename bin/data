@@ -47,8 +47,8 @@
     (documentation-template darcs "http://common-lisp.net/~loliveira/ediware/documentation-template"
   		    ,(lisp "site/documentation-template") ("documentation-template.asd"))
 
-    (cl+ssl git "git://gitorious.org/cl-plus-ssl/cl-plus-ssl.git" ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
-    (trivial-gray-streams git "git://gitorious.org/trivial-gray-streams/trivial-gray-streams.git"
+    (cl+ssl git "git://github.com/cl-plus-ssl/cl-plus-ssl" ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
+    (trivial-gray-streams git "git://github.com/trivial-gray-streams/trivial-gray-streams"
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
     (cffi git "git://github.com/cffi/cffi.git" ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"))
     (babel git "git://github.com/cl-babel/babel.git" ,(lisp "site/babel") ("babel.asd" "babel-streams.asd"))
