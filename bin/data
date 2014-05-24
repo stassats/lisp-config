@@ -147,7 +147,7 @@
     (trivial-garbage git "git://github.com/trivial-garbage/trivial-garbage.git"
                      ,(lisp "site/trivial-garbage") ("trivial-garbage.asd"))
     (commonqt git "git://gitorious.org/commonqt/commonqt.git" ,(lisp "site/commonqt") ("qt.asd" "qt-tutorial.asd" "qt-repl.asd"))
-    (named-readtables darcs "http://common-lisp.net/project/editor-hints/darcs/named-readtables/"
+    (named-readtables git "git://github.com/melisgl/named-readtables.git"
                       ,(lisp "site/named-readtables") ("named-readtables.asd"))
     (movitz cvs ,(cl-net-cvs "movitz" "movitz") ,(lisp "site/movitz") ("movitz.asd"))
     (binary-types cvs ,(cl-net-cvs "movitz" "binary-types") ,(lisp "site/binary-types") ("binary-types.asd"))
