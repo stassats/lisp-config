@@ -121,7 +121,7 @@
     (asdf-utils git "git://common-lisp.net/projects/asdf/asdf-utils.git" ,(lisp "site/asdf-utils") ("asdf-utils.asd"))
     (bordeaux-threads git "git://common-lisp.net/projects/bordeaux-threads/bordeaux-threads.git" ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
     (stefil darcs ,(cl-net-darcs "stefil") ,(lisp "site/stefil") ("stefil.asd"))
-    (metabang-bind darcs "http://common-lisp.net/project/metabang-bind/" ,(lisp "site/metabang-bind") ("metabang-bind.asd"))
+    (metabang-bind git "git://github.com/gwkkwg/metabang-bind" ,(lisp "site/metabang-bind") ("metabang-bind.asd"))
     (gbbopen svn "http://GBBopen.org/svn/GBBopen/trunk/" ,(lisp "site/gbbopen") ("gbbopen.asd"))
     (s-xml-rpc cvs ,(cl-net-cvs "s-xml-rpc" "s-xml-rpc") ,(lisp "site/s-xml-rpc") ("s-xml-rpc.asd"))
     (montezuma svn "http://montezuma.googlecode.com/svn/trunk/montezuma" ,(lisp "site/montezuma") ("montezuma.asd"))
@@ -226,11 +226,11 @@
                             ,(lisp "site/command-line-arguments") ("command-line-arguments.asd"))
     (cl-containers git "git://github.com/gwkkwg/cl-containers.git"
                    ,(lisp "site/cl-containers") ("cl-containers.asd"))
-    (metatilities darcs "http://common-lisp.net/project/metatilities"
+    (metatilities git "git://github.com/gwkkwg/metatilities"
 		  ,(lisp "site/metatilities") ("metatilities.asd"))
-    (metatilities-base darcs "http://common-lisp.net/project/metatilities-base"
+    (metatilities-base git "git://github.com/gwkkwg/metatilities-base"
 		       ,(lisp "site/metatilities-base") ("metatilities-base.asd"))
-    (moptilities darcs "http://common-lisp.net/project/moptilities"
+    (moptilities git "git://github.com/gwkkwg/moptilities"
 		 ,(lisp "site/moptilities") ("moptilities.asd"))
     (s-base64 darcs "http://www.beta9.be/darcs/s-base64" ,(lisp "site/s-base64") ("s-base64.asd"))
     (s-sysdeps git "git://github.com/svenvc/s-sysdeps.git" ,(lisp "site/s-sysdeps") ("s-sysdeps.asd"))
