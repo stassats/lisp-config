@@ -2,7 +2,8 @@
 
 (load (merge-pathnames "lisp/configs/share.lisp" (user-homedir-pathname)))
 
-(sb-ext:set-sbcl-source-location (~ "lisp/impl/sbcl/"))
+(sb-ext:set-sbcl-source-location (~ #-x86 "lisp/impl/sbcl/"
+                                    #+x86 "lisp/impl/sbcl-x86/"))
 
 (let ((sb-ext:*muffled-warnings* 'sb-kernel::redefinition-warning))
   (defmethod asdf:perform :around ((o asdf:load-op)
@@ -19,4 +20,4 @@
 
 (when (find-package :sb-regalloc)
   (setf (symbol-value (find-symbol "*REGISTER-ALLOCATION-METHOD*" :sb-regalloc))
-        :greedy))
+        :iterative))
