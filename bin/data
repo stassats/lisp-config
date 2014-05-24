@@ -208,7 +208,7 @@
               ,(lisp "site/cxml-stp") ("cxml-stp.asd"))
     (hyperdoc darcs "http://common-lisp.net/project/editor-hints/darcs/hyperdoc/"
               ,(lisp "site/hyperdoc") ("hyperdoc.asd"))
-    (cl-store darcs "http://common-lisp.net/project/cl-store/darcs/cl-store/"
+    (cl-store git "git://github.com/skypher/cl-store.git"
               ,(lisp "site/cl-store") ("cl-store.asd"))
     (trees wget "http://www.method-combination.net/lisp/files/trees.tar.gz"
            ,(lisp "site/trees") ("trees.asd"))
@@ -373,6 +373,8 @@
     (cl-slice git "git://github.com/tpapp/cl-slice.git" ,(lisp "site/cl-slice") ("cl-slice.asd"))
     (cl-num-utils git "git://github.com/tpapp/cl-num-utils.git" ,(lisp "site/cl-num-utils") ("cl-num-utils.asd"))
     (array-operations git "git://github.com/tpapp/array-operations.git" ,(lisp "site/array-operations") ("array-operations.asd"))
+    (fnv git "git://github.com/blindglobe/fnv.git" ,(lisp "site/fnv") ("org.middleangle.foreign-numeric-vector.asd"))
+
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
