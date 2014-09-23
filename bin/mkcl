@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec /usr/local/bin/mkcl -norc -load ~/lisp/configs/mkcl.lisp "$@"

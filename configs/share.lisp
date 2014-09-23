@@ -15,7 +15,7 @@
 (progn
   #+(or clisp lispworks scl allegro)
   (load (~ "lisp/site/asdf/asdf.lisp"))
-  #+(or ccl sbcl ecl abcl cmu)
+  #+(or ccl sbcl abcl cmu ecl mkcl)
   (require :asdf))
 
 (setf asdf:*central-registry*
