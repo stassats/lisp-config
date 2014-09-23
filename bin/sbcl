@@ -9,7 +9,7 @@ SYSTEMS="sb-bsd-sockets sb-posix sb-introspect sb-cltl2 sb-sprof sb-concurrency"
 FASL_DIR=~/lisp/fasls
 
 if [ `hostname` = debian ]; then
-    DYNAMIC_SPACE=8GB
+    DYNAMIC_SPACE=12GB
 else
     DYNAMIC_SPACE=4GB
 fi

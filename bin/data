@@ -57,7 +57,7 @@
     (trivial-features git "git://github.com/trivial-features/trivial-features.git"
                       ,(lisp "site/trivial-features") ("trivial-features.asd"))
     (trivial-utf-8 darcs ,(cl-net-darcs "trivial-utf-8") ,(lisp "site/trivial-utf-8") ("trivial-utf-8.asd"))
-    (usocket svn "svn://common-lisp.net/project/usocket/svn/usocket/trunk"
+    (usocket git "git://github.com/usocket/usocket.git"
              ,(lisp "site/usocket") ("usocket.asd"))
     (puri git "http://git.b9.com/puri.git" ,(lisp "site/puri") ("puri.asd"))
     (cl-base64 git "http://git.b9.com/cl-base64.git" ,(lisp "site/cl-base64") ("cl-base64.asd"))
@@ -291,7 +291,8 @@
     (ht-simple-ajax wget "http://martin-loetzsch.de/ht-simple-ajax/ht-simple-ajax.tar.gz"
                     ,(lisp "site/ht-simple-ajax")
                     ("ht-simple-ajax.asd"))
-    (3bmd git "git://github.com/3b/3bmd.git" ,(lisp "site/3bmd") ("3bmd.asd"))
+    (3bmd git "git://github.com/3b/3bmd.git" ,(lisp "site/3bmd")
+          ("3bmd.asd" "3bmd-ext-code-blocks.asd" "3bmd-ext-definition-lists.asd"  "3bmd-ext-wiki-links.asd"))
     (esrap git "git://github.com/nikodemus/esrap.git" ,(lisp "site/esrap") ("esrap.asd"))
     (cl-mongo git "git://github.com/fons/cl-mongo.git" ,(lisp "site/cl-mongo") ("cl-mongo.asd"))
     (parenscript git "git://common-lisp.net/projects/parenscript/parenscript.git" ,(lisp "site/parenscript") ("parenscript.asd"))
@@ -374,7 +375,13 @@
     (cl-num-utils git "git://github.com/tpapp/cl-num-utils.git" ,(lisp "site/cl-num-utils") ("cl-num-utils.asd"))
     (array-operations git "git://github.com/tpapp/array-operations.git" ,(lisp "site/array-operations") ("array-operations.asd"))
     (fnv git "git://github.com/blindglobe/fnv.git" ,(lisp "site/fnv") ("org.middleangle.foreign-numeric-vector.asd"))
-
+    (mgl-gpr git "git://github.com/melisgl/mgl-gpr" ,(lisp "site/mgl-gpr")
+             ("mgl-gpr.asd" "mgl-gpr-test.asd"))
+    (mgl-pax git "git://github.com/melisgl/mgl-pax" ,(lisp "site/mgl-pax")
+             ("mgl-pax.asd" "mgl-pax-test.asd"))
+    (colorize git "git://github.com/redline6561/colorize" ,(lisp "site/colorize") ("colorize.asd"))
+    (clunit git "git://github.com/tgutu/clunit" ,(lisp "site/clunit") ("clunit.asd"))
+    
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
