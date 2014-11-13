@@ -21,3 +21,7 @@
 (when (find-package :sb-regalloc)
   (setf (symbol-value (find-symbol "*REGISTER-ALLOCATION-METHOD*" :sb-regalloc))
         :iterative))
+
+#+#.(cl:if (cl:find-package :sb-unicode) '(:and) '(:or))
+(setf (sb-impl::%readtable-normalization *readtable*) nil
+      (sb-impl::%readtable-normalization sb-impl::*standard-readtable*) nil)
