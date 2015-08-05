@@ -396,6 +396,8 @@
     (piping git "git@github.com:Shinmera/piping.git" ,(lisp "site/piping") ("piping.asd"))
     (trivial-arguments git "git@github.com:Shinmera/trivial-arguments.git" ,(lisp "site/trivial-arguments") ("trivial-arguments.asd"))
     (clon git "git@github.com:igorpikman/clon.git" ,(lisp "site/clon") ("clon.asd"))
+    (quri git "git@github.com:fukamachi/quri.git" ,(lisp "site/quri") ("quri.asd" "quri-test.asd"))
+    (sb-daemon git "git@github.com:nikodemus/sb-daemon.git" ,(lisp "site/sb-daemon") ("sb-daemon.asd"))
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
