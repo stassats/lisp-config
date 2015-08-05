@@ -124,7 +124,7 @@
     (metabang-bind git "git://github.com/gwkkwg/metabang-bind" ,(lisp "site/metabang-bind") ("metabang-bind.asd"))
     (gbbopen svn "http://GBBopen.org/svn/GBBopen/trunk/" ,(lisp "site/gbbopen") ("gbbopen.asd"))
     (s-xml-rpc cvs ,(cl-net-cvs "s-xml-rpc" "s-xml-rpc") ,(lisp "site/s-xml-rpc") ("s-xml-rpc.asd"))
-    (montezuma svn "http://montezuma.googlecode.com/svn/trunk/montezuma" ,(lisp "site/montezuma") ("montezuma.asd"))
+    (montezuma git "git@github.com:sharplispers/montezuma.git" ,(lisp "site/montezuma") ("montezuma.asd"))
     (closure cvs ,(cl-net-cvs "closure" "closure") ,(lisp "site/closure") ("closure.asd"))
     (skippy wget "http://www.xach.com/lisp/skippy.tgz" ,(lisp "site/skippy") ("skippy.asd"))
     (salza2 wget "http://www.xach.com/lisp/salza2.tgz" ,(lisp "site/salza2") ("salza2.asd"))
@@ -160,16 +160,16 @@
                       "lispbuilder-sdl-cl-vectors.asd" "lispbuilder-sdl-examples.asd"
                       "lispbuilder-sdl-vecto-examples.asd" "lispbuilder-sdl-vecto.asd"
                       "lispbuilder-sdl.asd"))
-    (iolib git "git://gitorious.org/iolib/iolib.git" ,(lisp "site/iolib")
+    (iolib git "git://github.com/sionescu/iolib.git" ,(lisp "site/iolib")
            ("src/iolib.asd" "src/iolib.asd" "src/iolib.pathnames.asd" "src/iolib.syscalls.asd"
             "src/iolib.base.asd" "src/iolib.sockets.asd" "src/iolib.trivial-sockets.asd"
             "src/iolib.multiplex.asd" "src/iolib.streams.asd" "src/iolib.zeta-streams.asd"
             "src/iolib.os.asd" "src/iolib-grovel.asd" "src/iolib.asdf.asd"
             "src/iolib.conf.asd"
             "test/iolib-tests.asd"))
-    (static-vectors git "git://gitorious.org/iolib/static-vectors.git" ,(lisp "site/static-vectors")
+    (static-vectors git "git://github.com/sionescu/static-vectors.git" ,(lisp "site/static-vectors")
                     ("static-vectors.asd"))
-    (libfixposix git "git://gitorious.org/libfixposix/libfixposix.git" ,(lisp "site/libfixposix") ())
+    (libfixposix git "git://github.com/sionescu/libfixposix.git" ,(lisp "site/libfixposix") ())
     (cl-launch wget "http://fare.tunes.org/files/cl-launch/cl-launch.tar.gz"
                ,(lisp "site/cl-launch") ("cl-launch.asd"))
     (cl-l10n darcs "http://www.common-lisp.net/project/cl-l10n/repos/cl-l10n"
@@ -381,7 +381,21 @@
              ("mgl-pax.asd" "mgl-pax-test.asd"))
     (colorize git "git://github.com/redline6561/colorize" ,(lisp "site/colorize") ("colorize.asd"))
     (clunit git "git://github.com/tgutu/clunit" ,(lisp "site/clunit") ("clunit.asd"))
-    
+    (lisp-cv git "git@github.com:W-Net-AI/LISP-CV.git" ,(lisp "site/lisp-cv") ("lisp-cv.asd" "gc.asd"))
+    (lisp-executable git "git@github.com:markcox80/lisp-executable.git" ,(lisp "site/lisp-executable") ("lisp-executable.asd"))
+    (cl-sdl2 git "git@github.com:lispgames/cl-sdl2.git" ,(lisp "site/cl-sdl2") ("sdl2.asd"))
+    (cl-autowrap git "git@github.com:rpav/cl-autowrap.git" ,(lisp "site/cl-autowrap") ("cl-autowrap.asd"
+                                                                                       "cl-plus-c.asd"
+                                                                                       "cl-autowrap-test.asd"))
+    (trivial-channels git "git@github.com:rpav/trivial-channels.git" ,(lisp "site/trivial-channels") ("trivial-channels.asd"))
+    (dissect git "git@github.com:Shinmera/dissect.git" ,(lisp "site/dissect") ("dissect.asd"))
+    (verbose git "git@github.com:Shinmera/verbose.git" ,(lisp "site/verbose") ("verbose.asd"))
+    (colleen git "git@github.com:Shinmera/colleen.git" ,(lisp "site/colleen") ("colleen.asd"))
+    (universal-config git "git@github.com:Shinmera/universal-config.git" ,(lisp "site/universal-config") ("universal-config.asd"))
+    (parse-float git "git@github.com:soemraws/parse-float.git" ,(lisp "site/parse-float") ("parse-float.asd"))
+    (piping git "git@github.com:Shinmera/piping.git" ,(lisp "site/piping") ("piping.asd"))
+    (trivial-arguments git "git@github.com:Shinmera/trivial-arguments.git" ,(lisp "site/trivial-arguments") ("trivial-arguments.asd"))
+    (clon git "git@github.com:igorpikman/clon.git" ,(lisp "site/clon") ("clon.asd"))
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
