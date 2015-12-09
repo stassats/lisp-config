@@ -103,7 +103,7 @@
     (asdf-dependency-grovel git "http://common-lisp.net/r/projects/xcvb/asdf-dependency-grovel.git" ,(lisp "site/asdf-dependency-grovel")
                             ("asdf-dependency-grovel.asd"))
     (stumpwm git "git://git.savannah.nongnu.org/stumpwm.git" ,(lisp "site/stumpwm") ("stumpwm.asd"))
-    (closer-mop darcs "http://common-lisp.net/project/closer/repos/closer-mop/" ,(lisp "site/closer-mop") ("closer-mop.asd"))
+    (closer-mop git "git://git.code.sf.net/p/closer/closer-mop" ,(lisp "site/closer-mop") ("closer-mop.asd"))
     (contextl darcs "http://common-lisp.net/project/closer/repos/contextl/" ,(lisp "site/contextl") ("contextl.asd"))
     (lw-compat darcs "http://common-lisp.net/project/closer/repos/lw-compat/" ,(lisp "site/lw-compat") ("lw-compat.asd"))
     (filtered-functions darcs "http://common-lisp.net/project/closer/repos/filtered-functions/" ,(lisp "site/filtered-functions") ("filtered-functions.asd"))
