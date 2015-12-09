@@ -119,7 +119,7 @@
            "asdf-condition-control.asd" "xcvb-bridge.asd" "xcvb-utils.asd"
            "lisp-invocation.asd" "xcvb-bootstrap.asd"  "xcvb-driver.asd"))
     (asdf-utils git "git://common-lisp.net/projects/asdf/asdf-utils.git" ,(lisp "site/asdf-utils") ("asdf-utils.asd"))
-    (bordeaux-threads git "git://common-lisp.net/projects/bordeaux-threads/bordeaux-threads.git" ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
+    (bordeaux-threads git "git://github.com/sionescu/bordeaux-threads.git" ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
     (stefil darcs ,(cl-net-darcs "stefil") ,(lisp "site/stefil") ("stefil.asd"))
     (metabang-bind git "git://github.com/gwkkwg/metabang-bind" ,(lisp "site/metabang-bind") ("metabang-bind.asd"))
     (gbbopen svn "http://GBBopen.org/svn/GBBopen/trunk/" ,(lisp "site/gbbopen") ("gbbopen.asd"))
