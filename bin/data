@@ -50,7 +50,8 @@
     (cl+ssl git "git://github.com/cl-plus-ssl/cl-plus-ssl" ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
     (trivial-gray-streams git "git://github.com/trivial-gray-streams/trivial-gray-streams"
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
-    (cffi git "git://github.com/cffi/cffi.git" ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"))
+    (cffi git "git://github.com/cffi/cffi.git" ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"
+                                                                    "cffi-toolchain.asd"))
     (babel git "git://github.com/cl-babel/babel.git" ,(lisp "site/babel") ("babel.asd" "babel-streams.asd"))
     (alexandria git "git://common-lisp.net/projects/alexandria/alexandria.git" ,(lisp "site/alexandria") ("alexandria.asd"))
 
