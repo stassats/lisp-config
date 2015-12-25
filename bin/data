@@ -308,6 +308,7 @@
     (rfc2388 wget "http://common-lisp.net/project/rfc2388/rfc2388_latest.tar.gz"
              ,(lisp "site/rfc2388") ("rfc2388.asd"))
     (cl-oauth git "git://github.com/skypher/cl-oauth.git" ,(lisp "site/cl-oauth") ("cl-oauth.asd"))
+    (oauth2 git "git://github.com/Neronus/oauth2.git" ,(lisp "site/oauth2") ("oauth2.asd"))
     (f-underscore git "git://github.com/nallen05/f-underscore.git" ,(lisp "site/f-underscore")
                   ("f-underscore.asd"))
     (linedit git "git://common-lisp.net/projects/linedit/linedit.git" ,(lisp "site/linedit") ("linedit.asd"))
