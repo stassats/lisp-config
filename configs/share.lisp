@@ -9,7 +9,7 @@
 
 (defun ~ (path)
   (#+cmu truename #-cmu or
-         (merge-pathnames path (user-homedir-pathname))))
+   (merge-pathnames path (user-homedir-pathname))))
 
 #-asdf
 (progn
@@ -46,12 +46,14 @@
     (format t "Loading system: ~a~%" system)
     (and (asdf:oos 'asdf:load-op system :verbose nil)
          t))
-
+  (defun dbg (tag &rest results)
+    (declare (dynamic-extent results))
+    (let ((*print-right-margin* 155))
+     (format *debug-io* "~&~@[~a ~]~:[; no values~;~:*~{~s~^, ~}~]~%" tag results))
+    (finish-output *debug-io*)
+    (apply #'values results))
   (defmacro :dbg (x &optional tag)
-    `(let ((results (multiple-value-list ,x)))
-       (format *debug-io* "~&~@[~a ~]~:[; no values~;~:*~{~s~^, ~}~]~%" ,tag results)
-       (finish-output *debug-io*)
-       (values-list results)))
+    `(multiple-value-call #'dbg ,tag ,x))
 
   (defun :preload ()
     (mapcar :asd '(closer-mop cl-ppcre cxml cxml-stp closure-html
