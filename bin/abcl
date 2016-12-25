@@ -1,6 +1,6 @@
 #!/bin/sh
 
-exec /usr/lib/jvm/java-6-openjdk-amd64/jre/bin/java -Djava.net.preferIPv4Stack=true \
+exec java -Djava.net.preferIPv4Stack=true \
     -Xmx8g \
     -jar ~/lisp/impl/abcl/dist/abcl.jar \
     --load ~/lisp/configs/abcl.lisp "$@"

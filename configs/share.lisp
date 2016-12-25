@@ -32,7 +32,7 @@
    (~ "lisp/fasls/")))
 
 #+asdf3
-(setf asdf/configuration::*user-cache*
+(setf uiop/configuration:*user-cache*
       `(,*fasl-dir* :implementation))
 #-asdf3
 (asdf:enable-asdf-binary-locations-compatibility

@@ -25,3 +25,9 @@
 #+#.(cl:if (cl:find-package :sb-unicode) '(:and) '(:or))
 (setf (sb-impl::%readtable-normalization *readtable*) nil
       (sb-impl::%readtable-normalization sb-impl::*standard-readtable*) nil)
+
+(defun :tct ()
+  (setf sb-c::*compiler-trace-output*
+        (if sb-c::*compiler-trace-output*
+            nil
+            *standard-output*)))
