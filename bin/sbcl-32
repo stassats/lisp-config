@@ -6,9 +6,10 @@ export SBCL_HOME=$SBCL/obj/sbcl-home/
 
 FASL_DIR=~/lisp/fasls
 
-DYNAMIC_SPACE=2GB
+DYNAMIC_SPACE=1000
 
-exec $SBCL/src/runtime/sbcl --dynamic-space-size $DYNAMIC_SPACE \
+exec $SBCL/src/runtime/sbcl  --dynamic-space-size $DYNAMIC_SPACE \
     --core $SBCL/output/sbcl.core \
-    --load ~/lisp/configs/share.lisp "$@" \
+    "$@" \
+    --load ~/lisp/configs/share.lisp
 

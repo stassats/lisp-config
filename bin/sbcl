@@ -4,8 +4,6 @@ SBCL=~/lisp/impl/sbcl
 
 export SBCL_HOME=$SBCL/obj/sbcl-home/
 
-SYSTEMS="sb-bsd-sockets sb-posix sb-introspect sb-cltl2 sb-sprof sb-concurrency"
-
 FASL_DIR=~/lisp/fasls
 
 if [ `hostname` = debian ]; then
@@ -14,18 +12,5 @@ else
     DYNAMIC_SPACE=4GB
 fi
 
-dump_core() {
-    $SBCL/src/runtime/sbcl \
-        --core $SBCL/output/sbcl.core \
-        --no-sysinit --no-userinit \
-        --eval "(mapc 'require '($SYSTEMS))" \
-        --load ~/lisp/configs/sbcl.lisp \
-        --eval "(sb-ext:save-lisp-and-die \"$FASL_DIR/sbcl-core\" :save-runtime-options t)"
-}
+exec $SBCL/src/runtime/sbcl --core $FASL_DIR/sbcl-core --dynamic-space-size $DYNAMIC_SPACE "$@"
 
-if [ ! -e $FASL_DIR/sbcl-core -o "$1" = --dump ]; then
-    dump_core
-fi
-
-exec $SBCL/src/runtime/sbcl --dynamic-space-size $DYNAMIC_SPACE \
-    --core $FASL_DIR/sbcl-core --no-sysinit --no-userinit "$@"

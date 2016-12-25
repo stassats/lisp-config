@@ -2,10 +2,10 @@
 
 SBCL=~/lisp/impl/fast-sbcl
 
-export SBCL_HOME=$SBCL/contrib
+export SBCL_HOME=$SBCL/obj/sbcl-home/
 
 if [ `hostname` = debian ]; then
-    DYNAMIC_SPACE=8GB
+    DYNAMIC_SPACE=16GB
 else
     DYNAMIC_SPACE=4GB
 fi

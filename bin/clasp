@@ -1,0 +1,5 @@
+#!/bin/sh
+
+exec ~/c/clasp/build/clasp/Contents/execs/boehm/release/bin/clasp -f bclasp "$@"
+
+
