@@ -402,6 +402,8 @@
     (sb-daemon git "git@github.com:nikodemus/sb-daemon.git" ,(lisp "site/sb-daemon") ("sb-daemon.asd"))
     (cl-ftp git "git@github.com:pinterface/cl-ftp.git" ,(lisp "site/cl-ftp") ("cl-ftp.asd"))
     (trivial-ldap git "git@github.com:rwiker/trivial-ldap.git" ,(lisp "site/trivial-ldap") ("trivial-ldap.asd"))
+    (unit-test git "git@github.com:hanshuebner/unit-test.git" ,(lisp "site/unit-test") ("unit-test.asd"))
+    (asdf-flv git "https://github.com/didierverna/asdf-flv.git" ,(lisp "site/asdf-flv") ("net.didierverna.asdf-flv.asd"))
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
