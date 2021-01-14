@@ -6,24 +6,11 @@ FASL_DIR=~/lisp/fasls
 
 if [ `uname -m` = x86_64 ]
 then
-    CCL=${CCL_DIR}/lx86cl64
+    CCL=${CCL_DIR}/dx86cl64
 else
-    CCL=${CCL_DIR}/lx86cl
+    CCL=${CCL_DIR}/dx86cl
 fi
 
 export CCL_DEFAULT_DIRECTORY=${CCL_DIR}
 
-dump_core() {
-    $CCL -n --load ~/lisp/configs/ccl.lisp -K utf-8 \
-    --eval "(ccl:save-application \"$FASL_DIR/ccl-core\")"
-}
-
-if [ ! -e $FASL_DIR/ccl-core -o "$1" = --dump ]; then
-    echo  "Saving an image"
-    if [ "$1" = --dump ]; then
-        shift
-    fi
-    dump_core
-fi
-
-exec $CCL -K utf-8 -n -I $FASL_DIR/ccl-core "$@"
+exec $CCL --load ~/lisp/configs/ccl.lisp -K utf-8 -n "$@"

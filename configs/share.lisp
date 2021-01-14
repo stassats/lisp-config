@@ -48,12 +48,23 @@
          t))
   (defun dbg (tag &rest results)
     (declare (dynamic-extent results))
-    (let ((*print-right-margin* 155))
+    (let ((*print-right-margin* 155)
+          (*print-readably* nil))
      (format *debug-io* "~&~@[~a ~]~:[; no values~;~:*~{~s~^, ~}~]~%" tag results))
     (finish-output *debug-io*)
     (apply #'values results))
   (defmacro :dbg (x &optional tag)
     `(multiple-value-call #'dbg ,tag ,x))
+  #+sbcl
+  (defun dbgs (tag &rest results)
+    (declare (dynamic-extent results))
+    (let ((*print-right-margin* 155))
+     (format sb-sys:*stdout* "~&~@[~a ~]~:[; no values~;~:*~{~s~^, ~}~]~%" tag results))
+    (finish-output sb-sys:*stdout*)
+    (apply #'values results))
+  #+sbcl
+  (defmacro :dbgs (x &optional tag)
+    `(multiple-value-call #'dbgs ,tag ,x))
 
   (defun :preload ()
     (mapcar :asd '(closer-mop cl-ppcre cxml cxml-stp closure-html

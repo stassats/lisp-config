@@ -14,8 +14,6 @@
 	(asdf:perform (make-instance 'asdf:compile-op) c)
 	(call-next-method)))))
 
-(sb-ext:restrict-compiler-policy 'debug 2)
-
 (setf sb-ext:*disassemble-annotate* nil)
 
 (when (find-package :sb-regalloc)
@@ -26,8 +24,15 @@
 (setf (sb-impl::%readtable-normalization *readtable*) nil
       (sb-impl::%readtable-normalization sb-impl::*standard-readtable*) nil)
 
-(defun :tct ()
+(defun :tct (&rest targets)
   (setf sb-c::*compiler-trace-output*
-        (if sb-c::*compiler-trace-output*
+        (if (and (progn
+                   t
+                   #+#.(cl:if (cl:find-symbol "*COMPILE-TRACE-TARGETS*" :sb-c) '(:and) '(:or))
+                   (equal (shiftf sb-c::*compile-trace-targets* targets)
+                          targets))
+                 sb-c::*compiler-trace-output*)
             nil
             *standard-output*)))
+
+(setf *print-right-margin* 157)

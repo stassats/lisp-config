@@ -9,7 +9,7 @@ FASL_DIR=~/lisp/fasls
 if [ `hostname` = debian ]; then
     DYNAMIC_SPACE=12GB
 else
-    DYNAMIC_SPACE=4GB
+    DYNAMIC_SPACE=8GB
 fi
 
 exec $SBCL/src/runtime/sbcl --core $FASL_DIR/sbcl-core --dynamic-space-size $DYNAMIC_SPACE "$@"

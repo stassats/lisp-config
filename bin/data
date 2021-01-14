@@ -60,7 +60,7 @@
     (trivial-utf-8 darcs ,(cl-net-darcs "trivial-utf-8") ,(lisp "site/trivial-utf-8") ("trivial-utf-8.asd"))
     (usocket git "git://github.com/usocket/usocket.git"
              ,(lisp "site/usocket") ("usocket.asd"))
-    (puri git "http://git.b9.com/puri.git" ,(lisp "site/puri") ("puri.asd"))
+    (puri git "git://git.kpe.io/puri.git" ,(lisp "site/puri") ("puri.asd"))
     (cl-base64 git "http://git.b9.com/cl-base64.git" ,(lisp "site/cl-base64") ("cl-base64.asd"))
     (md5 git "git://github.com/pmai/md5.git" ,(lisp "site/md5") ("md5.asd"))
     (clsql git "http://git.b9.com/clsql.git" ,(lisp "site/clsql")
@@ -413,7 +413,17 @@
     (mt19937 wget "http://common-lisp.net/project/asdf-packaging/mt19937-latest.tar.gz" ,(lisp "site/mt19937") ("mt19937.asd"))
     (cl-cli git "https://github.com/renard/cl-cli.git" ,(lisp "site/cl-cli") ("cl-cli.asd"))
     (lisp-unit git "https://github.com/OdonataResearchLLC/lisp-unit.git" ,(lisp "site/lisp-unit") ("lisp-unit.asd"))
-    
+    (jonathan git "https://github.com/Rudolph-Miller/jonathan" ,(lisp "site/jonathan") ("jonathan.asd"))
+    (acclimation git "https://github.com/robert-strandh/Acclimation" ,(lisp "site/acclimation") ("acclimation.asd"))
+    (eclector git "https://github.com/s-expressionists/Eclector" ,(lisp "site/eclector") ("eclector.asd" "eclector-concrete-syntax-tree.asd"))
+    (concrete-syntax-tree git "https://github.com/s-expressionists/Concrete-Syntax-Tree" ,(lisp "site/concrete-syntax-tree")
+                          ("concrete-syntax-tree.asd" "concrete-syntax-tree-base.asd"
+                           "Lambda-list/concrete-syntax-tree-lambda-list.asd"))
+    (float-features git "https://github.com/Shinmera/float-features" ,(lisp "site/float-features") ("float-features.asd"))
+    (trivial-indent git "https://github.com/Shinmera/trivial-indent" ,(lisp "site/trivial-indent") ("trivial-indent.asd"))
+    (documentation-utils git "https://github.com/Shinmera/documentation-utils" ,(lisp "site/documentation-utils") ("multilang-documentation-utils.asd"
+                                                                                                                   "documentation-utils.asd"))
+
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
