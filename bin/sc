@@ -1,4 +1,4 @@
-#!/usr/bin/gosh
+#!/usr/local/bin/gosh
 ;;; -*- Mode: Scheme -*-
 
 (use file.util)
@@ -8,7 +8,7 @@
 (use util.match)
 
 (define (main args)
-  (load "/home/stas/lisp/bin/data")
+  (load "~/lisp/bin/data")
   (match (map string->symbol (cdr args))
          (('g . arguments)
           (act get arguments))

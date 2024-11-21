@@ -10,5 +10,18 @@ else
     DYNAMIC_SPACE=4GB
 fi
 
-exec $SBCL/src/runtime/sbcl --dynamic-space-size $DYNAMIC_SPACE \
-    --core $SBCL/output/sbcl.core "$@"
+CORE_DEFINED=no
+
+for arg in "$@"; do
+    case "$arg" in
+        --core)
+          CORE_DEFINED=yes
+          ;;
+    esac
+done
+
+if [ "$CORE_DEFINED" = "no" ]; then
+    CORE="--core $SBCL/output/sbcl.core"
+fi
+
+exec $SBCL/src/runtime/sbcl --dynamic-space-size $DYNAMIC_SPACE $CORE "$@"

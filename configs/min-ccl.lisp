@@ -1,4 +1,10 @@
 (require :asdf)
+
+(setf ccl:*default-file-character-encoding* :utf-8
+      ccl:*default-socket-character-encoding* :utf-8
+      (pathname-encoding-name) :utf-8
+      ccl:*default-external-format* :utf-8)
+
 (setf asdf:*central-registry*
       `(*default-pathname-defaults*
         ,(merge-pathnames "lisp/systems/"

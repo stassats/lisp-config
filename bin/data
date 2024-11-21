@@ -37,7 +37,7 @@
     (chunga git ,(ediware "chunga") ,(lisp "site/chunga") ("chunga.asd"))
     (url-rewrite darcs "http://common-lisp.net/~loliveira/ediware/url-rewrite/" ,(lisp "site/url-rewrite") ("url-rewrite.asd"))
     (cl-who git ,(ediware "cl-who") ,(lisp "site/cl-who") ("cl-who.asd"))
-    (hunchentoot git "git://github.com/edicl/hunchentoot.git" ,(lisp "site/hunchentoot") ("hunchentoot.asd"))
+    (hunchentoot git "https://github.com/edicl/hunchentoot.git" ,(lisp "site/hunchentoot") ("hunchentoot.asd"))
     (cl-fad git ,(ediware "cl-fad") ,(lisp "site/cl-fad") ("cl-fad.asd"))
     (cl-gd git ,(ediware "cl-gd") ,(lisp "site/cl-gd") ("cl-gd.asd"))
     (cl-unicode git ,(ediware "cl-unicode") ,(lisp "site/cl-unicode") ("cl-unicode.asd"))
@@ -47,23 +47,25 @@
     (documentation-template darcs "http://common-lisp.net/~loliveira/ediware/documentation-template"
   		    ,(lisp "site/documentation-template") ("documentation-template.asd"))
 
-    (cl+ssl git "git://github.com/cl-plus-ssl/cl-plus-ssl" ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
-    (trivial-gray-streams git "git://github.com/trivial-gray-streams/trivial-gray-streams"
+    (cl+ssl git "https://github.com/cl-plus-ssl/cl-plus-ssl" ,(lisp "site/cl+ssl") ("cl+ssl.asd"))
+    (trivial-gray-streams git "https://github.com/trivial-gray-streams/trivial-gray-streams"
                           ,(lisp "site/trivial-gray-streams") ("trivial-gray-streams.asd"))
-    (cffi git "git://github.com/cffi/cffi.git" ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"
+    (cffi git "https://github.com/cffi/cffi.git" ,(lisp "site/cffi") ("cffi.asd" "cffi-uffi-compat.asd" "cffi-grovel.asd"
                                                                     "cffi-toolchain.asd" "cffi-libffi.asd"))
-    (babel git "git://github.com/cl-babel/babel.git" ,(lisp "site/babel") ("babel.asd" "babel-streams.asd"))
-    (alexandria git "git://common-lisp.net/projects/alexandria/alexandria.git" ,(lisp "site/alexandria") ("alexandria.asd"))
+    (babel git "https://github.com/cl-babel/babel.git" ,(lisp "site/babel") ("babel.asd" "babel-streams.asd"))
+    (alexandria git "https://gitlab.common-lisp.net/alexandria/alexandria.git" ,(lisp "site/alexandria") ("alexandria.asd"))
 
-    (trivial-features git "git://github.com/trivial-features/trivial-features.git"
+    (trivial-features git "https://github.com/trivial-features/trivial-features.git"
                       ,(lisp "site/trivial-features") ("trivial-features.asd"))
     (trivial-utf-8 darcs ,(cl-net-darcs "trivial-utf-8") ,(lisp "site/trivial-utf-8") ("trivial-utf-8.asd"))
-    (usocket git "git://github.com/usocket/usocket.git"
+    (usocket git "https://github.com/usocket/usocket.git"
              ,(lisp "site/usocket") ("usocket.asd"))
     (puri git "http://git.b9.com/puri.git" ,(lisp "site/puri") ("puri.asd"))
-    (cl-base64 git "http://git.b9.com/cl-base64.git" ,(lisp "site/cl-base64") ("cl-base64.asd"))
     (md5 git "git://github.com/pmai/md5.git" ,(lisp "site/md5") ("md5.asd"))
     (deflate git "https://github.com/pmai/deflate.git" ,(lisp "site/deflate") ("deflate.asd"))
+    (puri git "git://git.kpe.io/puri.git" ,(lisp "site/puri") ("puri.asd"))
+    (cl-base64 git "http://git.kpe.io/cl-base64.git" ,(lisp "site/cl-base64") ("cl-base64.asd"))
+    (md5 git "https://github.com/pmai/md5.git" ,(lisp "site/md5") ("md5.asd"))
     (clsql git "http://git.b9.com/clsql.git" ,(lisp "site/clsql")
            ("clsql.asd" "clsql-aodbc.asd" "clsql-cffi.asd" "clsql-db2.asd" "clsql-mysql.asd"
             "clsql-odbc.asd" "clsql-oracle.asd" "clsql-postgresql-socket.asd" "clsql-postgresql.asd"
@@ -73,19 +75,28 @@
     (cl-audioscrobbler svn "http://cl-audioscrobbler.googlecode.com/svn/trunk/"
                        ,(lisp "site/cl-audioscrobbler") ("cl-audioscrobbler.asd"))
     (s-xml git "https://gitlab.common-lisp.net/s-xml/s-xml.git" ,(lisp "site/s-xml") ("s-xml.asd"))
-    (clx git "git://github.com/sharplispers/clx.git" ,(lisp "site/clx") ("clx.asd"))
-    (mcclim git "https://github.com/robert-strandh/mcclim.git" ,(lisp "site/mcclim")
-            ("mcclim.asd"))
+    (clx git "https://github.com/sharplispers/clx.git" ,(lisp "site/clx") ("clx.asd"))
+    (mcclim git "https://github.com/McCLIM/McCLIM.git" ,(lisp "site/mcclim")
+            ("Apps/Clouseau/clouseau.asd" "Apps/Debugger/clim-debugger.asd" "Apps/Functional-Geometry/functional-geometry.asd" "Apps/Listener/clim-listener.asd"
+             "Apps/Scigraph/scigraph.asd" "Backends/CLX-fb/mcclim-clx-fb.asd" "Backends/CLX/mcclim-clx.asd" "Backends/Null/mcclim-null.asd" "Backends/PDF/clim-pdf.asd"
+             "Backends/PostScript/clim-postscript-font.asd" "Backends/PostScript/clim-postscript.asd" "Backends/RasterImage/mcclim-raster-image.asd"
+             "Backends/SVG/mcclim-svg.asd" "Backends/common/mcclim-backend-common.asd" "Core/clim-core.asd" "Core/clim.asd" "Examples/clim-examples.asd"
+             "Experimental/tree-with-cross-edges/mcclim-tree-with-cross-edges.asd" "Extensions/Franz/mcclim-franz.asd" "Extensions/bezier/mcclim-bezier.asd"
+             "Extensions/bitmap-formats/mcclim-bitmaps.asd" "Extensions/conditional-commands/conditional-commands.asd" "Extensions/dot/mcclim-dot.asd"
+             "Extensions/fontconfig/mcclim-fontconfig.asd" "Extensions/fonts/mcclim-fonts.asd" "Extensions/harfbuzz/mcclim-harfbuzz.asd"
+             "Extensions/layouts/mcclim-layouts.asd" "Extensions/render/mcclim-render.asd" "Extensions/tooltips/mcclim-tooltips.asd"
+             "Libraries/Drei/Persistent/persistent.asd" "Libraries/Drei/cl-automaton/automaton.asd" "Libraries/Drei/drei-mcclim.asd" "Libraries/ESA/esa-mcclim.asd"
+             "Libraries/Slim/slim.asd"))
     (climacs cvs ,(cl-net-cvs "climacs" "climacs") ,(lisp "site/climacs") ("climacs.asd"))
     (flexichain cvs ,(cl-net-cvs "flexichain" "flexichain") ,(lisp "site/flexichain") ("flexichain.asd"))
     (spatial-trees git "https://github.com/rpav/spatial-trees.git"
                    ,(lisp "site/spatial-trees") ("spatial-trees.asd"))
     (cl-xmpp cvs ,(cl-net-cvs "cl-xmpp" "cl-xmpp") ,(lisp "site/cl-xmpp")
              ("cl-xmpp.asd" "cl-xmpp-tls.asd" "cl-xmpp-sasl.asd"))
-    (cxml git "http://repo.or.cz/r/cxml.git" ,(lisp "site/cxml") ("cxml.asd"))
-    (closure-common git "http://repo.or.cz/r/closure-common.git" ,(lisp "site/closure-common") ("closure-common.asd"))
-    (closure-html git "http://repo.or.cz/r/closure-html.git" ,(lisp "site/closure-html") ("closure-html.asd"))
-    (iterate darcs ,(cl-net-darcs "iterate") ,(lisp "site/iterate") ("iterate.asd"))
+    (cxml git "https://github.com/sharplispers/cxml.git" ,(lisp "site/cxml") ("cxml.asd"))
+    (closure-common git "https://github.com/sharplispers/closure-common.git" ,(lisp "site/closure-common") ("closure-common.asd"))
+    (closure-html git "https://github.com/bluelisp/closure-html.git" ,(lisp "site/closure-html") ("closure-html.asd"))
+    (iterate git "https://gitlab.common-lisp.net/iterate/iterate.git"  ,(lisp "site/iterate") ("iterate.asd"))
     (cl-utilities cvs ,(cl-net-cvs "cl-utilities" "cl-utilities") ,(lisp "site/cl-utilities") ("cl-utilities.asd"))
     (acl-compat cvs ,(sf-cvs "portableaserve" "portableaserve/acl-compat")
                 ,(lisp "site/acl-compat") ("acl-compat.asd"))
@@ -94,9 +105,9 @@
                     ,(lisp "site/org-davep-dict") ("org-davep-dict.asd"))
     (hunchentoot-cgi git "git://cyrusharmon.org/pub/git/hunchentoot-cgi.git"
                      ,(lisp "site/hunchentoot-cgi") ("hunchentoot-cgi.asd"))
-    (local-time git "git://github.com/dlowe-net/local-time.git" ,(lisp "site/local-time") ("local-time.asd"))
+    (local-time git "https://github.com/dlowe-net/local-time.git" ,(lisp "site/local-time") ("local-time.asd"))
     (asdf-system-connections git
-                             "git://github.com/gwkkwg/asdf-system-connections"
+                             "https://github.com/gwkkwg/asdf-system-connections"
                              ,(lisp "site/asdf-system-connections") ("asdf-system-connections.asd"))
     (asdf-binary-locations darcs "http://common-lisp.net/project/asdf-binary-locations/"
                            ,(lisp "site/asdf-binary-locations") ("asdf-system-connections.asd"))
@@ -109,21 +120,21 @@
     (filtered-functions darcs "http://common-lisp.net/project/closer/repos/filtered-functions/" ,(lisp "site/filtered-functions") ("filtered-functions.asd"))
     (ltk wget "http://www.peter-herth.de/ltk/ltk-0.91.tgz" ,(lisp "site/ltk") ("ltk.asd"))
     (able wget "http://phil.nullable.eu/files/able-src-0.18.zip" ,(lisp "site/able") ("able.asd"))
-    (png-read git "git://github.com/Ramarren/png-read.git" ,(lisp "site/png-read") ("png-read.asd"))
-    (chipz git "git://github.com/froydnj/chipz.git" ,(lisp "site/chipz") ("chipz.asd"))
-    (ironclad git "git://github.com/froydnj/ironclad.git" ,(lisp "site/ironclad") ("ironclad.asd"))
-    (nibbles git "git://github.com/froydnj/nibbles.git" ,(lisp "site/nibbles") ("nibbles.asd"))
-    (qlmapper git "git://github.com/xach/qlmapper.git" ,(lisp "site/qlmapper") ("qlmapper.asd"))
-    (xcvb git "git://github.com/fare/xcvb.git" ,(lisp "site/xcvb")
+    (png-read git "https://github.com/Ramarren/png-read.git" ,(lisp "site/png-read") ("png-read.asd"))
+    (chipz git "https://github.com/froydnj/chipz.git" ,(lisp "site/chipz") ("chipz.asd"))
+    (ironclad git "https://github.com/froydnj/ironclad.git" ,(lisp "site/ironclad") ("ironclad.asd"))
+    (nibbles git "https://github.com/froydnj/nibbles.git" ,(lisp "site/nibbles") ("nibbles.asd"))
+    (qlmapper git "https://github.com/xach/qlmapper.git" ,(lisp "site/qlmapper") ("qlmapper.asd"))
+    (xcvb git "https://github.com/fare/xcvb.git" ,(lisp "site/xcvb")
           ("xcvb.asd"
            "asdf-condition-control.asd" "xcvb-bridge.asd" "xcvb-utils.asd"
            "lisp-invocation.asd" "xcvb-bootstrap.asd"  "xcvb-driver.asd"))
     (asdf-utils git "git://common-lisp.net/projects/asdf/asdf-utils.git" ,(lisp "site/asdf-utils") ("asdf-utils.asd"))
-    (bordeaux-threads git "git://github.com/sionescu/bordeaux-threads.git" ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
+    (bordeaux-threads git "https://github.com/sionescu/bordeaux-threads.git" ,(lisp "site/bordeaux-threads") ("bordeaux-threads.asd"))
     (stefil darcs ,(cl-net-darcs "stefil") ,(lisp "site/stefil") ("stefil.asd"))
-    (metabang-bind git "git://github.com/gwkkwg/metabang-bind" ,(lisp "site/metabang-bind") ("metabang-bind.asd"))
+    (metabang-bind git "https://github.com/gwkkwg/metabang-bind" ,(lisp "site/metabang-bind") ("metabang-bind.asd"))
     (gbbopen svn "http://GBBopen.org/svn/GBBopen/trunk/" ,(lisp "site/gbbopen") ("gbbopen.asd"))
-    (s-xml-rpc cvs ,(cl-net-cvs "s-xml-rpc" "s-xml-rpc") ,(lisp "site/s-xml-rpc") ("s-xml-rpc.asd"))
+    (s-xml-rpc git "https://gitlab.com/ambrevar/s-xml-rpc" ,(lisp "site/s-xml-rpc") ("s-xml-rpc.asd"))
     (montezuma git "git@github.com:sharplispers/montezuma.git" ,(lisp "site/montezuma") ("montezuma.asd"))
     (closure cvs ,(cl-net-cvs "closure" "closure") ,(lisp "site/closure") ("closure.asd"))
     (skippy wget "http://www.xach.com/lisp/skippy.tgz" ,(lisp "site/skippy") ("skippy.asd"))
@@ -136,7 +147,7 @@
     (gsharp git "git://common-lisp.net/projects/gsharp/gsharp.git" ,(lisp "site/gsharp") ("gsharp.asd"))
     (midi wget "http://doc.gold.ac.uk/isms/lisp/midi/midi-20070618.tar.gz" ,(lisp "site/midi") ("midi.asd"))
     (cl-irc svn "svn://common-lisp.net/project/cl-irc/svn/trunk" ,(lisp "site/cl-irc") ("cl-irc.asd"))
-    (trivial-irc git "git://github.com/karvus/trivial-irc.git" ,(lisp "site/trivial-irc") ("trivial-irc.asd"))
+    (trivial-irc git "https://github.com/karvus/trivial-irc.git" ,(lisp "site/trivial-irc") ("trivial-irc.asd"))
     (tab-layout wget "http://bl0rg.net/~mgr/flux/tab-layout_2005-09-19_02-52+0200.tar.bz2"
 		,(lisp "site/tab-layout-pane") ("tab-layout.asd" "radio-layout.asd" "stack-layout.asd"))
     (beirc cvs ,(cl-net-cvs "beirc" "beirc") ,(lisp "site/beirc") ("beirc.asd"))
@@ -148,10 +159,10 @@
                                                                                       "foreign-array.asd"))
     (fsbv git "git://repo.or.cz/fsbv.git" ,(lisp "site/fsbv") ("fsbv.asd"))
     
-    (trivial-garbage git "git://github.com/trivial-garbage/trivial-garbage.git"
+    (trivial-garbage git "https://github.com/trivial-garbage/trivial-garbage.git"
                      ,(lisp "site/trivial-garbage") ("trivial-garbage.asd"))
     (commonqt git "git://gitorious.org/commonqt/commonqt.git" ,(lisp "site/commonqt") ("qt.asd" "qt-tutorial.asd" "qt-repl.asd"))
-    (named-readtables git "git://github.com/melisgl/named-readtables.git"
+    (named-readtables git "https://github.com/melisgl/named-readtables.git"
                       ,(lisp "site/named-readtables") ("named-readtables.asd"))
     (movitz cvs ,(cl-net-cvs "movitz" "movitz") ,(lisp "site/movitz") ("movitz.asd"))
     (binary-types cvs ,(cl-net-cvs "movitz" "binary-types") ,(lisp "site/binary-types") ("binary-types.asd"))
@@ -164,23 +175,23 @@
                       "lispbuilder-sdl-cl-vectors.asd" "lispbuilder-sdl-examples.asd"
                       "lispbuilder-sdl-vecto-examples.asd" "lispbuilder-sdl-vecto.asd"
                       "lispbuilder-sdl.asd"))
-    (iolib git "git://github.com/sionescu/iolib.git" ,(lisp "site/iolib")
+    (iolib git "https://github.com/sionescu/iolib.git" ,(lisp "site/iolib")
            ("src/iolib.asd" "src/iolib.asd" "src/iolib.pathnames.asd" "src/iolib.syscalls.asd"
             "src/iolib.base.asd" "src/iolib.sockets.asd" "src/iolib.trivial-sockets.asd"
             "src/iolib.multiplex.asd" "src/iolib.streams.asd" "src/iolib.zeta-streams.asd"
             "src/iolib.os.asd" "src/iolib-grovel.asd" "src/iolib.asdf.asd"
             "src/iolib.conf.asd"
             "test/iolib-tests.asd"))
-    (static-vectors git "git://github.com/sionescu/static-vectors.git" ,(lisp "site/static-vectors")
+    (static-vectors git "https://github.com/sionescu/static-vectors.git" ,(lisp "site/static-vectors")
                     ("static-vectors.asd"))
-    (libfixposix git "git://github.com/sionescu/libfixposix.git" ,(lisp "site/libfixposix") ())
+    (libfixposix git "https://github.com/sionescu/libfixposix.git" ,(lisp "site/libfixposix") ())
     (cl-launch wget "http://fare.tunes.org/files/cl-launch/cl-launch.tar.gz"
                ,(lisp "site/cl-launch") ("cl-launch.asd"))
     (cl-l10n darcs "http://www.common-lisp.net/project/cl-l10n/repos/cl-l10n"
              ,(lisp "site/cl-l10n") ("cl-l10n.asd"))
     (sb-simple-audio wget "http://v16.org/lisp/sb-simple-audio_latest.tar.gz"
                      ,(lisp "site/sb-simple-audio") ("sb-simple-audio.asd"))
-    (parse-number git "git://github.com/sharplispers/parse-number.git"
+    (parse-number git "https://github.com/sharplispers/parse-number.git"
                   ,(lisp "site/parse-number") ("parse-number.asd"))
     (cl-wav-synth cvs ,(cl-net-cvs "cl-wav-synth" "cl-wav-synth")
                   ,(lisp "site/cl-wav-synth") ("cl-wav-synth.asd" "cl-wav-synth-clim.asd"))
@@ -189,13 +200,15 @@
     (cl-vectors git "git://git.tuxee.net/cl-vectors" ,(lisp "site/cl-vectors")
                 ("cl-vectors.asd" "cl-paths.asd" "cl-paths-ttf.asd" "cl-aa.asd" "cl-aa-misc.asd"))
     (zpb-ttf wget "http://www.xach.com/lisp/zpb-ttf.tgz" ,(lisp "site/zpb-ttf") ("zpb-ttf.asd"))
-    (cl-opengl git "git://github.com/3b/cl-opengl.git" ,(lisp "site/cl-opengl")
+    (zpb-exif git "https://github.com/xach/zpb-exif.git" ,(lisp "site/zpb-exif") ("zpb-exif.asd"))
+    (cl-opengl git "https://github.com/3b/cl-opengl.git" ,(lisp "site/cl-opengl")
                ("cl-opengl.asd" "cl-opengl.asd" "cl-glut.asd" "cl-glut-examples.asd" "cl-glu.asd"))
+    (cl-tga git "https://github.com/fisxoj/cl-tga.git" ,(lisp "site/cl-tga") ("cl-tga.asd"))
     (mel-base git "http://pmeta.net/projects/mel-base/mel-base.git"
               ,(lisp "site/mel-base") ("mel-base.asd"))
     (ansi-test svn "svn://common-lisp.net/project/ansi-test/svn/trunk/ansi-tests"
                ,(lisp "site/ansi-test") ())
-    (cl-python git "git://github.com/franzinc/cl-python.git" ,(lisp "site/cl-python") ("clpython.asd"))
+    (cl-python git "https://github.com/franzinc/cl-python.git" ,(lisp "site/cl-python") ("clpython.asd"))
     (cl-yacc git "https://github.com/jech/cl-yacc.git"
              ,(lisp "site/cl-yacc") ("yacc.asd") )
     (adw-charting darcs "http://common-lisp.net/project/adw-charting/darcs/adw-charting/"
@@ -206,13 +219,13 @@
     (cl-json darcs "http://common-lisp.net/project/cl-json/darcs/cl-json"
              ,(lisp "site/cl-json") ("cl-json.asd"))
     (cl-png svn "http://svn.ljosa.com/cl-png/trunk/" ,(lisp "site/cl-png") ("png.asd" "image.asd"))
-    (plexippus-xpath darcs "http://common-lisp.net/project/plexippus-xpath/darcs/plexippus-xpath/"
+    (plexippus-xpath git "https://github.com/sharplispers/xpath.git"
                      ,(lisp "site/plexippus-xpath") ("xpath.asd"))
-    (cxml-stp git "http://www.lichteblau.com/git/cxml-stp.git"
+    (cxml-stp git "https://github.com/sharplispers/cxml-stp.git"
               ,(lisp "site/cxml-stp") ("cxml-stp.asd"))
     (hyperdoc darcs "http://common-lisp.net/project/editor-hints/darcs/hyperdoc/"
               ,(lisp "site/hyperdoc") ("hyperdoc.asd"))
-    (cl-store git "git://github.com/skypher/cl-store.git"
+    (cl-store git "https://github.com/skypher/cl-store.git"
               ,(lisp "site/cl-store") ("cl-store.asd"))
     (trees wget "http://www.method-combination.net/lisp/files/trees.tar.gz"
            ,(lisp "site/trees") ("trees.asd"))
@@ -223,37 +236,37 @@
             ("osicat.asd"))
     (prepl git "git://gitorious.org/prepl/prepl.git" ,(lisp "site/prepl") ("prepl.asd"))
     (conium git "git://gitorious.org/conium/conium.git" ,(lisp "site/conium") ("conium.asd"))
-    (manardb git "git://github.com/ilitirit/manardb.git" ,(lisp "site/manardb") ("manardb.asd"))
+    (manardb git "https://github.com/ilitirit/manardb.git" ,(lisp "site/manardb") ("manardb.asd"))
     (cl-irregsexp git "http://common-lisp.net/projects/cl-irregsexp/cl-irregsexp.git"
                   ,(lisp "site/cl-irregsexp") ("cl-irregsexp.asd"))
     (command-line-arguments git "git://common-lisp.net/projects/qitab/command-line-arguments.git"
                             ,(lisp "site/command-line-arguments") ("command-line-arguments.asd"))
-    (cl-containers git "git://github.com/gwkkwg/cl-containers.git"
+    (cl-containers git "https://github.com/gwkkwg/cl-containers.git"
                    ,(lisp "site/cl-containers") ("cl-containers.asd"))
-    (metatilities git "git://github.com/gwkkwg/metatilities"
+    (metatilities git "https://github.com/gwkkwg/metatilities"
 		  ,(lisp "site/metatilities") ("metatilities.asd"))
-    (metatilities-base git "git://github.com/gwkkwg/metatilities-base"
+    (metatilities-base git "https://github.com/gwkkwg/metatilities-base"
 		       ,(lisp "site/metatilities-base") ("metatilities-base.asd"))
-    (moptilities git "git://github.com/gwkkwg/moptilities"
+    (moptilities git "https://github.com/gwkkwg/moptilities"
 		 ,(lisp "site/moptilities") ("moptilities.asd"))
     (s-base64 darcs "http://www.beta9.be/darcs/s-base64" ,(lisp "site/s-base64") ("s-base64.asd"))
-    (s-sysdeps git "git://github.com/svenvc/s-sysdeps.git" ,(lisp "site/s-sysdeps") ("s-sysdeps.asd"))
+    (s-sysdeps git "https://github.com/svenvc/s-sysdeps.git" ,(lisp "site/s-sysdeps") ("s-sysdeps.asd"))
     (matlisp cvs ,(sf-cvs "matlisp" "matlisp") ,(lisp "site/matlisp") ("matlisp.asd"))
     (ieee-floats darcs ,(cl-net-darcs "ieee-floats") ,(lisp "site/ieee-floats") ("ieee-floats.asd"))
     (blocky git "https://github.com/dto/blocky.git" ,(lisp "site/blocky") ("blocky.asd"))
-    (sb-vector-io git "git://github.com/nikodemus/sb-vector-io.git" ,(lisp "site/sb-vector-io")
+    (sb-vector-io git "https://github.com/nikodemus/sb-vector-io.git" ,(lisp "site/sb-vector-io")
                   ("sb-vector-io.asd"))
     (cxml-rpc git "https://github.com/antifuchs/cxml-rpc.git" ,(lisp "site/cxml-rpc") ("cxml-rpc.asd"))
     (trivial-backtrace git "http://common-lisp.net/project/trivial-backtrace/trivial-backtrace.git"
                        ,(lisp "site/trivial-backtrace") ("trivial-backtrace.asd"))
     (postmodern git "http://marijn.haverbeke.nl/git/postmodern" ,(lisp "site/postmodern")
                 ("cl-postgres.asd" "postmodern.asd" "s-sql.asd" "simple-date.asd"))
-    (cl-bencode git "git://github.com/nja/cl-bencode.git" ,(lisp "site/cl-bencode") ("bencode.asd"))
-    (lift git "git://github.com/gwkkwg/lift" ,(lisp "site/lift")  ("lift.asd"))
+    (cl-bencode git "https://github.com/nja/cl-bencode.git" ,(lisp "site/cl-bencode") ("bencode.asd"))
+    (lift git "https://github.com/gwkkwg/lift" ,(lisp "site/lift")  ("lift.asd"))
     (uffi git "http://git.b9.com/uffi.git" ,(lisp "site/uffi") ("uffi.asd"))
     (external-program wget "http://common-lisp.net/project/external-program/releases/external-program_latest.tar.gz"
                       ,(lisp "site/external-program") ("external-program.asd"))
-    (sicl git "git://github.com/robert-strandh/SICL.git" ,(lisp "site/sicl")
+    (sicl git "https://github.com/robert-strandh/SICL.git" ,(lisp "site/sicl")
           ("Code/Conditionals/conditionals.asd"
            "Code/Code-utilities/sicl-code-utilities.asd"
            "Code/Reader/read.asd"
@@ -272,59 +285,64 @@
            "Code/Sequences/sicl-sequences-tiny.asd"
            "Code/Sequences/Small/sequences-small.asd"))
     (date-calc wget "http://common-lisp.net/project/cl-date-calc/date-calc-0.3.tar.gz" ,(lisp "site/date-calc") ("date-calc.asd"))
-    (idna git "git://github.com/antifuchs/idna.git" ,(lisp "site/idna") ("idna.asd"))
+    (idna git "https://github.com/antifuchs/idna.git" ,(lisp "site/idna") ("idna.asd"))
     (rt git "http://git.b9.com/rt.git" ,(lisp "site/rt") ("rt.asd"))
     (weblocks hg "http://bitbucket.org/S11001001/weblocks-dev" ,(lisp "site/weblocks") ())
-    (vectometry git "git://github.com/xach/vectometry.git" ,(lisp "site/vectometry") ("vectometry.asd"))
-    (geometry git "git://github.com/xach/geometry.git" ,(lisp "site/geometry") ("geometry.asd"))
-    (cl-pdf git "git://github.com/mbattyani/cl-pdf.git"
+    (vectometry git "https://github.com/xach/vectometry.git" ,(lisp "site/vectometry") ("vectometry.asd"))
+    (geometry git "https://github.com/xach/geometry.git" ,(lisp "site/geometry") ("geometry.asd"))
+    (cl-pdf git "https://github.com/mbattyani/cl-pdf.git"
 	    ,(lisp "site/cl-pdf") ("cl-pdf.asd"))
-    (cl-typesetting git "git://github.com/mbattyani/cl-typesetting.git"
+    (cl-typesetting git "https://github.com/mbattyani/cl-typesetting.git"
                     ,(lisp "site/cl-typesetting") ("cl-typesetting.asd"))
-    (opticl git "git://github.com/slyrus/opticl.git" ,(lisp "site/opticl") ("opticl.asd"))
-    (opticl-core git "git://github.com/slyrus/opticl-core.git" ,(lisp "site/opticl-core") ("opticl-core.asd"))
-    (retrospectiff git "git://github.com/slyrus/retrospectiff.git" ,(lisp "site/retrospectiff") ("retrospectiff.asd"))
-    (cl-jpeg git "https://github.com/sharplispers/cl-jpeg.git"  ,(lisp "site/cl-jpeg") ("cl-jpeg.asd"))
-
-    (binary-data git "git://github.com/gigamonkey/monkeylib-binary-data.git" ,(lisp "site/binary-data")
+    (opticl git "https://github.com/slyrus/opticl.git" ,(lisp "site/opticl") ("opticl.asd"))
+    (opticl-core git "https://github.com/slyrus/opticl-core.git" ,(lisp "site/opticl-core") ("opticl-core.asd"))
+    (retrospectiff git "https://github.com/slyrus/retrospectiff.git" ,(lisp "site/retrospectiff") ("retrospectiff.asd"))
+    (cl-jpeg cvs ,(cl-net-cvs "cl-jpeg" "cljl") ,(lisp "site/cl-jpeg") ("cl-jpeg.asd"))
+    (pngload git "https://github.com/mfiano/pngload.git" ,(lisp "site/pngload") ("pngload.asd"))
+    (parsley git "https://github.com/mfiano/parsley.git" ,(lisp "site/parsley") ("parsley.asd"))
+    (fast-io git "https://github.com/rpav/fast-io.git" ,(lisp "site/fast-io") ("fast-io.asd"))
+    (3bz git "https://github.com/3b/3bz.git" ,(lisp "site/3bz") ("3bz.asd"))
+    
+    (binary-data git "https://github.com/gigamonkey/monkeylib-binary-data.git" ,(lisp "site/binary-data")
                  ("com.gigamonkeys.binary-data.asd"))
-    (monkeylib-macro-utilities git "git://github.com/gigamonkey/monkeylib-macro-utilities.git" ,(lisp "site/monkeylib-macro-utilities")
+    (monkeylib-macro-utilities git "https://github.com/gigamonkey/monkeylib-macro-utilities.git" ,(lisp "site/monkeylib-macro-utilities")
                                ("com.gigamonkeys.macro-utilities.asd"))
-    (cl-gtk2 git "git://github.com/dmitryvk/cl-gtk2.git" ,(lisp "site/cl-gtk2")
+    (cl-gtk2 git "https://github.com/dmitryvk/cl-gtk2.git" ,(lisp "site/cl-gtk2")
              ("glib/cl-gtk2-glib.asd" "gtk/cl-gtk2-gtk.asd" "pango/cl-gtk2-pango.asd"
               "gtk-glext/cl-gtk2-gtkglext.asd" "glib/cl-gtk2-glib.asd"
               "cairo/cl-gtk2-cairo.asd" "gdk/cl-gtk2-gdk.asd"))
     (ht-simple-ajax wget "http://martin-loetzsch.de/ht-simple-ajax/ht-simple-ajax.tar.gz"
                     ,(lisp "site/ht-simple-ajax")
                     ("ht-simple-ajax.asd"))
-    (3bmd git "git://github.com/3b/3bmd.git" ,(lisp "site/3bmd")
+    (3bmd git "https://github.com/3b/3bmd.git" ,(lisp "site/3bmd")
           ("3bmd.asd" "3bmd-ext-code-blocks.asd" "3bmd-ext-definition-lists.asd"  "3bmd-ext-wiki-links.asd"))
-    (esrap git "git://github.com/nikodemus/esrap.git" ,(lisp "site/esrap") ("esrap.asd"))
-    (cl-mongo git "git://github.com/fons/cl-mongo.git" ,(lisp "site/cl-mongo") ("cl-mongo.asd"))
+    (esrap git "https://github.com/nikodemus/esrap.git" ,(lisp "site/esrap") ("esrap.asd"))
+    (cl-mongo git "https://github.com/fons/cl-mongo.git" ,(lisp "site/cl-mongo") ("cl-mongo.asd"))
     (parenscript git "git://common-lisp.net/projects/parenscript/parenscript.git" ,(lisp "site/parenscript") ("parenscript.asd"))
     (anaphora cvs ,(cl-net-cvs "anaphora" "") ,(lisp "site/anaphora") ("src/anaphora.asd"))
     (uuid wget "http://www.dardoria.net/software/uuid.tar.gz" ,(lisp "site/uuid") ("uuid.asd"))
     (trivial-timeout darcs "http://common-lisp.net/project/trivial-timeout/" ,(lisp "site/trivial-timeout") ("trivial-timeout.asd"))
     (fare-matcher git "git://common-lisp.net/users/frideau/fare-matcher.git" ,(lisp "site/fare-matcher") ("fare-matcher.asd"))
+    
     (fare-utils git "git://common-lisp.net/users/frideau/fare-utils.git" ,(lisp "site/fare-utils") ("fare-utils.asd"))
-    (cl-simd git "git://github.com/angavrilov/cl-simd.git" ,(lisp "site/cl-simd") ("cl-simd.asd"))
+    (cl-simd git "https://github.com/angavrilov/cl-simd.git" ,(lisp "site/cl-simd") ("cl-simd.asd"))
     (net-telent-date wget "http://www.defmacro.org/lisp-lib/net-telent-date.tar.gz" ,(lisp "site/net-telent-date") ("net-telent-date.asd"))
     (cl-smtp cvs ,(cl-net-cvs "cl-smtp" "cl-smtp") ,(lisp "site/cl-smtp") ("cl-smtp.asd"))
     (rfc2388 wget "http://common-lisp.net/project/rfc2388/rfc2388_latest.tar.gz"
              ,(lisp "site/rfc2388") ("rfc2388.asd"))
-    (cl-oauth git "git://github.com/skypher/cl-oauth.git" ,(lisp "site/cl-oauth") ("cl-oauth.asd"))
-    (oauth2 git "git://github.com/Neronus/oauth2.git" ,(lisp "site/oauth2") ("oauth2.asd"))
-    (f-underscore git "git://github.com/nallen05/f-underscore.git" ,(lisp "site/f-underscore")
+    (cl-oauth git "https://github.com/skypher/cl-oauth.git" ,(lisp "site/cl-oauth") ("cl-oauth.asd"))
+    (oauth2 git "https://github.com/Neronus/oauth2.git" ,(lisp "site/oauth2") ("oauth2.asd"))
+    (f-underscore git "https://github.com/nallen05/f-underscore.git" ,(lisp "site/f-underscore")
                   ("f-underscore.asd"))
     (linedit git "https://gitlab.common-lisp.net/linedit/linedit.git" ,(lisp "site/linedit") ("linedit.asd"))
     (series git "git://series.git.sourceforge.net/gitroot/series/series" ,(lisp "site/series") ("series.asd"))
-    (cl-mime git "git://github.com/billitch/cl-mime.git" ,(lisp "site/cl-mime") ("cl-mime.asd"))
-    (cl-qprint git "git://github.com/mcna/cl-qprint.git" ,(lisp "site/cl-qprint") ("cl-qprint.asd"))
+    (cl-mime git "https://github.com/billitch/cl-mime.git" ,(lisp "site/cl-mime") ("cl-mime.asd"))
+    (cl-qprint git "https://github.com/mcna/cl-qprint.git" ,(lisp "site/cl-qprint") ("cl-qprint.asd"))
     (trivial-timers wget "http://releases.unknownlamer.org/trivial-timers/trivial-timers_latest.tar.gz"
                     ,(lisp "site/trivial-timers") ("trivial-timers.asd"))
-    (cl-num-utils git "git://github.com/tpapp/cl-num-utils.git" ,(lisp "site/cl-num-utils") ("cl-num-utils.asd"))
-    (let-plus git "git://github.com/tpapp/let-plus.git" ,(lisp "site/let-plus") ("let-plus.asd"))
-    (extended-reals git "git://github.com/tpapp/extended-reals.git" ,(lisp "site/extended-reals") ("extended-reals.asd"))
+    (cl-num-utils git "https://github.com/tpapp/cl-num-utils.git" ,(lisp "site/cl-num-utils") ("cl-num-utils.asd"))
+    (let-plus git "https://github.com/tpapp/let-plus.git" ,(lisp "site/let-plus") ("let-plus.asd"))
+    (extended-reals git "https://github.com/tpapp/extended-reals.git" ,(lisp "site/extended-reals") ("extended-reals.asd"))
     (f2cl hg "http://common-lisp.net/project/f2cl/hg/f2cl" ,(lisp "site/f2cl")
           ("f2cl.asd"
            "packages/toms715.asd"
@@ -342,11 +360,11 @@
            "packages/minpack.asd"
            "packages/fishpack.asd"
            "packages/blas-complex.asd"))
-    (sheeple git "git://github.com/sykopomp/sheeple.git" ,(lisp "site/sheeple") ("sheeple.asd"))
-    (fiveam git "git://github.com/sionescu/fiveam.git" ,(lisp "site/fiveam") ("fiveam.asd"))
-    (screamer git "git://github.com/nikodemus/screamer.git" ,(lisp "site/screamer") ("screamer.asd"))
-    (chtml-matcher git "git://github.com/eslick/chtml-matcher.git" ,(lisp "site/chtml-matcher") ("chtml-matcher.asd"))
-    (cl-stdutils git "git://github.com/eslick/cl-stdutils.git" ,(lisp "site/cl-stdutils") ("stdutils.asd"))
+    (sheeple git "https://github.com/sykopomp/sheeple.git" ,(lisp "site/sheeple") ("sheeple.asd"))
+    (fiveam git "https://github.com/sionescu/fiveam.git" ,(lisp "site/fiveam") ("fiveam.asd"))
+    (screamer git "https://github.com/nikodemus/screamer.git" ,(lisp "site/screamer") ("screamer.asd"))
+    (chtml-matcher git "https://github.com/eslick/chtml-matcher.git" ,(lisp "site/chtml-matcher") ("chtml-matcher.asd"))
+    (cl-stdutils git "https://github.com/eslick/cl-stdutils.git" ,(lisp "site/cl-stdutils") ("stdutils.asd"))
     (inferior-shell git "git://common-lisp.net/projects/qitab/inferior-shell.git" ,(lisp "site/inferior-shell") ("inferior-shell.asd"))
     (fare-quasiquote git "git://common-lisp.net/users/frideau/fare-quasiquote.git" ,(lisp "site/fare-quasiquote")
                      ("fare-quasiquote-extras.asd" "fare-quasiquote.asd"
@@ -354,46 +372,65 @@
                       "fare-quasiquote-optima.asd"  "fare-quasiquote-test.asd"))
     (fare-mop git "git://common-lisp.net/users/frideau/fare-mop.git" ,(lisp "site/fare-mop")
               ("fare-mop.asd"))
-    (optima git "git://github.com/m2ym/optima.git" ,(lisp "site/optima") ("optima.asd"))
-    (lparallel git "git://github.com/lmj/lparallel.git" ,(lisp "site/lparallel")
+    (optima git "https://github.com/m2ym/optima.git" ,(lisp "site/optima") ("optima.asd"))
+    (lparallel git "https://github.com/lmj/lparallel.git" ,(lisp "site/lparallel")
                ("lparallel.asd" "lparallel-bench.asd" "lparallel-test.asd"))
-    (napa-fft git "git://github.com/pkhuong/Napa-FFT.git" ,(lisp "site/napa-fft")
+    (napa-fft git "https://github.com/pkhuong/Napa-FFT.git" ,(lisp "site/napa-fft")
               ("napa-fft.asd"))
-    (cl-freetype2 git "git://github.com/rpav/cl-freetype2.git" ,(lisp "site/cl-freetype2") ("cl-freetype2.asd"))
-    (cl-gss git "git://github.com/lokedhs/cl-gss.git" ,(lisp "site/cl-gss") ("cl-gss.asd"))
-    (yason git "git://github.com/hanshuebner/yason.git" ,(lisp "site/yason") ("yason.asd"))
+    (cl-freetype2 git "https://github.com/rpav/cl-freetype2.git" ,(lisp "site/cl-freetype2") ("cl-freetype2.asd"))
+    (cl-gss git "https://github.com/lokedhs/cl-gss.git" ,(lisp "site/cl-gss") ("cl-gss.asd"))
+    (yason git "https://github.com/hanshuebner/yason.git" ,(lisp "site/yason") ("yason.asd"))
     (yaclml darcs "http://common-lisp.net/project/bese/repos/yaclml/" ,(lisp "site/yaclml") ("yaclml.asd"))
     (arnesi darcs "http://common-lisp.net/project/bese/repos/arnesi_dev/" ,(lisp "site/arnesi") ("arnesi.asd"))
-    (jsown git "git://github.com/madnificent/jsown.git" ,(lisp "site/jsown") ("jsown.asd"))
-    (cl-csv git "git://github.com/AccelerationNet/cl-csv.git" ,(lisp "site/cl-csv") ("cl-csv.asd"))
+    (jsown git "https://github.com/madnificent/jsown.git" ,(lisp "site/jsown") ("jsown.asd"))
+    (cl-csv git "https://github.com/AccelerationNet/cl-csv.git" ,(lisp "site/cl-csv") ("cl-csv.asd"))
     (femlisp cvs ":pserver:anonymous@cvs.savannah.nongnu.org:/sources/femlisp femlisp"
              ,(lisp "site/femlisp") ("femlisp.asd"))
-    (cl-sasl git "git://github.com/legoscia/cl-sasl.git" ,(lisp "site/cl-sasl") ("cl-sasl.asd"))
-    (cl-async git "git://github.com/orthecreedence/cl-async" ,(lisp "site/cl-async")
+    (cl-sasl git "https://github.com/legoscia/cl-sasl.git" ,(lisp "site/cl-sasl") ("cl-sasl.asd"))
+    (cl-async git "https://github.com/orthecreedence/cl-async" ,(lisp "site/cl-async")
               ("cl-async.asd" "cl-async-ssl.asd" "cl-async-test.asd"))
-    (cl-libevent2 git "git://github.com/orthecreedence/cl-libevent2" ,(lisp "site/cl-libevent2")
+    (cl-libevent2 git "https://github.com/orthecreedence/cl-libevent2" ,(lisp "site/cl-libevent2")
               ("cl-libevent2.asd" "cl-libevent2-ssl.asd"))
-    (cl-async-future git "git://github.com/orthecreedence/cl-async-future" ,(lisp "site/cl-async-future")
+    (cl-async-future git "https://github.com/orthecreedence/cl-async-future" ,(lisp "site/cl-async-future")
               ("cl-async-future.asd" "cl-async-future-test.asd"))
-    (cl-mustache git "git://github.com/kanru/cl-mustache" ,(lisp "site/cl-mustache") ("cl-mustache.asd" "cl-mustache-test.asd"))
+    (cl-mustache git "https://github.com/kanru/cl-mustache" ,(lisp "site/cl-mustache") ("cl-mustache.asd" "cl-mustache-test.asd"))
 
-    (lla git "git://github.com/tpapp/lla.git" ,(lisp "site/lla") ("lla.asd"))
-    (cl-slice git "git://github.com/tpapp/cl-slice.git" ,(lisp "site/cl-slice") ("cl-slice.asd"))
-    (cl-num-utils git "git://github.com/tpapp/cl-num-utils.git" ,(lisp "site/cl-num-utils") ("cl-num-utils.asd"))
-    (array-operations git "git://github.com/tpapp/array-operations.git" ,(lisp "site/array-operations") ("array-operations.asd"))
-    (fnv git "git://github.com/blindglobe/fnv.git" ,(lisp "site/fnv") ("org.middleangle.foreign-numeric-vector.asd"))
-    (mgl-gpr git "git://github.com/melisgl/mgl-gpr" ,(lisp "site/mgl-gpr")
+    (lla git "https://github.com/tpapp/lla.git" ,(lisp "site/lla") ("lla.asd"))
+    (cl-slice git "https://github.com/tpapp/cl-slice.git" ,(lisp "site/cl-slice") ("cl-slice.asd"))
+    (num-utils git "https://github.com/Lisp-Stat/numerical-utilities.git" ,(lisp "site/num-utils") ("num-utils.asd"))
+    (select git "https://github.com/Lisp-Stat/select.git" ,(lisp "site/select") ("select.asd"))
+    (dfio git "https://github.com/Lisp-Stat/dfio.git" ,(lisp "site/dfio") ("dfio.asd"))
+    (special-functions git "https://github.com/Lisp-Stat/special-functions.git" ,(lisp "site/special-functions") ("special-functions.asd"))
+    (cephes.cl git "https://github.com/Lisp-Stat/cephes.cl.git" ,(lisp "site/cephes.cl") ("cephes.asd"))
+    (statistics git "https://github.com/Lisp-Stat/statistics.git" ,(lisp "site/statistics") ("statistics.asd"))
+    (distributions git "https://github.com/Lisp-Stat/distributions.git" ,(lisp "site/distributions") ("distributions.asd"))
+    (array-operations git "https://github.com/Lisp-Stat/array-operations.git" ,(lisp "site/array-operations") ("array-operations.asd"))
+    (fnv git "https://github.com/blindglobe/fnv.git" ,(lisp "site/fnv") ("org.middleangle.foreign-numeric-vector.asd"))
+    (mgl-gpr git "https://github.com/melisgl/mgl-gpr" ,(lisp "site/mgl-gpr")
              ("mgl-gpr.asd" "mgl-gpr-test.asd"))
-    (mgl-pax git "git://github.com/melisgl/mgl-pax" ,(lisp "site/mgl-pax")
+    (mgl-pax git "https://github.com/melisgl/mgl-pax" ,(lisp "site/mgl-pax")
              ("mgl-pax.asd" "mgl-pax-test.asd"))
-    (colorize git "git://github.com/redline6561/colorize" ,(lisp "site/colorize") ("colorize.asd"))
-    (clunit git "git://github.com/tgutu/clunit" ,(lisp "site/clunit") ("clunit.asd"))
+    (colorize git "https://github.com/redline6561/colorize" ,(lisp "site/colorize") ("colorize.asd"))
+    (clunit git "https://github.com/tgutu/clunit" ,(lisp "site/clunit") ("clunit.asd"))
     (lisp-cv git "git@github.com:W-Net-AI/LISP-CV.git" ,(lisp "site/lisp-cv") ("lisp-cv.asd" "gc.asd"))
     (lisp-executable git "git@github.com:markcox80/lisp-executable.git" ,(lisp "site/lisp-executable") ("lisp-executable.asd"))
     (cl-sdl2 git "git@github.com:lispgames/cl-sdl2.git" ,(lisp "site/cl-sdl2") ("sdl2.asd"))
     (cl-autowrap git "git@github.com:rpav/cl-autowrap.git" ,(lisp "site/cl-autowrap") ("cl-autowrap.asd"
                                                                                        "cl-plus-c.asd"
                                                                                        "cl-autowrap-test.asd"))
+    (dexador git "https://github.com/fukamachi/dexador.git" ,(lisp "site/dexador") ("dexador.asd"))
+    (fast-http git "https://github.com/fukamachi/fast-http.git" ,(lisp "site/fast-http") ("fast-http.asd"))
+    (proc-parse git "https://github.com/fukamachi/proc-parse.git" ,(lisp "site/proc-parse") ("proc-parse.asd"))
+    (xsubseq git "https://github.com/fukamachi/xsubseq.git" ,(lisp "site/xsubseq") ("xsubseq.asd"))
+    (smart-buffer git "https://github.com/fukamachi/smart-buffer.git" ,(lisp "site/smart-buffer") ("smart-buffer.asd"))
+    (cl-cookie git "https://github.com/fukamachi/cl-cookie.git" ,(lisp "site/cl-cookie") ("cl-cookie.asd"))
+    (trivial-mimes git "https://github.com/Shinmera/trivial-mimes.git" ,(lisp "site/trivial-mimes") ("trivial-mimes.asd"))
+    (conduit-packages git "https://github.com/tfeb/conduit-packages.git" ,(lisp "site/conduit-packages") ("org.tfeb.conduit-packages.asd"))
+    (duologue git "https://github.com/mmontone/duologue.git" ,(lisp "site/duologue") ("duologue.asd"))
+    (clavier git "https://github.com/mmontone/clavier.git" ,(lisp "site/clavier") ("clavier.asd"))
+    (chronicity git "https://github.com/chaitanyagupta/chronicity.git" ,(lisp "site/chronicity") ("chronicity.asd"))
+    (cl-ansi-text git "https://github.com/pnathan/cl-ansi-text.git" ,(lisp "site/cl-ansi-text") ("cl-ansi-text.asd"))
+    (cl-colors2 git "https://codeberg.org/cage/cl-colors2.git" ,(lisp "site/cl-colors2") ("cl-colors2.asd"))
     (trivial-channels git "git@github.com:rpav/trivial-channels.git" ,(lisp "site/trivial-channels") ("trivial-channels.asd"))
     (dissect git "git@github.com:Shinmera/dissect.git" ,(lisp "site/dissect") ("dissect.asd"))
     (verbose git "git@github.com:Shinmera/verbose.git" ,(lisp "site/verbose") ("verbose.asd"))
@@ -421,6 +458,26 @@
     (cl-tga git "https://github.com/fisxoj/cl-tga.git" ,(lisp "site/cl-tga") ("cl-tga.asd"))
     (madeira-port git "https://github.com/nikodemus/madeira-port.git" ,(lisp "site/madeira-port") ("madeira-port.asd"))
     
+    (jonathan git "https://github.com/Rudolph-Miller/jonathan" ,(lisp "site/jonathan") ("jonathan.asd"))
+    (acclimation git "https://github.com/robert-strandh/Acclimation" ,(lisp "site/acclimation") ("acclimation.asd"))
+    (eclector git "https://github.com/s-expressionists/Eclector" ,(lisp "site/eclector") ("eclector.asd" "eclector-concrete-syntax-tree.asd"))
+    (concrete-syntax-tree git "https://github.com/s-expressionists/Concrete-Syntax-Tree" ,(lisp "site/concrete-syntax-tree")
+                          ("concrete-syntax-tree.asd" "concrete-syntax-tree-base.asd"
+                           "Lambda-list/concrete-syntax-tree-lambda-list.asd"))
+    (float-features git "https://github.com/Shinmera/float-features" ,(lisp "site/float-features") ("float-features.asd"))
+    (trivial-indent git "https://github.com/Shinmera/trivial-indent" ,(lisp "site/trivial-indent") ("trivial-indent.asd"))
+    (documentation-utils git "https://github.com/Shinmera/documentation-utils" ,(lisp "site/documentation-utils") ("multilang-documentation-utils.asd"
+                                                                                                                   "documentation-utils.asd"))
+    (cl-dejavu git "https://codeberg.org/TurtleWare/cl-dejavu.git" ,(lisp "site/cl-dejavu") ("cl-dejavu.asd"))
+    (lisp-stat git "https://github.com/Lisp-Stat/lisp-stat.git" ,(lisp "site/lisp-stat") ("lisp-stat.asd"))
+    (alexandria-plus git "https://github.com/Symbolics/alexandria-plus.git" ,(lisp "site/alexandria-plus") ("alexandria+.asd"))
+    (data-frame git "https://github.com/Lisp-Stat/data-frame.git" ,(lisp "site/data-frame") ("data-frame.asd"))
+    (global-vars git "https://github.com/lmj/global-vars.git" ,(lisp "site/global-vars") ("global-vars.asd"))
+    (plot git "https://github.com/Lisp-Stat/plot.git" ,(lisp "site/plot") ("plot.asd"))
+    (LASS git "https://github.com/Shinmera/LASS.git" ,(lisp "site/LASS") ("LASS.asd"))
+    (cl-gists git "https://github.com/Symbolics/cl-gists.git" ,(lisp "site/cl-gists") ("cl-gists.asd"))
+    (smoothers git "https://github.com/Lisp-Stat/smoothers.git" ,(lisp "site/smoothers") ("smoothers.asd"))
+
 ;;;
     (ccl svn "http://svn.clozure.com/publicsvn/openmcl/trunk/linuxx86/ccl" ,(lisp "impl/ccl") ())
     (sbcl git "git://git.boinkor.net/sbcl.git" ,(lisp "impl/sbcl") ())
@@ -428,7 +485,7 @@
     (ecl git "git://ecls.git.sourceforge.net/gitroot/ecls/ecl" ,(lisp "impl/ecl") ())
     (gcl cvs ":pserver:anonymous@cvs.savannah.gnu.org:/sources/gcl gcl" ,(lisp "impl/gcl") ())
     (abcl svn "http://abcl.org/svn/trunk/abcl/" ,(lisp "impl/abcl") ())
-    (xcl git "git://github.com/gnooth/xcl.git" ,(lisp "impl/xcl") ())
+    (xcl git "https://github.com/gnooth/xcl.git" ,(lisp "impl/xcl") ())
 
     (gosh svn "https://gauche.svn.sourceforge.net/svnroot/gauche/Gauche/trunk" ,(lisp "impl/gauche") ())
 ;;;
@@ -442,13 +499,13 @@
     (emacs git "git://git.savannah.gnu.org/emacs.git" ,(~ "c/emacs") ())
     (haskell-mode darcs "http://code.haskell.org/haskellmode-emacs" ,(~ ".emacs.d/haskell") ())
     (emms git "git://git.sv.gnu.org/emms.git" ,(~ ".emacs.d/emms") ())
-    (emacs-chess git "git://github.com/jwiegley/emacs-chess.git" ,(~ ".emacs.d/chess") ())
+    (emacs-chess git "https://github.com/jwiegley/emacs-chess.git" ,(~ ".emacs.d/chess") ())
     (emacs-w3m cvs ":pserver:anonymous@cvs.namazu.org:/storage/cvsroot emacs-w3m" ,(~ ".emacs.d/w3m") ())
     (vc-darcs darcs "http://www.pps.jussieu.fr/~jch/software/repos/vc-darcs/" ,(~ ".emacs.d/vc-darcs") ())
     (magit git "https://github.com/philjackson/magit.git" ,(~ ".emacs.d/magit") ())
     (dvc bzr "http://bzr.xsteve.at/dvc/" ,(~ ".emacs.d/dvc") ())
-    (mouse-copy git "git://github.com/vsedach/mouse-copy.git" ,(~ ".emacs.d/mouse-copy") ())
-    (tramp-adb git "git://github.com/juergenhoetzel/tramp-adb.git" ,(~ ".emacs.d/tramp-adb") ())
+    (mouse-copy git "https://github.com/vsedach/mouse-copy.git" ,(~ ".emacs.d/mouse-copy") ())
+    (tramp-adb git "https://github.com/juergenhoetzel/tramp-adb.git" ,(~ ".emacs.d/tramp-adb") ())
 
     (mplayer svn "svn://svn.mplayerhq.hu/mplayer/trunk" ,(~ "c/mplayer") ())
 
