@@ -42,10 +42,11 @@
 ;;; Useful functions
 #-lispworks
 (progn
-  (defun :asd (system)
-    (format t "Loading system: ~a~%" system)
-    (and (asdf:oos 'asdf:load-op system :verbose nil)
-         t))
+  (defun :l (&rest systems)
+    (loop for system in systems
+          do
+          (format t "Loading system: ~a~%" system)
+          (asdf:oos 'asdf:load-op system :verbose nil)))
   (defun dbg (tag &rest results)
     (declare (dynamic-extent results))
     (let ((*print-right-margin* 155)
@@ -67,7 +68,7 @@
     `(multiple-value-call #'dbgs ,tag ,x))
 
   (defun :preload ()
-    (mapcar :asd '(closer-mop cl-ppcre cxml cxml-stp closure-html
+    (mapcar :l '(closer-mop cl-ppcre cxml cxml-stp closure-html
                    drakma named-readtables iterate cffi trivial-garbage bordeaux-threads
                    chipz trivial-gray-streams conium prepl osicat command-line-arguments
                    cl-pdf cl-typesetting postmodern alexandria csv-parser ironclad cl-json

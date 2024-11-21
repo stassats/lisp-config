@@ -8,7 +8,7 @@ if [ `uname -m` = x86_64 ]
 then
     CCL=${CCL_DIR}/dx86cl64
 else
-    CCL=${CCL_DIR}/dx86cl
+    CCL=${CCL_DIR}/dx86cl64
 fi
 
 export CCL_DEFAULT_DIRECTORY=${CCL_DIR}
